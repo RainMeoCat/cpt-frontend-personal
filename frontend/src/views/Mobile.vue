@@ -23,28 +23,81 @@
       <section class="section2" id="Info">
         <div class="main_title_container">
           <div class="main_title">關於競賽</div>
-          為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。
+          <el-divider></el-divider>
+          <span
+            >為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。</span
+          >
+          <el-divider></el-divider>
+          <el-row :gutter="24">
+            <el-col :span="8"
+              ><div class="grid-content bg-purple">主辦單位</div></el-col
+            >
+            <el-col :span="16"
+              ><div class="grid-content bg-purple">
+                國立高雄科技大學商業智慧學院暨智慧商務系
+              </div></el-col
+            >
+          </el-row>
+          <el-row :gutter="24">
+            <el-col :span="8"
+              ><div class="grid-content bg-purple">協辦單位</div></el-col
+            >
+            <el-col :span="16"
+              ><div class="grid-content bg-purple">
+                <ul style="padding: 0px; margin: 0px">
+                  <li>高雄市政府青年局</li>
+                  <li>金融資訊系</li>
+                  <li>會計資訊系</li>
+                </ul>
+              </div></el-col
+            >
+          </el-row>
+          <el-row :gutter="24">
+            <el-col :span="8"
+              ><div class="grid-content bg-purple">贊助單位</div></el-col
+            >
+            <el-col :span="16"
+              ><div class="grid-content bg-purple">
+                <ul style="padding: 0px; margin: 0px">
+                  <li>華友聯集團</li>
+                  <li>智慧商務系系友會</li>
+                </ul>
+              </div></el-col
+            >
+          </el-row>
         </div>
       </section>
       <section class="section3" id="News">
         <div class="main_title_container">
           <div class="main_title">初賽徵稿至 2021-10-7日止</div>
+          <el-divider></el-divider>
           <div>
-            <span
-              >概念組請繳交提案說明書(附件一)；實作組請繳交作品說明書(附件二)。</span
+            概念組請繳交提案說明書<el-link
+              type="primary"
+              href="./attach_1.pdf"
+              target="_blank"
+              >(附件一)</el-link
+            ><br />
+            實作組請繳交作品說明書<el-link
+              type="primary"
+              href="./attach_2.pdf"
+              target="_blank"
+              >(附件二)</el-link
             >
             <el-divider></el-divider>
-            <span
-              >參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。(https://forms.gle/coDqU3Nu92N4dvmCA)</span
+            參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+            <el-link type="primary" href="https://forms.gle/coDqU3Nu92N4dvmCA"
+              >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
             >
             <el-divider></el-divider>
-            <span>評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)</span>
+            評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
           </div>
         </div>
       </section>
       <section class="section4" id="Schedule">
         <div class="main_title_container">
           <div class="main_title">競賽時程</div>
+          <el-divider></el-divider>
           <div style="padding-top: 3vmin">
             <el-timeline style="padding-left: 15vmin">
               <el-timeline-item
@@ -63,10 +116,12 @@
       <section class="section5" id="Rule">
         <div class="rule_container">
           <div class="main_title">競賽辦法</div>
-          <el-collapse accordion style="border: 0px;padding-bottom:0px">
+          <el-divider></el-divider>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
             <el-collapse-item>
-              <template slot="title">
-                【初賽】組別說明<i class="header-icon el-icon-info"></i>
+              <template slot="title"
+                ><i class="header-icon el-icon-info"></i>
+                【初賽】組別說明
               </template>
               <div>
                 <span>概念組</span>
@@ -136,15 +191,16 @@
               實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title">
-                獎勵辦法<i class="header-icon el-icon-info"></i>
+              <template slot="title"
+                ><i class="header-icon el-icon-star-on"></i>
+                獎勵辦法
               </template>
               <div>
-                <ul>
+                <ol>
                   <li v-for="(el, index) in award_info" :key="index">
                     {{ el.data }}
                   </li>
-                </ul>
+                </ol>
               </div>
               <el-divider></el-divider>
               <div>
@@ -156,35 +212,63 @@
               </div>
             </el-collapse-item>
             <el-collapse-item style="padding-bottom: 0px">
-              <template slot="title">
-                注意事項<i class="header-icon el-icon-info"></i>
+              <template slot="title"
+                ><i class="header-icon el-icon-warning"></i>
+                注意事項(共八點)
               </template>
-              <div>
-                <ul style="margin: 0px; padding-left: 5vmin">
+              <el-scrollbar style="height: 60vmin" tag="ul">
+                <ol style="margin: 0px; padding-left: 0vmin">
                   <li v-for="(el, index) in cpt_caution" :key="index">
                     {{ el.data }}
                   </li>
-                </ul>
-              </div>
+                </ol>
+              </el-scrollbar>
             </el-collapse-item>
           </el-collapse>
         </div>
       </section>
       <section class="section6" id="List">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
+        <div class="main_title_container">
+          <div class="main_title">名單公布</div>
+          <el-divider style="background-color: #ffffff"></el-divider>
+          <span>尚未有任何名單公布</span>
+        </div>
       </section>
       <section class="section7" id="Works">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
+        <div class="main_title_container">
+          <div class="main_title">歷屆作品</div>
+          <el-divider style="background-color: #ffffff"></el-divider>
+          <span>尚未有歷屆作品</span>
+        </div>
       </section>
       <section class="section8" id="Faq">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
+        <div class="faq_container">
+          <div class="main_title">FAQ</div>
+          <el-divider style="background-color: #ffffff"></el-divider>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-info"></i>
+                聯絡窗口
+              </template>
+              <div>
+                <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
+                <span
+                  >國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
+                  分機：17560</span
+                >
+              </div>
+            </el-collapse-item>
+          </el-collapse>
+          <span> </span>
+        </div>
       </section>
     </div>
     <el-drawer
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="80%"
+      size="70%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
@@ -225,7 +309,7 @@
       <el-row class="mobile-drawer">
         <el-button
           type="warning"
-          style="height: 100px; font-weight: 900; font-size: 20px"
+          style="height: 20vmin; font-size: 10vmin"
           @click="
             drawer = false;
             openUrl('https://nkust-ic.kktix.cc/events/20211024');
@@ -253,7 +337,7 @@
             active-text-color="#000000"
             mode="horizontal"
           >
-            <el-menu-item index="1" @click="Scroll('Info')" class="el-top-item">
+            <el-menu-item index="1" @click="Scroll('News')" class="el-top-item">
               <template #title
                 ><i class="el-icon-s-platform"></i
                 ><span>最新消息</span></template
@@ -422,27 +506,52 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  background-position: center;
 }
 .section2 {
   background-image: url("../assets/section2_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .section3 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url("../assets/section3_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section4 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url("../assets/section4_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section5 {
+  background-image: url("../assets/section5_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.section5 {
-  background-image: url("../assets/section2_background.jpg");
+.section6 {
+  background-image: url("../assets/section6_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.section7 {
+  background-image: url("../assets/section7_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.section8 {
+  background-image: url("../assets/section8_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
 }
 
 .main_title_container {
@@ -469,6 +578,14 @@ export default {
   width: 93vmin;
   text-align: left;
 }
+.faq_container {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  width: 93vmin;
+  text-align: left;
+}
 
 .el-collapse-item__content,
 .el-collapse-item__header {
@@ -485,7 +602,7 @@ export default {
   margin-bottom: 2vmin;
   margin-left: 0px;
   margin-right: 0px;
-  background-color: black;
+  background-color: rgb(133, 133, 133);
 }
 .el-collapse-item__content {
   padding-bottom: 0px;
