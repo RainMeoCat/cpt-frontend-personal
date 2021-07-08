@@ -3,14 +3,30 @@
     <div class="content">
       <section class="section1" id="Top">
         <div class="main_title_container">
-          <div class="main_title">高科盃<br />全國商業智慧競賽</div>
-          <div style="font-size: 18px;text-align:center">
+          <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
+          <div style="font-size: 18px; text-align: center">
             徵稿至 2021-10-7日<br />
             總獎金50,000元整
+          </div>
+          <div style="text-align: center; padding-top: 5vmin">
+            <el-button
+              type="warning"
+              size="medium"
+              @click="openUrl('https://nkust-ic.kktix.cc/events/20211024')"
+              style="width: 50vmin; font-size: 5vmin"
+              round
+              >前往報名</el-button
+            >
           </div>
         </div>
       </section>
       <section class="section2" id="Info">
+        <div class="main_title_container">
+          <div class="main_title">關於競賽</div>
+          為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。
+        </div>
+      </section>
+      <section class="section3" id="News">
         <div class="main_title_container">
           <div class="main_title">初賽徵稿至 2021-10-7日止</div>
           <div>
@@ -26,11 +42,23 @@
           </div>
         </div>
       </section>
-      <section class="section3" id="News">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
-      </section>
       <section class="section4" id="Schedule">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
+        <div class="main_title_container">
+          <div class="main_title">競賽時程</div>
+          <div style="padding-top: 3vmin">
+            <el-timeline style="padding-left: 15vmin">
+              <el-timeline-item
+                v-for="(activity, index) in activities"
+                :key="index"
+                :timestamp="activity.timestamp"
+              >
+                <div style="color: #ffffff; font-size: 4vmin">
+                  {{ activity.content }}
+                </div>
+              </el-timeline-item>
+            </el-timeline>
+          </div>
+        </div>
       </section>
       <section class="section5" id="Rule">
         <el-empty description="現在空空的，是在哭？"></el-empty>
@@ -54,40 +82,47 @@
     >
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Info')"
-          ><i class="el-icon-s-flag"/>關於競賽</el-button
+          ><i class="el-icon-s-flag" />關於競賽</el-button
         >
-      </el-row>      <el-row class="mobile-drawer">
+      </el-row>
+      <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('News')"
-          ><i class="el-icon-s-platform"/>最新消息</el-button
+          ><i class="el-icon-s-platform" />最新消息</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Schedule')"
-          ><i class="el-icon-time"/>競賽時程</el-button
+          ><i class="el-icon-time" />競賽時程</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Rule')"
-          ><i class="el-icon-s-check"/>競賽辦法</el-button
+          ><i class="el-icon-s-check" />競賽辦法</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('List')"
-          ><i class="el-icon-tickets"/>名單公布</el-button
+          ><i class="el-icon-tickets" />名單公布</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Works')"
-          ><i class="el-icon-s-open"/>歷屆作品</el-button
+          ><i class="el-icon-s-open" />歷屆作品</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Faq')"
-          ><i class="el-icon-question"/>FAQ</el-button
+          ><i class="el-icon-question" />FAQ</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
-        <el-button type="warning" style="height: 100px;font-weight: 900;font-size:20px" @click="drawer = false"
+        <el-button
+          type="warning"
+          style="height: 100px; font-weight: 900; font-size: 20px"
+          @click="
+            drawer = false;
+            openUrl('https://nkust-ic.kktix.cc/events/20211024');
+          "
           >前往報名</el-button
         >
       </el-row>
@@ -139,7 +174,23 @@ export default {
   data () {
     return {
       drawer: false,
-      LastClick: ''
+      LastClick: '',
+      activities: [
+        {
+          content: '報名、初賽繳件截止日',
+          timestamp: '2021-10-07'
+        }, {
+          content: '公布晉級決賽名單',
+          timestamp: '2021-10-14'
+        }, {
+          content: '決賽繳件截止日',
+          timestamp: '2021-10-21'
+        },
+        {
+          content: '賽暨頒獎典禮',
+          timestamp: '2021-10-24'
+        }
+      ]
     }
   },
   methods: {
@@ -158,6 +209,9 @@ export default {
     },
     DrawerClosed () {
       this.Scroll(this.LastClick)
+    },
+    openUrl (url) {
+      window.open(url, '_blank')
     }
   }
 }
@@ -216,6 +270,17 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.section3 {
+  background-image: url("../assets/section2_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section4 {
+  background-image: url("../assets/section2_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .main_title_container {
   text-align: left;
@@ -231,7 +296,7 @@ export default {
   z-index: 100;
   font-size: 10vmin;
   font-weight: 900;
-  text-align:center
+  text-align: center;
 }
 
 section {
@@ -260,6 +325,9 @@ section {
 .section3,
 .section6 {
   background-color: #ff3c00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
