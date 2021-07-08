@@ -64,8 +64,8 @@
       </el-row>
       <transition
         name="custom-classes-transition"
-        enter-active-class="animate__animated animate__zoomIn"
-        leave-active-class="animate__animated animate__zoomOut"
+        enter-active-class="animate__animated animate__fadeInUp"
+        leave-active-class="animate__animated animate__fadeOutDown"
       >
         <el-button
           type="primary"
@@ -88,17 +88,54 @@
     <section class="section1" id="Index">
       <div class="main_title_container">
         <div class="main_title">高科盃<br />全國商業智慧競賽</div>
-        <div style="font-size: 3vmin">
+        <div style="font-size: 4vmin">
           徵稿至 2021-10-7日<br />
           總獎金50,000元整
         </div>
+        <el-button
+          plain
+          round
+          style="
+            margin-top: 10px;
+            width: 15vmin;
+            font-weight: 900;
+            font-size: 20px;
+            height: 5vmin;
+          "
+          class="
+            animate__animated animate__pulse animate__infinite animate__slower
+          "
+          onclick="window.open('https://www.youtube.com/watch?v=o-YBDTqX_ZU')"
+          target="_blank"
+          >立即報名</el-button
+        >
       </div>
     </section>
     <section class="section2" id="Info">
-      <el-empty description="現在空空的，是在哭？"></el-empty>
+      <div class="main_title_container">
+        <div class="main_title">關於競賽</div>
+        <div style="font-size: 3vmin">
+          為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。
+        </div>
+      </div>
     </section>
     <section class="section3" id="News">
-      <el-empty description="現在空空的，是在哭？"></el-empty>
+      <div class="main_title_container">
+        <div class="main_title" style="font-size: 5vmin">
+          初賽徵稿至 2021-10-7日止
+        </div>
+        <div style="font-size:2vmin">
+          <span
+            >概念組請繳交提案說明書(附件一)；實作組請繳交作品說明書(附件二)。</span
+          >
+          <el-divider></el-divider>
+          <span
+            >參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。(https://forms.gle/coDqU3Nu92N4dvmCA)</span
+          >
+          <el-divider></el-divider>
+          <span>評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)</span>
+        </div>
+      </div>
     </section>
     <section class="section4" id="Schedule">
       <el-empty description="現在空空的，是在哭？"></el-empty>
@@ -191,14 +228,67 @@ export default {
   background-repeat: no-repeat;
   position: relative;
 }
-
+.section2 {
+  background-color: #3c599b;
+  background-image: url("../assets/section2_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.section3 {
+  background-color: #3c599b;
+  background-image: url("../assets/section3_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.section4 {
+  background-color: #3c599b;
+  background-image: url("../assets/section4_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.section5 {
+  background-color: #3c599b;
+  background-image: url("../assets/section5_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.section6 {
+  background-color: #3c599b;
+  background-image: url("../assets/section6_background.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  position: relative;
+}.section7 {
+  background-color: #3c599b;
+  background-image: url("../assets/section7_background.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  position: relative;
+}.section8 {
+  background-color: #3c599b;
+  background-image: url("../assets/section8_background.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  position: relative;
+}
 .main_title_container {
   text-align: left;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 87, 153, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  /* mix-blend-mode:color-burn; */
   color: rgb(255, 255, 255);
-  width: 80vmin;
+  width: 50vw;
 }
 
 .main_title {
@@ -215,23 +305,17 @@ section {
 }
 
 .section1,
+.section2,
+.section3,
 .section4,
-.section7 {
+.section5,
+.section6,
+.section7,
+.section8 {
   display: flex;
   justify-content: left;
   align-items: center;
   background-color: #ffa43c;
-}
-
-.section2,
-.section5,
-.section8 {
-  background-color: #527415;
-}
-
-.section3,
-.section6 {
-  background-color: #ff3c00;
 }
 
 .main {
