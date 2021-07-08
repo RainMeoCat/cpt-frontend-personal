@@ -61,7 +61,114 @@
         </div>
       </section>
       <section class="section5" id="Rule">
-        <el-empty description="現在空空的，是在哭？"></el-empty>
+        <div class="rule_container">
+          <div class="main_title">競賽辦法</div>
+          <el-collapse accordion style="border: 0px;padding-bottom:0px">
+            <el-collapse-item>
+              <template slot="title">
+                【初賽】組別說明<i class="header-icon el-icon-info"></i>
+              </template>
+              <div>
+                <span>概念組</span>
+                <br />
+                <span
+                  >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
+                >
+              </div>
+              <el-divider></el-divider>
+              <div>
+                實作組
+                <br />
+                實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
+              </div>
+            </el-collapse-item>
+            <el-collapse-item title="【初賽】交件說明與評分項目">
+              概念組請繳交提案說明書<el-link
+                type="primary"
+                href="./attach_1.pdf"
+                target="_blank"
+                >(附件一)</el-link
+              ><br />
+              實作組請繳交作品說明書<el-link
+                type="primary"
+                href="./attach_2.pdf"
+                target="_blank"
+                >(附件二)</el-link
+              >
+              <el-divider></el-divider>
+              參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+              <el-link type="primary" href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
+              >
+              <el-divider></el-divider>
+              評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+            </el-collapse-item>
+            <el-collapse-item title="【初賽】評分項目">
+              概念組
+              <div>
+                <span>作品創作理念</span>
+                <el-progress :percentage="10"></el-progress>
+              </div>
+              <div>
+                <span>提案創新性</span>
+                <el-progress :percentage="30"></el-progress>
+              </div>
+              <div>
+                <span>市場應用可行性</span>
+                <el-progress :percentage="30"></el-progress>
+              </div>
+              <div>
+                <span>預期效益</span>
+                <el-progress :percentage="20"></el-progress>
+              </div>
+              <div>
+                <span>報告完整度</span>
+                <el-progress :percentage="10"></el-progress>
+              </div>
+            </el-collapse-item>
+            <el-collapse-item title="【決賽】交件說明與評分項目">
+              概念組請繳交簡報<el-link
+                type="primary"
+                href="./attach_3.pdf"
+                target="_blank"
+                >(附件三)</el-link
+              ><br />
+              實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
+            </el-collapse-item>
+            <el-collapse-item>
+              <template slot="title">
+                獎勵辦法<i class="header-icon el-icon-info"></i>
+              </template>
+              <div>
+                <ul>
+                  <li v-for="(el, index) in award_info" :key="index">
+                    {{ el.data }}
+                  </li>
+                </ul>
+              </div>
+              <el-divider></el-divider>
+              <div>
+                <ul>
+                  <li v-for="(el, index) in idea_award" :key="index">
+                    {{ el.data }}
+                  </li>
+                </ul>
+              </div>
+            </el-collapse-item>
+            <el-collapse-item style="padding-bottom: 0px">
+              <template slot="title">
+                注意事項<i class="header-icon el-icon-info"></i>
+              </template>
+              <div>
+                <ul style="margin: 0px; padding-left: 5vmin">
+                  <li v-for="(el, index) in cpt_caution" :key="index">
+                    {{ el.data }}
+                  </li>
+                </ul>
+              </div>
+            </el-collapse-item>
+          </el-collapse>
+        </div>
       </section>
       <section class="section6" id="List">
         <el-empty description="現在空空的，是在哭？"></el-empty>
@@ -190,6 +297,57 @@ export default {
           content: '賽暨頒獎典禮',
           timestamp: '2021-10-24'
         }
+      ],
+      award_info: [
+        {
+          data: '獎品項目暫訂，主辦單位得依實際狀況更改之。'
+        },
+        {
+          data: '競賽得獎者，於推薦甄試高雄科技大學商業智慧學院各系，可列為多元表現加分項目。'
+        },
+        {
+          data: '所有參賽者，皆頒發參賽證明，可上傳作為推薦甄試能力佐證資料。'
+        }
+      ],
+      idea_award: [
+        {
+          data: '特優一名，團體獎金10,000元、每人獎狀一只'
+        },
+        {
+          data: '優等一名，團體獎金5,000元、每人獎狀一只'
+        },
+        {
+          data: '佳作五名，團體獎金2,000元、每人獎狀一只'
+        },
+        {
+          data: '特別獎數名，每人獎狀一只'
+        }
+      ],
+      cpt_caution: [
+        {
+          data: '本競賽分為「概念組」及「實作組」兩組，概念組或實作組僅能擇一參加，且須依規定繳交資料，如違反上述規定，則取消參賽資格。'
+        },
+        {
+          data: '每隊以2至4位參賽學生為限，可跨校、跨科、跨班組隊參加。需指派1人為隊長(報名系統中的聯絡人)，負責彙整全隊成員資料（著作財產權授權同意書、學生證明、法定代理人同意書、延續性作品說明書）'
+        },
+        {
+          data: '報名：採線上報名，請至https://nkust-ic.kktix.cc/events/20211024'
+        },
+        {
+          data: '比賽分為初賽與決賽，初賽為書面審查，依繳交的資料給予評分。'
+        },
+        {
+          data: '指導老師以2位為限。'
+        },
+        {
+          data: '主辦單位保有審核及同意報名參賽隊伍資格及對應主題之權利。'
+        },
+        {
+          data: '作品中不可以任何形式洩漏作者、指導老師之單位與姓名，違者取消資格。'
+        },
+        {
+          data: '決賽方式與參加人數限制將遵循衛福部公告之「特殊傳染性肺炎防疫措施」，請隨時留意網站最新消息。'
+        }
       ]
     }
   },
@@ -281,6 +439,11 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.section5 {
+  background-image: url("../assets/section2_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .main_title_container {
   text-align: left;
@@ -297,6 +460,35 @@ export default {
   font-size: 10vmin;
   font-weight: 900;
   text-align: center;
+}
+.rule_container {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  width: 93vmin;
+  text-align: left;
+}
+
+.el-collapse-item__content,
+.el-collapse-item__header {
+  padding-left: 3vmin;
+  padding-right: 3vmin;
+  padding-bottom: 3px;
+}
+.el-collapse-item__wrap {
+  padding: 0px;
+}
+
+.el-divider.el-divider--horizontal {
+  margin-top: 2vmin;
+  margin-bottom: 2vmin;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: black;
+}
+.el-collapse-item__content {
+  padding-bottom: 0px;
 }
 
 section {
