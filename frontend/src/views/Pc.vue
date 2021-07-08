@@ -14,9 +14,9 @@
         <el-col>
           <el-menu
             class="el-menu-vertical-demo"
-            default-active="1"
             text-color="#9E9E9E"
             active-text-color="#409EFF"
+            :default-active="MenuIndex"
           >
             <el-menu-item index="1" @click="Scroll('Info')" class="el-top-item">
               <template #title
@@ -130,7 +130,8 @@
 export default {
   data () {
     return {
-      HomeBtn: false
+      HomeBtn: false,
+      MenuIndex: '0'
     }
   },
   methods: {
@@ -147,7 +148,8 @@ export default {
     }
   },
   created () {
-    const self = this// 這裡的this是vue
+    console.log(toString(Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))))
+    const self = this// 這裡的this是vueco
     // 因為callback中的這個繫結沒有指向vue實例。
     // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
     window.addEventListener('scroll', function () {
@@ -156,6 +158,7 @@ export default {
       } else {
         self.HomeBtn = false
       }
+      self.MenuIndex = '' + Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))// parseInt(document.body.clientHeight / window.scrollY)
     })
   }
 }
