@@ -68,30 +68,40 @@
         </div>
       </section>
       <section class="section3" id="News">
-        <div class="main_title_container">
-          <div class="main_title">初賽徵稿至 2021-10-7日止</div>
+        <div class="news_container">
+          <div class="main_title">最新消息</div>
           <el-divider></el-divider>
-          <div>
-            概念組請繳交提案說明書<el-link
-              type="primary"
-              href="./attach_1.pdf"
-              target="_blank"
-              >(附件一)</el-link
-            ><br />
-            實作組請繳交作品說明書<el-link
-              type="primary"
-              href="./attach_2.pdf"
-              target="_blank"
-              >(附件二)</el-link
-            >
-            <el-divider></el-divider>
-            參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
-            <el-link type="primary" href="https://forms.gle/coDqU3Nu92N4dvmCA"
-              >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-            >
-            <el-divider></el-divider>
-            評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
-          </div>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-info"></i>
+                初賽徵稿至 2021-10-7日止
+              </template>
+              <div>
+                概念組請繳交提案說明書<el-link
+                  type="primary"
+                  href="./attach_1.pdf"
+                  target="_blank"
+                  >(附件一)</el-link
+                ><br />
+                實作組請繳交作品說明書<el-link
+                  type="primary"
+                  href="./attach_2.pdf"
+                  target="_blank"
+                  >(附件二)</el-link
+                >
+                <el-divider></el-divider>
+                參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+                <el-link
+                  type="primary"
+                  href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                  >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
+                >
+                <el-divider></el-divider>
+                評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+              </div>
+            </el-collapse-item>
+          </el-collapse>
         </div>
       </section>
       <section class="section4" id="Schedule">
@@ -579,6 +589,14 @@ export default {
   text-align: left;
 }
 .faq_container {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  width: 93vmin;
+  text-align: left;
+}
+.news_container {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
