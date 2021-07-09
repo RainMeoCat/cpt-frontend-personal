@@ -1,11 +1,10 @@
 <template>
   <div class="main">
-    <line-chart
+    <Pie-chart
       :chart-data="dataC"
       :options="options"
       style="max-width: 600px; margin: 150px auto"
-    ></line-chart>
-    <button @click="fillData()">Randomize</button>
+    ></Pie-chart>
     <div
       style="
         float: right;
@@ -160,10 +159,10 @@
 </template>
 
 <script lang="js">
-import LineChart from './LineChart.js'
+import PieChart from './PieChart.js'
 export default {
   components: {
-    LineChart
+    PieChart
   },
   data () {
     return {
