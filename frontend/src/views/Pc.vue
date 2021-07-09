@@ -1,5 +1,11 @@
 <template>
   <div class="main">
+    <line-chart
+      :chart-data="dataC"
+      :options="options"
+      style="max-width: 600px; margin: 150px auto"
+    ></line-chart>
+    <button @click="fillData()">Randomize</button>
     <div
       style="
         float: right;
@@ -124,7 +130,7 @@
         <div class="main_title" style="font-size: 5vmin">
           初賽徵稿至 2021-10-7日止
         </div>
-        <div style="font-size:2vmin">
+        <div style="font-size: 2vmin">
           <span
             >概念組請繳交提案說明書(附件一)；實作組請繳交作品說明書(附件二)。</span
           >
@@ -140,17 +146,7 @@
     <section class="section4" id="Schedule">
       <el-empty description="現在空空的，是在哭？"></el-empty>
     </section>
-    <section class="section5" id="Rule">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/y9K18CGEeiI"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </section>
+    <section class="section5" id="Rule"></section>
     <section class="section6" id="List">
       <el-empty description="現在空空的，是在哭？"></el-empty>
     </section>
@@ -164,11 +160,21 @@
 </template>
 
 <script lang="js">
+import LineChart from './LineChart.js'
 export default {
+  components: {
+    LineChart
+  },
   data () {
     return {
       HomeBtn: false,
-      MenuIndex: '0'
+      MenuIndex: '0',
+      dataC: {},
+      options: {
+        rotation: 0.65,
+        responsive: true,
+        maintainAspectRatio: false
+      }
     }
   },
   methods: {
@@ -182,10 +188,30 @@ export default {
           behavior: 'smooth'
         })
       }
+    },
+    fillData () {
+      this.dataC = {
+        labels: ['金字塔的亮面', '金字塔的暗面', '天空'],
+        datasets: [
+          {
+            label: 'Data One',
+            data: [100, 35, 300],
+            backgroundColor: [
+              'rgb(249, 223, 137)',
+              'rgb(219, 154, 89)',
+              'rgb(102, 204, 255)'
+            ],
+            options: this.options
+          }
+        ]
+      }
+    },
+    getRandomInt () {
+      return Math.floor(Math.random() * (50 - 5 + 1)) + 5
     }
   },
-  created () {
-    console.log(toString(Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))))
+  mounted () {
+    this.fillData()
     const self = this// 這裡的this是vueco
     // 因為callback中的這個繫結沒有指向vue實例。
     // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
@@ -263,14 +289,16 @@ export default {
   filter: grayscale(100%);
   background-repeat: no-repeat;
   position: relative;
-}.section7 {
+}
+.section7 {
   background-color: #3c599b;
   background-image: url("../assets/section7_background.jpg");
   background-size: cover;
   filter: grayscale(100%);
   background-repeat: no-repeat;
   position: relative;
-}.section8 {
+}
+.section8 {
   background-color: #3c599b;
   background-image: url("../assets/section8_background.jpg");
   background-size: cover;
