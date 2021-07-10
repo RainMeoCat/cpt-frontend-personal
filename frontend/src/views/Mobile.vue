@@ -574,6 +574,23 @@ export default {
     openUrl (url) {
       window.open(url, '_blank')
     }
+  },
+  mounted () {
+    const self = this// 這裡的this是vue
+    // 因為callback中的這個繫結沒有指向vue實例。
+    // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
+    window.addEventListener('load', function (event) {
+      self.LoadingV.close()
+      console.log('載入完成~')
+    })
+  },
+  created () {
+    this.LoadingV = this.$loading({
+      lock: true,
+      text: '一生懸命、全速全身、拚死拚活、抱著必死的決心進行載入中...',
+      spinner: 'el-icon-loading',
+      background: 'rgb(255, 255, 255)'
+    })
   }
 }
 
@@ -625,7 +642,6 @@ export default {
   align-items: center;
 }
 .section1 {
-  background-color: #3c599b;
   background-image: url("../assets/section1_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -755,7 +771,6 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin: 0px;
 }
 </style>

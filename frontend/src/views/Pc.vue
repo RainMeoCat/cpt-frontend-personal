@@ -85,32 +85,32 @@
         >
       </transition>
     </div>
-      <section class="section1" id="Index" v-show="section1T">
-        <div class="main_title_container">
-          <div class="main_title">高科盃<br />全國商業智慧競賽</div>
-          <div style="font-size: 4vmin">
-            徵稿至 2021-10-7日<br />
-            總獎金50,000元整
-          </div>
-          <el-button
-            plain
-            round
-            style="
-              margin-top: 10px;
-              width: 15vmin;
-              font-weight: 900;
-              font-size: 20px;
-              height: 5vmin;
-            "
-            class="
-              animate__animated animate__pulse animate__infinite animate__slower
-            "
-            onclick="window.open('https://www.youtube.com/watch?v=o-YBDTqX_ZU')"
-            target="_blank"
-            >立即報名</el-button
-          >
+    <section class="section1" id="Index">
+      <div class="main_title_container">
+        <div class="main_title">高科盃<br />全國商業智慧競賽</div>
+        <div style="font-size: 3vmin">
+          徵稿至 2021-10-7日<br />
+          總獎金50,000元整
         </div>
-      </section>
+        <el-button
+          plain
+          round
+          style="
+            margin-top: 10px;
+            width: 15vmin;
+            font-weight: 900;
+            font-size: 20px;
+            height: 5vmin;
+          "
+          class="
+            animate__animated animate__pulse animate__infinite animate__slower
+          "
+          onclick="window.open('https://www.youtube.com/watch?v=o-YBDTqX_ZU')"
+          target="_blank"
+          >立即報名</el-button
+        >
+      </div>
+    </section>
     <section class="section2" id="Info">
       <div class="main_title_container">
         <div class="main_title">關於競賽</div>
@@ -409,6 +409,7 @@ export default {
     return {
       HomeBtn: false,
       MenuIndex: '0',
+      LoadingV: '',
       options: {
         responsive: true,
         legend: {
@@ -553,9 +554,6 @@ export default {
           behavior: 'smooth'
         })
       }
-    },
-    getRandomInt () {
-      return Math.floor(Math.random() * (50 - 5 + 1)) + 5
     }
   },
   mounted () {
@@ -570,9 +568,18 @@ export default {
       }
       self.MenuIndex = '' + Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))// parseInt(document.body.clientHeight / window.scrollY)
     })
-    while (document.readyState === 'complete') {
-      console.log(document.readyState)
-    }
+    window.addEventListener('load', function (event) {
+      self.LoadingV.close()
+      console.log('載入完成~')
+    })
+  },
+  created () {
+    this.LoadingV = this.$loading({
+      lock: true,
+      text: '一生懸命、全速全身、拚死拚活、抱著必死的決心進行載入中...',
+      spinner: 'el-icon-loading',
+      background: 'rgb(255, 255, 255)'
+    })
   }
 }
 </script>
@@ -600,56 +607,48 @@ export default {
 }
 
 .section1 {
-  background-color: #3c599b;
   background-image: url("../assets/section1_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section2 {
-  background-color: #3c599b;
   background-image: url("../assets/section2_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section3 {
-  background-color: #3c599b;
   background-image: url("../assets/section3_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section4 {
-  background-color: #3c599b;
   background-image: url("../assets/section4_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section5 {
-  background-color: #3c599b;
   background-image: url("../assets/section5_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section6 {
-  background-color: #3c599b;
   background-image: url("../assets/section6_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section7 {
-  background-color: #3c599b;
   background-image: url("../assets/section7_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section8 {
-  background-color: #3c599b;
   background-image: url("../assets/section8_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -692,7 +691,6 @@ section {
   display: flex;
   justify-content: left;
   align-items: center;
-  background-color: #ffa43c;
 }
 .sub-item {
   font-size: 2vmin;
@@ -704,6 +702,5 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>
