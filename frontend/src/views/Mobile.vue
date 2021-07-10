@@ -587,7 +587,7 @@ export default {
   created () {
     this.LoadingV = this.$loading({
       lock: true,
-      text: '一生懸命、全速全身、拚死拚活、抱著必死的決心進行載入中...',
+      text: '載入中...',
       spinner: 'el-icon-loading',
       background: 'rgb(255, 255, 255)'
     })
