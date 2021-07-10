@@ -258,12 +258,12 @@
                 <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
                 <span
                   >國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
-                  分機：17560</span
+                  分機：17560<br></span
                 >
+                <span style="color:linear-gradient(to right, orange , yellow, green, cyan, blue, violet);width:100%;">開發團隊/網頁維護：ITALAB</span>
               </div>
             </el-collapse-item>
           </el-collapse>
-          <span> </span>
         </div>
       </section>
     </div>
@@ -436,7 +436,7 @@ export default {
           timestamp: '2021-10-21'
         },
         {
-          content: '賽暨頒獎典禮',
+          content: '決賽暨頒獎典禮',
           timestamp: '2021-10-24'
         }
       ],
@@ -492,7 +492,6 @@ export default {
         }
       ],
       options: { // chartjs設定
-        rotation: 0.65,
         responsive: true,
         plugins: { // chartjs-plugin-datalabels設定
           datalabels: {
@@ -662,21 +661,18 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: grayscale(100%);
 }
 .section7 {
   background-image: url("../assets/section7_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: grayscale(100%);
 }
 .section8 {
   background-image: url("../assets/section8_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: grayscale(100%);
 }
 
 .main_title_container {
