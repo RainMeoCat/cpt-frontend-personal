@@ -123,7 +123,7 @@
             class="
               animate__animated animate__pulse animate__infinite animate__slower
             "
-            onclick="window.open('https://www.youtube.com/watch?v=o-YBDTqX_ZU')"
+            onclick="window.open('https://nkust-ic.kktix.cc/events/20211024')"
             target="_blank"
             >立即報名</el-button
           >
