@@ -824,7 +824,7 @@ section {
   font-size: 2vmin;
 }
 .main {
-  font-family: Noto Sans SC;
+  font-family: Microsoft JhengHei;
   font-style: normal;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
