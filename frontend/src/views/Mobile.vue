@@ -123,7 +123,7 @@
           </div>
         </div>
       </section>
-      <section class="section5" id="Rule">
+      <section class="section5" id="Rule" style="overflow-y: hidden">
         <div class="rule_container">
           <div class="main_title">競賽辦法</div>
           <el-divider></el-divider>
@@ -169,26 +169,19 @@
               評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
             </el-collapse-item>
             <el-collapse-item title="【初賽】評分項目">
-              概念組
-              <div>
-                <span>作品創作理念</span>
-                <el-progress :percentage="10"></el-progress>
-              </div>
-              <div>
-                <span>提案創新性</span>
-                <el-progress :percentage="30"></el-progress>
-              </div>
-              <div>
-                <span>市場應用可行性</span>
-                <el-progress :percentage="30"></el-progress>
-              </div>
-              <div>
-                <span>預期效益</span>
-                <el-progress :percentage="20"></el-progress>
-              </div>
-              <div>
-                <span>報告完整度</span>
-                <el-progress :percentage="10"></el-progress>
+              <div style="height: 80vh; overflow-y: scroll; overflow-x: hidden">
+                <div
+                  style="text-align: center; font-size: 16px; font-weight: 900"
+                >
+                  概念組
+                </div>
+                <Pie-chart :chart-data="dataC" :options="options"></Pie-chart>
+                <div
+                  style="text-align: center; font-size: 16px; font-weight: 900"
+                >
+                  實作組
+                </div>
+                <Pie-chart :chart-data="dataI" :options="options"></Pie-chart>
               </div>
             </el-collapse-item>
             <el-collapse-item title="【決賽】交件說明與評分項目">
@@ -278,7 +271,7 @@
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="70%"
+      size="90%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
@@ -346,21 +339,72 @@
             text-color="#9E9E9E"
             active-text-color="#000000"
             mode="horizontal"
+            style="height: 13vmin"
           >
-            <el-menu-item index="1" @click="Scroll('News')" class="el-top-item">
-              <template #title
-                ><i class="el-icon-s-platform"></i
-                ><span>最新消息</span></template
+            <el-menu-item
+              index="1"
+              @click="Scroll('News')"
+              class="el-top-item"
+              style="
+                height: 13vmin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <i class="el-icon-s-platform" />
+              <span
+                style="
+                  height: 18px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  line-height: 13vmin;
+                "
+              >
+                最新消息
+              </span>
+            </el-menu-item>
+            <el-menu-item
+              index="2"
+              @click="drawer = !drawer"
+              style="
+                height: 13vmin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <i class="el-icon-menu" /><span
+                style="
+                  height: 13vmin;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  line-height: 13vmin;
+                "
+                >快速選單</span
               >
             </el-menu-item>
-            <el-menu-item index="2" @click="drawer = !drawer">
-              <template #title
-                ><i class="el-icon-menu"></i><span>快速選單</span></template
-              >
-            </el-menu-item>
-            <el-menu-item index="3" @click="Scroll('Schedule')">
-              <template #title
-                ><i class="el-icon-time"></i><span>競賽時程</span></template
+            <el-menu-item
+              index="3"
+              @click="Scroll('Schedule')"
+              style="
+                height: 13vmin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <i class="el-icon-time" /><span
+                style="
+                  height: 13vmin;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  line-height: 13vmin;
+                "
+                >競賽時程</span
               >
             </el-menu-item>
           </el-menu>
@@ -371,7 +415,11 @@
 </template>
 
 <script lang="js">
+import PieChart from './PieChart.js'
 export default {
+  components: {
+    PieChart
+  },
   data () {
     return {
       drawer: false,
@@ -442,7 +490,69 @@ export default {
         {
           data: '決賽方式與參加人數限制將遵循衛福部公告之「特殊傳染性肺炎防疫措施」，請隨時留意網站最新消息。'
         }
-      ]
+      ],
+      options: { // chartjs設定
+        rotation: 0.65,
+        responsive: true,
+        plugins: { // chartjs-plugin-datalabels設定
+          datalabels: {
+            formatter: (value, ctx) => {
+              const LEGEND_PERCENTAGE = value + '%' // 數值加'%'
+              return LEGEND_PERCENTAGE
+              // 預留程式碼區塊：可以計算所有數值轉換為百分比後的結果'
+              // let sum = 0
+              // const dataArr = ctx.chart.data.datasets[0].data
+              // dataArr.map(data => {
+              //   sum += data
+              //   return 0
+              // })
+              // const percentage = (value * 100 / sum).toFixed(2) + '%'
+            },
+            color: 'black', // labels設定字體顏色
+            align: 'end',
+            textAlign: 'center', // labels設定對齊樣式
+            font: {
+              weight: 'bold',
+              size: 12
+            },
+            offset: -6
+          }
+        }
+      },
+      dataC: {
+        labels: ['作品創作理念', '提案創新性', '市場應用可行性', '預期效益', '報告完整度'],
+        datasets: [
+          {
+            data: [10, 30, 30, 20, 10],
+            backgroundColor: [
+              'rgb(66, 129, 164)',
+              'rgb(72, 169, 166)',
+              'rgb(228, 223, 218)',
+              'rgb(212, 180, 131)',
+              'rgb(193, 102, 107)'
+            ],
+            borderColor: '#000',
+            options: this.options
+          }
+        ]
+      },
+      dataI: {
+        labels: ['作品創作理念', '作品功能', '市場應用可行性', '成本分析', '實用價值/商業價值'],
+        datasets: [
+          {
+            data: [30, 20, 20, 20, 10],
+            backgroundColor: [
+              'rgb(21, 96, 100)',
+              'rgb(0, 196, 154)',
+              'rgb(248, 225, 108)',
+              'rgb(255, 194, 180)',
+              'rgb(251, 143, 103)'
+            ],
+            borderColor: '#000',
+            options: this.options
+          }
+        ]
+      }
     }
   },
   methods: {
@@ -509,7 +619,12 @@ export default {
   padding-left: 10px;
   padding-right: 10px;
 }
-
+.el-menu-item {
+  height: 13vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section1 {
   background-color: #3c599b;
   background-image: url("../assets/section1_background.jpg");
@@ -628,33 +743,13 @@ export default {
 
 section {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.el-drawer__body {
   display: block;
-}
-
-.section1,
-.section4,
-.section7 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffa43c;
-}
-
-.section2,
-.section5,
-.section8 {
-  background-color: #527415;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section3,
-.section6 {
-  background-color: #ff3c00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main {
