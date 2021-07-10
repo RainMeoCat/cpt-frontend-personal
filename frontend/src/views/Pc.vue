@@ -6,11 +6,10 @@
         z-index: 999;
         position: fixed;
         right: 1vmin;
-        height: 100vh;
         padding-top: 25vmin;
       "
     >
-      <el-row :span="10" style="margin-right: 10px; height: 100vh">
+      <el-row :span="10" style="margin-right: 10px">
         <el-col>
           <el-menu
             class="el-menu-vertical-demo"
@@ -592,6 +591,7 @@ export default {
 
 .el-menu-item {
   text-align: left;
+  height:55px
 }
 
 .el-top-item {
