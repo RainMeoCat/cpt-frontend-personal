@@ -657,37 +657,46 @@ export default {
         self.HomeBtn = false
       }
       self.MenuIndex = '' + Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))// parseInt(document.body.clientHeight / window.scrollY)
-      if (!self.S8t) {
-        console.log(Math.round(window.scrollY / parseInt(document.body.clientHeight / 8)))
-        switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
-          case (1): {
-            self.S2t = true
-            break
-          }
-          case (2): {
-            self.S3t = true
-            break
-          }
-          case (3): {
-            self.S4t = true
-            break
-          }
-          case (4): {
-            self.S5t = true
-            break
-          }
-          case (5): {
-            self.S6t = true
-            break
-          }
-          case (6): {
-            self.S7t = true
-            break
-          }
-          case (7): {
-            self.S8t = true
-            break
-          }
+      switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
+        case (0): {
+          self.S2t = true
+          self.$router.push('')
+          break
+        }
+        case (1): {
+          self.S2t = true
+          self.$router.push('#Info')
+          break
+        }
+        case (2): {
+          self.S3t = true
+          self.$router.push('#News')
+          break
+        }
+        case (3): {
+          self.S4t = true
+          self.$router.push('#Schedule')
+          break
+        }
+        case (4): {
+          self.S5t = true
+          self.$router.push('#Rules')
+          break
+        }
+        case (5): {
+          self.S6t = true
+          self.$router.push('#List')
+          break
+        }
+        case (6): {
+          self.S7t = true
+          self.$router.push('#Works')
+          break
+        }
+        case (7): {
+          self.S8t = true
+          self.$router.push('#Faq')
+          break
         }
       }
     })
