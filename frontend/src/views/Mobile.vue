@@ -271,7 +271,7 @@
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="90%"
+      size="80%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
