@@ -118,7 +118,9 @@
               width: 15vmin;
               font-weight: 900;
               font-size: 20px;
-              height: 5vmin;
+              height: 47px;
+              text-align:
+              font-family: Microsoft JhengHei
             "
             class="
               animate__animated animate__pulse animate__infinite animate__slower
