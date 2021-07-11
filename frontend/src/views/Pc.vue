@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
     <div
       style="
         float: right;
@@ -9,6 +10,7 @@
         padding-top: 25vmin;
       "
     >
+    <!-- 側邊懸浮選單 -->
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInUp"
@@ -74,6 +76,7 @@
           </el-col>
         </el-row>
       </transition>
+      <!-- 回到頂端按鈕 -->
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInUp"
@@ -97,6 +100,7 @@
         >
       </transition>
     </div>
+
     <section class="section1" id="Index">
       <transition
         name="custom-classes-transition"
@@ -487,26 +491,26 @@ export default {
   },
   data () {
     return {
-      HomeBtn: false,
-      MenuIndex: '0',
-      LoadingV: '',
-      MenuT: false,
-      S1t: false,
-      S2t: false,
-      S3t: false,
-      S4t: false,
-      S5t: false,
-      S6t: false,
-      S7t: false,
-      S8t: false,
-      options: {
+      HomeBtn: false, // 回到首頁按鈕
+      MenuIndex: '0', // 側邊懸浮選單高亮Index(滾動綁定)
+      LoadingV: '', // 載入動畫，預先在這裡宣告，以供在不同的實例下取得這個參數
+      MenuT: false, // 側邊懸浮選單進入動畫
+      S1t: false, // 滾動進入動畫：section1(index 首頁)
+      S2t: false, // 滾動進入動畫：section2(Info 關於競賽)
+      S3t: false, // 滾動進入動畫：section3(News 最新消息)
+      S4t: false, // 滾動進入動畫：section4(Schedule 競賽時程)
+      S5t: false, // 滾動進入動畫：section5(Rule 競賽辦法)
+      S6t: false, // 滾動進入動畫：section6(List 名單公布)
+      S7t: false, // 滾動進入動畫：section7(Works 歷屆作品)
+      S8t: false, // 滾動進入動畫：section8(Faq)
+      options: { // 圓餅圖選項
         responsive: true,
         legend: {
           display: false
         },
         plugins: { // chartjs-plugin-datalabels設定
           datalabels: {
-            formatter: (value, ctx) => {
+            formatter: (value, ctx) => { // 圓餅圖上的標籤格式化
               const LEGEND_PERCENTAGE = ctx.chart.data.labels[ctx.dataIndex] + '\n' + value + '%' // 數值加'%'
               return LEGEND_PERCENTAGE
               // 預留程式碼區塊：可以計算所有數值轉換為百分比後的結果'
@@ -529,7 +533,7 @@ export default {
           }
         }
       },
-      activities: [
+      activities: [ // 競賽時程
         {
           content: '報名、初賽繳件截止日',
           timestamp: '2021-10-07'
@@ -545,7 +549,7 @@ export default {
           timestamp: '2021-10-24'
         }
       ],
-      dataC: {
+      dataC: { // 競賽辦法.評分項目.概念組
         labels: ['作品創作理念', '提案創新性', '市場應用可行性', '報告完整度', '預期效益'],
         datasets: [
           {
@@ -562,7 +566,7 @@ export default {
           }
         ]
       },
-      dataI: {
+      dataI: { // 競賽辦法.評分項目.實作組
         labels: ['作品創作理念', '作品功能', '市場應用可行性', '成本分析', '實用價值/商業價值'],
         datasets: [
           {
@@ -579,7 +583,7 @@ export default {
           }
         ]
       },
-      cpt_caution: [
+      cpt_caution: [ // 競賽辦法.注意事項
         {
           data: '本競賽分為「概念組」及「實作組」兩組，概念組或實作組僅能擇一參加，且須依規定繳交資料，如違反上述規定，則取消參賽資格。'
         },
@@ -605,7 +609,7 @@ export default {
           data: '決賽方式與參加人數限制將遵循衛福部公告之「特殊傳染性肺炎防疫措施」，請隨時留意網站最新消息。'
         }
       ],
-      award_info: [
+      award_info: [ // 競賽辦法.獎勵辦法
         {
           data: '獎品項目暫訂，主辦單位得依實際狀況更改之。'
         },
@@ -616,7 +620,7 @@ export default {
           data: '所有參賽者，皆頒發參賽證明，可上傳作為推薦甄試能力佐證資料。'
         }
       ],
-      idea_award: [
+      idea_award: [ // 競賽辦法.獎勵辦法
         {
           data: '特優一名，團體獎金10,000元、每人獎狀一只'
         },
@@ -633,83 +637,84 @@ export default {
     }
   },
   methods: {
-    show () {
-      this.HomeBtn = !this.HomeBtn
-    },
     Scroll (section) {
-      const el = document.getElementById(section)
-      if (el) {
-        el.scrollIntoView({
+      // 由側邊懸浮選單觸發，傳入section的id，以此宣告常數EL
+      // 並呼叫document的method:scrollIntoView捲動卷軸直到該元素可見。
+      const EL = document.getElementById(section)
+      if (EL) {
+        EL.scrollIntoView({
           behavior: 'smooth'
         })
       }
     }
   },
   mounted () {
-    const self = this// 這裡的this是vue
+    const SELF = this
+    // 這裡的this是vue
     // 因為callback中的這個繫結沒有指向vue實例。
-    // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
+    // 為解決這個問題，在建立的hook中定義一個變數var SELF = this，指向vue實例，在callback中使用SELF引用資料屬性。
     window.addEventListener('scroll', function () {
-      self.s2t = true
+      SELF.s2t = true
       if (window.scrollY > 800) {
-        self.HomeBtn = true
+        SELF.HomeBtn = true
       } else {
-        self.HomeBtn = false
+        SELF.HomeBtn = false
       }
-      self.MenuIndex = '' + Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))// parseInt(document.body.clientHeight / window.scrollY)
+      // 滾動監聽，這裡處理回到頂端，當滾動量大於800時讓HomeBtn出現
+      SELF.MenuIndex = '' + Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))// parseInt(document.body.clientHeight / window.scrollY)
+      // 滾動監聽，這裡處理側邊懸浮選單的高亮Index，計算現在滾到哪一個section，綁定到MenuIndex。
       switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
         case (0): {
-          self.S2t = true
-          self.$router.push('')
+          SELF.S2t = true
+          SELF.$router.push('')
           break
         }
         case (1): {
-          self.S2t = true
-          self.$router.push('#Info')
+          SELF.S2t = true
+          SELF.$router.push('#Info')
           break
         }
         case (2): {
-          self.S3t = true
-          self.$router.push('#News')
+          SELF.S3t = true
+          SELF.$router.push('#News')
           break
         }
         case (3): {
-          self.S4t = true
-          self.$router.push('#Schedule')
+          SELF.S4t = true
+          SELF.$router.push('#Schedule')
           break
         }
         case (4): {
-          self.S5t = true
-          self.$router.push('#Rules')
+          SELF.S5t = true
+          SELF.$router.push('#Rules')
           break
         }
         case (5): {
-          self.S6t = true
-          self.$router.push('#List')
+          SELF.S6t = true
+          SELF.$router.push('#List')
           break
         }
         case (6): {
-          self.S7t = true
-          self.$router.push('#Works')
+          SELF.S7t = true
+          SELF.$router.push('#Works')
           break
         }
         case (7): {
-          self.S8t = true
-          self.$router.push('#Faq')
+          SELF.S8t = true
+          SELF.$router.push('#Faq')
           break
         }
+        // 滾動監聽，這裡處理進入動畫和網址的更新，計算現在滾到哪一個section，逐一讓一個個section出現，同時推入section的id到網址。
       }
     })
     window.addEventListener('load', function (event) {
-      self.LoadingV.close()
-      console.log('載入完成~')
+      SELF.LoadingV.close()
       setTimeout(() => {
-        self.MenuT = true
-        self.$nextTick(function () {
-          self.S1t = true
-        })
+        SELF.MenuT = true
+        SELF.S1t = true
       }, 500)
     })
+    // 頁面載入監聽，除了使全屏載入畫面關閉，也呼叫位在第一個Section的動畫出現。
   },
   created () {
     this.LoadingV = this.$loading({
@@ -718,6 +723,7 @@ export default {
       spinner: 'el-icon-loading',
       background: 'rgb(255, 255, 255)'
     })
+    // 在Vue生命週期:created階段建立一個element ui Loading實例，並在Mounted階段將關閉的呼叫加入頁面載入完成的監聽器。
   }
 }
 </script>

@@ -258,9 +258,23 @@
                 <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
                 <span
                   >國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
-                  分機：17560<br></span
+                  分機：17560<br
+                /></span>
+                <span
+                  style="
+                    color: linear-gradient(
+                      to right,
+                      orange,
+                      yellow,
+                      green,
+                      cyan,
+                      blue,
+                      violet
+                    );
+                    width: 100%;
+                  "
+                  >開發團隊/網頁維護：ITALAB</span
                 >
-                <span style="color:linear-gradient(to right, orange , yellow, green, cyan, blue, violet);width:100%;">開發團隊/網頁維護：ITALAB</span>
               </div>
             </el-collapse-item>
           </el-collapse>
@@ -422,9 +436,9 @@ export default {
   },
   data () {
     return {
-      drawer: false,
-      LastClick: '',
-      activities: [
+      drawer: false, // 快速選單
+      LastClick: '', // 快速選單捲動動作用，記錄選單關閉前所點擊的選項
+      activities: [ // 競賽時程
         {
           content: '報名、初賽繳件截止日',
           timestamp: '2021-10-07'
@@ -440,7 +454,7 @@ export default {
           timestamp: '2021-10-24'
         }
       ],
-      award_info: [
+      award_info: [ // 競賽辦法.獎勵辦法
         {
           data: '獎品項目暫訂，主辦單位得依實際狀況更改之。'
         },
@@ -451,7 +465,7 @@ export default {
           data: '所有參賽者，皆頒發參賽證明，可上傳作為推薦甄試能力佐證資料。'
         }
       ],
-      idea_award: [
+      idea_award: [ // 競賽辦法.獎勵辦法
         {
           data: '特優一名，團體獎金10,000元、每人獎狀一只'
         },
@@ -465,7 +479,7 @@ export default {
           data: '特別獎數名，每人獎狀一只'
         }
       ],
-      cpt_caution: [
+      cpt_caution: [ // 競賽辦法.注意事項
         {
           data: '本競賽分為「概念組」及「實作組」兩組，概念組或實作組僅能擇一參加，且須依規定繳交資料，如違反上述規定，則取消參賽資格。'
         },
@@ -518,7 +532,7 @@ export default {
           }
         }
       },
-      dataC: {
+      dataC: { // 競賽辦法.評分項目.概念組
         labels: ['作品創作理念', '提案創新性', '市場應用可行性', '預期效益', '報告完整度'],
         datasets: [
           {
@@ -535,7 +549,7 @@ export default {
           }
         ]
       },
-      dataI: {
+      dataI: { // 競賽辦法.評分項目.實作組
         labels: ['作品創作理念', '作品功能', '市場應用可行性', '成本分析', '實用價值/商業價值'],
         datasets: [
           {
@@ -559,17 +573,22 @@ export default {
       this.LastClick = section
       this.drawer = false
     },
+    // 因為Vue在同時渲染的處理方式，兩次渲染一次只能渲染出一個，所以把兩個渲染步驟拆分開來
+    // 由快速選單內的點擊觸發，傳入點擊的section id，使用LastClick記錄下來，接著呼叫快速選單關閉(drawer)，這是第一次渲染
+    // 在快速選單(drawer)關閉之後能夠觸發element ui 抽屜組件的DrawerClosed event，此時就可以用剛剛記錄下來的section id(LastClick)去呼叫document的method:scrollIntoView捲動卷軸直到該元素可見。
     Scroll (section) {
-      const el = document.getElementById(section)
-      if (el) {
-        el.scrollIntoView({
+      // 傳入section的id，以此宣告常數EL
+      // 並呼叫document的method:scrollIntoView捲動卷軸直到該元素可見。
+      const EL = document.getElementById(section)
+      if (EL) {
+        EL.scrollIntoView({
           behavior: 'smooth'
         })
       }
-      console.log('scroll complete')
     },
     DrawerClosed () {
       this.Scroll(this.LastClick)
+      // 在快速選單(drawer)關閉之後能夠觸發element ui 抽屜組件的DrawerClosed event，此時就可以用剛剛記錄下來的section id(LastClick)去呼叫document的method:scrollIntoView捲動卷軸直到該元素可見。
     },
     openUrl (url) {
       window.open(url, '_blank')
@@ -579,10 +598,47 @@ export default {
     const self = this// 這裡的this是vue
     // 因為callback中的這個繫結沒有指向vue實例。
     // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
+    window.addEventListener('scroll', function () {
+      switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
+        case (0): {
+          self.$router.push('')
+          break
+        }
+        case (1): {
+          self.$router.push('#Info')
+          break
+        }
+        case (2): {
+          self.$router.push('#News')
+          break
+        }
+        case (3): {
+          self.$router.push('#Schedule')
+          break
+        }
+        case (4): {
+          self.$router.push('#Rules')
+          break
+        }
+        case (5): {
+          self.$router.push('#List')
+          break
+        }
+        case (6): {
+          self.$router.push('#Works')
+          break
+        }
+        case (7): {
+          self.$router.push('#Faq')
+          break
+        }
+      }
+      // 滾動監聽，這裡處理網址的更新，計算現在滾到哪一個section，推入section的id到網址。
+    })
     window.addEventListener('load', function (event) {
       self.LoadingV.close()
-      console.log('載入完成~')
     })
+    // 頁面載入監聽，使全屏載入畫面關閉。
   },
   created () {
     this.LoadingV = this.$loading({
@@ -591,6 +647,7 @@ export default {
       spinner: 'el-icon-loading',
       background: 'rgb(255, 255, 255)'
     })
+    // 在Vue生命週期:created階段建立一個element ui Loading實例，並在Mounted階段將關閉的呼叫加入頁面載入完成的監聽器。
   }
 }
 
