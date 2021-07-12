@@ -10,7 +10,7 @@
         padding-top: 25vmin;
       "
     >
-    <!-- 側邊懸浮選單 -->
+      <!-- 側邊懸浮選單 -->
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInUp"
@@ -111,7 +111,7 @@
         <div class="main_title_container" v-show="S1t">
           <div class="main_title">高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 3vmin">
-            徵稿至 2021-10-7日<br />
+            徵稿至 2021-10-7 （四）<br />
             總獎金50,000元整
           </div>
           <el-button
@@ -259,21 +259,26 @@
         </div></transition
       >
     </section>
-    <section class="section5" id="Rule" style="overflow-y: hidden">
+    <section class="section5" id="Rule" style="overflow-y: scroll">
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S5t">
+        <div class="main_title_container" v-show="S5t" style="width: 70vw">
           <div class="main_title">競賽辦法</div>
           <el-divider></el-divider>
           <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+            <el-collapse-item title="參賽對象"
+              ><div class="sub-item">
+                全國高中職在學生，不拘科系皆可參加！
+              </div></el-collapse-item
+            >
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-info"></i>
-                【初賽】組別說明
+                組別說明
               </template>
               <div class="sub-item">
                 <div>
@@ -291,7 +296,7 @@
                 </div>
               </div></el-collapse-item
             >
-            <el-collapse-item title="【初賽】交件說明與評分項目"
+            <el-collapse-item title="【初賽】交件說明"
               ><div class="sub-item">
                 概念組請繳交提案說明書<el-link
                   type="primary"
@@ -320,13 +325,13 @@
               ><div class="sub-item">
                 <el-row
                   style="overflow-y: scroll; overflow-x: hidden"
-                  :gutter="40"
+                  :gutter="60"
                 >
                   <el-col :span="12">
                     <div
                       style="
                         text-align: center;
-                        font-size: 16px;
+                        font-size: 3vmin;
                         font-weight: 900;
                       "
                     >
@@ -341,7 +346,7 @@
                     <div
                       style="
                         text-align: center;
-                        font-size: 16px;
+                        font-size: 3vmin;
                         font-weight: 900;
                       "
                     >
@@ -354,7 +359,7 @@
                   </el-col>
                 </el-row></div
             ></el-collapse-item>
-            <el-collapse-item title="【決賽】交件說明與評分項目"
+            <el-collapse-item title="【決賽】交件說明"
               ><div class="sub-item">
                 概念組請繳交簡報<el-link
                   type="primary"
@@ -365,6 +370,44 @@
                 實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
               </div></el-collapse-item
             >
+            <el-collapse-item title="【決賽】評分項目"
+              ><div class="sub-item">
+                <el-row
+                  style="overflow-y: scroll; overflow-x: hidden"
+                  :gutter="60"
+                >
+                  <el-col :span="12">
+                    <div
+                      style="
+                        text-align: center;
+                        font-size: 3vmin;
+                        font-weight: 900;
+                      "
+                    >
+                      概念組
+                    </div>
+                    <Pie-chart
+                      :chart-data="dataC2"
+                      :options="options"
+                    ></Pie-chart>
+                  </el-col>
+                  <el-col :span="12">
+                    <div
+                      style="
+                        text-align: center;
+                        font-size: 3vmin;
+                        font-weight: 900;
+                      "
+                    >
+                      實作組
+                    </div>
+                    <Pie-chart
+                      :chart-data="dataI2"
+                      :options="options"
+                    ></Pie-chart>
+                  </el-col>
+                </el-row></div
+            ></el-collapse-item>
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-star-on"></i>
@@ -391,17 +434,19 @@
             <el-collapse-item style="padding-bottom: 0px">
               <template slot="title"
                 ><i class="header-icon el-icon-warning"></i>
-                注意事項(共八點)
+                注意事項（共十二點）
               </template>
-              <div class="sub-item">
-                <div>
-                  <ol style="margin: 0px; padding-left: 0vmin">
-                    <li v-for="(el, index) in cpt_caution" :key="index">
-                      {{ el.data }}
-                    </li>
-                  </ol>
+              <el-scrollbar style="height: 60vmin" tag="ul">
+                <div class="sub-item">
+                  <div>
+                    <ol style="margin: 0px; padding-left: 0vmin">
+                      <li v-for="(el, index) in cpt_caution" :key="index">
+                        {{ el.data }}
+                      </li>
+                    </ol>
+                  </div>
                 </div>
-              </div></el-collapse-item
+              </el-scrollbar></el-collapse-item
             >
           </el-collapse>
         </div></transition
@@ -549,7 +594,7 @@ export default {
           timestamp: '2021-10-24'
         }
       ],
-      dataC: { // 競賽辦法.評分項目.概念組
+      dataC: { // 競賽辦法.初賽評分項目.概念組
         labels: ['作品創作理念', '提案創新性', '市場應用可行性', '報告完整度', '預期效益'],
         datasets: [
           {
@@ -566,8 +611,42 @@ export default {
           }
         ]
       },
-      dataI: { // 競賽辦法.評分項目.實作組
+      dataI: { // 競賽辦法.初賽評分項目.實作組
         labels: ['作品創作理念', '作品功能', '市場應用可行性', '成本分析', '實用價值/商業價值'],
+        datasets: [
+          {
+            data: [30, 20, 20, 20, 10],
+            backgroundColor: [
+              'rgb(21, 96, 100)',
+              'rgb(0, 196, 154)',
+              'rgb(248, 225, 108)',
+              'rgb(255, 194, 180)',
+              'rgb(251, 143, 103)'
+            ],
+            borderColor: '#000',
+            options: this.options
+          }
+        ]
+      },
+      dataC2: { // 競賽辦法.決賽評分項目.概念組
+        labels: ['簡報內容', '現場表達能力', '問題回覆', '簡報技巧', '時間控制'],
+        datasets: [
+          {
+            data: [50, 20, 10, 10, 10],
+            backgroundColor: [
+              'rgb(66, 129, 164)',
+              'rgb(72, 169, 166)',
+              'rgb(228, 223, 218)',
+              'rgb(212, 180, 131)',
+              'rgb(193, 102, 107)'
+            ],
+            borderColor: '#000',
+            options: this.options
+          }
+        ]
+      },
+      dataI2: { // 競賽辦法.決賽評分項目.實作組
+        labels: ['創新想法', '作品穩定性', '作品實用性', '表達能力', '作品完整度'],
         datasets: [
           {
             data: [30, 20, 20, 20, 10],
@@ -607,6 +686,18 @@ export default {
         },
         {
           data: '決賽方式與參加人數限制將遵循衛福部公告之「特殊傳染性肺炎防疫措施」，請隨時留意網站最新消息。'
+        },
+        {
+          data: '主辦單位保有隨時修改及終止本活動之權利，如有任何變更內容或詳細注意事項將以 email 通知，請留意訊息。'
+        },
+        {
+          data: '參賽作品非真正參賽人員不得列入，作品內文應由學生自行製作，指導老師只能以指導者之身分督導學生，不能代為製作，違者取消參賽資格。'
+        },
+        {
+          data: '參賽者繳交之電子資料，均不予退回，應自行備份，徵稿收件截止後，不得對文件進行調整或置換。'
+        },
+        {
+          data: '參賽者寄送之電子資料於徵稿收件截止後，經主辦單位確認該隊確實完成所有上傳事宜，將以電子郵件通知隊長。若完成上述動作後，逾三天仍未收到相關電子郵件通知，請來電詢問。'
         }
       ],
       award_info: [ // 競賽辦法.獎勵辦法
@@ -823,6 +914,20 @@ export default {
 section {
   height: 100vh;
   display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a6a6a6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
 }
 
 .section1,
