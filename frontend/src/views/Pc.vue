@@ -246,7 +246,7 @@
           <div style="padding-top: 3vmin">
             <el-timeline style="padding-left: 15vmin">
               <el-timeline-item
-                v-for="(activity, index) in activities"
+                v-for="(activity, index) in this.$Global_data.Activities"
                 :key="index"
                 :timestamp="activity.timestamp"
               >
@@ -338,7 +338,7 @@
                       概念組
                     </div>
                     <Pie-chart
-                      :chart-data="dataC"
+                      :chart-data="this.$Global_data.DataC"
                       :options="options"
                     ></Pie-chart>
                   </el-col>
@@ -353,7 +353,7 @@
                       實作組
                     </div>
                     <Pie-chart
-                      :chart-data="dataI"
+                      :chart-data="this.$Global_data.DataI"
                       :options="options"
                     ></Pie-chart>
                   </el-col>
@@ -368,20 +368,6 @@
                   >(附件三)</el-link
                 ><br />
                 實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【決賽】比賽規定"
-              ><div class="sub-item">
-                概念組<br />
-                評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                <el-divider></el-divider>
-                實作組<br />
-                各隊展示、解說作品(展場規定請參照<el-link
-                  type="primary"
-                  href="./attach_4.pdf"
-                  target="_blank"
-                  >(附件四)</el-link
-                >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
               </div></el-collapse-item
             >
             <el-collapse-item title="【決賽】評分項目"
@@ -401,7 +387,7 @@
                       概念組
                     </div>
                     <Pie-chart
-                      :chart-data="dataC2"
+                      :chart-data="this.$Global_data.DataC2"
                       :options="options"
                     ></Pie-chart>
                   </el-col>
@@ -416,7 +402,7 @@
                       實作組
                     </div>
                     <Pie-chart
-                      :chart-data="dataI2"
+                      :chart-data="this.$Global_data.DataI2"
                       :options="options"
                     ></Pie-chart>
                   </el-col>
@@ -430,7 +416,7 @@
               <div class="sub-item">
                 <div>
                   <ol>
-                    <li v-for="(el, index) in award_info" :key="index">
+                    <li v-for="(el, index) in this.$Global_data.AwardInfo" :key="index">
                       {{ el.data }}
                     </li>
                   </ol>
@@ -438,7 +424,7 @@
                 <el-divider></el-divider>
                 <div>
                   <ul>
-                    <li v-for="(el, index) in idea_award" :key="index">
+                    <li v-for="(el, index) in this.$Global_data.IdeaAward" :key="index">
                       {{ el.data }}
                     </li>
                   </ul>
@@ -450,11 +436,11 @@
                 ><i class="header-icon el-icon-warning"></i>
                 注意事項（共十二點）
               </template>
-              <el-scrollbar style="height: 15vmin" tag="ul">
+              <el-scrollbar style="height: 60vmin" tag="ul">
                 <div class="sub-item">
                   <div>
                     <ol style="margin: 0px; padding-left: 0vmin">
-                      <li v-for="(el, index) in cpt_caution" :key="index">
+                      <li v-for="(el, index) in this.$Global_data.CptCaution" :key="index">
                         {{ el.data }}
                       </li>
                     </ol>
@@ -535,18 +521,6 @@
                 </div>
               </div>
             </el-collapse-item>
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
-                簡章全文
-              </template>
-              <el-link
-                  type="primary"
-                  href="./cpt_guide.pdf"
-                  target="_blank"
-                  >點擊下載簡章全文</el-link
-                ><br />
-            </el-collapse-item>
           </el-collapse>
         </div>
       </transition>
@@ -603,154 +577,7 @@ export default {
             offset: -72
           }
         }
-      },
-      activities: [ // 競賽時程
-        {
-          content: '報名、初賽繳件截止日',
-          timestamp: '2021-10-07'
-        }, {
-          content: '公布晉級決賽名單',
-          timestamp: '2021-10-14'
-        }, {
-          content: '決賽繳件截止日',
-          timestamp: '2021-10-21'
-        },
-        {
-          content: '決賽暨頒獎典禮',
-          timestamp: '2021-10-24'
-        }
-      ],
-      dataC: { // 競賽辦法.初賽評分項目.概念組
-        labels: ['作品創作理念', '提案創新性', '市場應用可行性', '報告完整度', '預期效益'],
-        datasets: [
-          {
-            data: [10, 30, 30, 10, 20],
-            backgroundColor: [
-              'rgb(66, 129, 164)',
-              'rgb(72, 169, 166)',
-              'rgb(228, 223, 218)',
-              'rgb(212, 180, 131)',
-              'rgb(193, 102, 107)'
-            ],
-            borderColor: '#000',
-            options: this.options
-          }
-        ]
-      },
-      dataI: { // 競賽辦法.初賽評分項目.實作組
-        labels: ['作品創作理念', '作品功能', '市場應用可行性', '成本分析', '實用價值/商業價值'],
-        datasets: [
-          {
-            data: [30, 20, 20, 20, 10],
-            backgroundColor: [
-              'rgb(21, 96, 100)',
-              'rgb(0, 196, 154)',
-              'rgb(248, 225, 108)',
-              'rgb(255, 194, 180)',
-              'rgb(251, 143, 103)'
-            ],
-            borderColor: '#000',
-            options: this.options
-          }
-        ]
-      },
-      dataC2: { // 競賽辦法.決賽評分項目.概念組
-        labels: ['簡報內容', '現場表達能力', '問題回覆', '簡報技巧', '時間控制'],
-        datasets: [
-          {
-            data: [50, 20, 10, 10, 10],
-            backgroundColor: [
-              'rgb(66, 129, 164)',
-              'rgb(72, 169, 166)',
-              'rgb(228, 223, 218)',
-              'rgb(212, 180, 131)',
-              'rgb(193, 102, 107)'
-            ],
-            borderColor: '#000',
-            options: this.options
-          }
-        ]
-      },
-      dataI2: { // 競賽辦法.決賽評分項目.實作組
-        labels: ['創新想法', '作品穩定性', '作品實用性', '表達能力', '作品完整度'],
-        datasets: [
-          {
-            data: [30, 20, 20, 20, 10],
-            backgroundColor: [
-              'rgb(21, 96, 100)',
-              'rgb(0, 196, 154)',
-              'rgb(248, 225, 108)',
-              'rgb(255, 194, 180)',
-              'rgb(251, 143, 103)'
-            ],
-            borderColor: '#000',
-            options: this.options
-          }
-        ]
-      },
-      cpt_caution: [ // 競賽辦法.注意事項
-        {
-          data: '本競賽分為「概念組」及「實作組」兩組，概念組或實作組僅能擇一參加，且須依規定繳交資料，如違反上述規定，則取消參賽資格。'
-        },
-        {
-          data: '每隊以2至4位參賽學生為限，可跨校、跨科、跨班組隊參加。需指派1人為隊長(報名系統中的聯絡人)，負責彙整全隊成員資料（著作財產權授權同意書、學生證明、法定代理人同意書、延續性作品說明書）'
-        },
-        {
-          data: '報名：採線上報名，請至https://nkust-ic.kktix.cc/events/20211024'
-        },
-        {
-          data: '比賽分為初賽與決賽，初賽為書面審查，依繳交的資料給予評分。'
-        },
-        {
-          data: '指導老師以2位為限。'
-        },
-        {
-          data: '主辦單位保有審核及同意報名參賽隊伍資格及對應主題之權利。'
-        },
-        {
-          data: '作品中不可以任何形式洩漏作者、指導老師之單位與姓名，違者取消資格。'
-        },
-        {
-          data: '決賽方式與參加人數限制將遵循衛福部公告之「特殊傳染性肺炎防疫措施」，請隨時留意網站最新消息。'
-        },
-        {
-          data: '主辦單位保有隨時修改及終止本活動之權利，如有任何變更內容或詳細注意事項將以 email 通知，請留意訊息。'
-        },
-        {
-          data: '參賽作品非真正參賽人員不得列入，作品內文應由學生自行製作，指導老師只能以指導者之身分督導學生，不能代為製作，違者取消參賽資格。'
-        },
-        {
-          data: '參賽者繳交之電子資料，均不予退回，應自行備份，徵稿收件截止後，不得對文件進行調整或置換。'
-        },
-        {
-          data: '參賽者寄送之電子資料於徵稿收件截止後，經主辦單位確認該隊確實完成所有上傳事宜，將以電子郵件通知隊長。若完成上述動作後，逾三天仍未收到相關電子郵件通知，請來電詢問。'
-        }
-      ],
-      award_info: [ // 競賽辦法.獎勵辦法
-        {
-          data: '獎品項目暫訂，主辦單位得依實際狀況更改之。'
-        },
-        {
-          data: '競賽得獎者，於推薦甄試高雄科技大學商業智慧學院各系，可列為多元表現加分項目。'
-        },
-        {
-          data: '所有參賽者，皆頒發參賽證明，可上傳作為推薦甄試能力佐證資料。'
-        }
-      ],
-      idea_award: [ // 競賽辦法.獎勵辦法
-        {
-          data: '特優一名，團體獎金10,000元、每人獎狀一只'
-        },
-        {
-          data: '優等一名，團體獎金5,000元、每人獎狀一只'
-        },
-        {
-          data: '佳作五名，團體獎金2,000元、每人獎狀一只'
-        },
-        {
-          data: '特別獎數名，每人獎狀一只'
-        }
-      ]
+      }
     }
   },
   methods: {
@@ -783,42 +610,42 @@ export default {
       switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
         case (0): {
           SELF.S2t = true
-          SELF.$router.push('')
+          SELF.$router.push('').catch(() => {})
           break
         }
         case (1): {
           SELF.S2t = true
-          SELF.$router.push('#Info')
+          SELF.$router.push('#Info').catch(() => {})
           break
         }
         case (2): {
           SELF.S3t = true
-          SELF.$router.push('#News')
+          SELF.$router.push('#News').catch(() => {})
           break
         }
         case (3): {
           SELF.S4t = true
-          SELF.$router.push('#Schedule')
+          SELF.$router.push('#Schedule').catch(() => {})
           break
         }
         case (4): {
           SELF.S5t = true
-          SELF.$router.push('#Rules')
+          SELF.$router.push('#Rules').catch(() => {})
           break
         }
         case (5): {
           SELF.S6t = true
-          SELF.$router.push('#List')
+          SELF.$router.push('#List').catch(() => {})
           break
         }
         case (6): {
           SELF.S7t = true
-          SELF.$router.push('#Works')
+          SELF.$router.push('#Works').catch(() => {})
           break
         }
         case (7): {
           SELF.S8t = true
-          SELF.$router.push('#Faq')
+          SELF.$router.push('#Faq').catch(() => {})
           break
         }
         // 滾動監聽，這裡處理進入動畫和網址的更新，計算現在滾到哪一個section，逐一讓一個個section出現，同時推入section的id到網址。
