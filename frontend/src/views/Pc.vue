@@ -370,6 +370,20 @@
                 實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
               </div></el-collapse-item
             >
+            <el-collapse-item title="【決賽】比賽規定"
+              ><div class="sub-item">
+                概念組<br />
+                評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
+                <el-divider></el-divider>
+                實作組<br />
+                各隊展示、解說作品(展場規定請參照<el-link
+                  type="primary"
+                  href="./attach_4.pdf"
+                  target="_blank"
+                  >(附件四)</el-link
+                >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
+              </div></el-collapse-item
+            >
             <el-collapse-item title="【決賽】評分項目"
               ><div class="sub-item">
                 <el-row
@@ -436,7 +450,7 @@
                 ><i class="header-icon el-icon-warning"></i>
                 注意事項（共十二點）
               </template>
-              <el-scrollbar style="height: 60vmin" tag="ul">
+              <el-scrollbar style="height: 15vmin" tag="ul">
                 <div class="sub-item">
                   <div>
                     <ol style="margin: 0px; padding-left: 0vmin">
@@ -520,6 +534,18 @@
                   >
                 </div>
               </div>
+            </el-collapse-item>
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-info"></i>
+                簡章全文
+              </template>
+              <el-link
+                  type="primary"
+                  href="./cpt_guide.pdf"
+                  target="_blank"
+                  >點擊下載簡章全文</el-link
+                ><br />
             </el-collapse-item>
           </el-collapse>
         </div>
