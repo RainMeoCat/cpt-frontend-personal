@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import { Button, Icon, Row, Col, Menu, MenuItem, Divider, Empty, Collapse, CollapseItem, Link, Timeline, TimelineItem, Progress, Scrollbar, Drawer, Loading } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import data from './views/Data.js'
 
 // 按需引入名單：
 
@@ -23,7 +24,7 @@ Vue.use(Divider)
 Vue.use(Empty)
 Vue.use(Drawer)
 Vue.use(Loading)
-
+Vue.prototype.$Global_data = data
 Vue.config.productionTip = false
 
 new Vue({
