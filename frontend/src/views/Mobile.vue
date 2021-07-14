@@ -111,7 +111,7 @@
           <div style="padding-top: 3vmin">
             <el-timeline style="padding-left: 15vmin">
               <el-timeline-item
-                v-for="(activity, index) in activities"
+                v-for="(activity, index) in this.$Global_data.Activities"
                 :key="index"
                 :timestamp="activity.timestamp"
               >
@@ -169,22 +169,58 @@
               評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
             </el-collapse-item>
             <el-collapse-item title="【初賽】評分項目">
-              <el-scrollbar style="height: 60vmin" tag="ul">
-              <div style="height: 80vh; overflow-y: scroll; overflow-x: hidden">
+              <div style="height: 60vh; overflow-y: scroll; overflow-x: hidden">
                 <div
                   style="text-align: center; font-size: 16px; font-weight: 900"
                 >
                   概念組
                 </div>
-                <Pie-chart :chart-data="dataC" :options="options"></Pie-chart>
+                <div>
+                  <span>提案創新性</span>
+                  <el-progress :percentage="30"></el-progress>
+                </div>
+                <div>
+                  <span>市場應用可行性</span>
+                  <el-progress :percentage="30"></el-progress>
+                </div>
+                <div>
+                  <span>預期效益</span>
+                  <el-progress :percentage="20"></el-progress>
+                </div>
+                <div>
+                  <span>報告完整度</span>
+                  <el-progress :percentage="10"></el-progress>
+                </div>
+                <div>
+                  <span>作品創作理念</span>
+                  <el-progress :percentage="10"></el-progress>
+                </div>
                 <div
                   style="text-align: center; font-size: 16px; font-weight: 900"
                 >
                   實作組
                 </div>
-                <Pie-chart :chart-data="dataI" :options="options"></Pie-chart>
+                <div>
+                  <span>作品創作理念</span>
+                  <el-progress :percentage="30"></el-progress>
+                </div>
+                <div>
+                  <span>作品功能</span>
+                  <el-progress :percentage="20"></el-progress>
+                </div>
+                <div>
+                  <span>市場應用可行性</span>
+                  <el-progress :percentage="20"></el-progress>
+                </div>
+                <div>
+                  <span>成本分析</span>
+                  <el-progress :percentage="20"></el-progress>
+                </div>
+                <div>
+                  <span>實用價值/商業價值</span>
+                  <el-progress :percentage="10"></el-progress>
+                </div>
               </div>
-              </el-scrollbar>
             </el-collapse-item>
             <el-collapse-item title="【決賽】交件說明"
               ><div class="sub-item">
@@ -212,22 +248,66 @@
               </div></el-collapse-item
             >
             <el-collapse-item title="【決賽】評分項目">
-              <el-scrollbar style="height: 60vmin" tag="ul">
-              <div>
-                <div
-                  style="text-align: center; font-size: 16px; font-weight: 900"
-                >
-                  概念組
+                <div  style="height: 60vh; overflow-y: scroll; overflow-x: hidden">
+                  <div
+                    style="
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 900;
+                    "
+                  >
+                    概念組
+                  </div>
+                  <div>
+                    <span>簡報內容</span>
+                    <el-progress :percentage="50"></el-progress>
+                  </div>
+                  <div>
+                    <span>現場表達能力</span>
+                    <el-progress :percentage="20"></el-progress>
+                  </div>
+                  <div>
+                    <span>問題回覆</span>
+                    <el-progress :percentage="10"></el-progress>
+                  </div>
+                  <div>
+                    <span>簡報技巧</span>
+                    <el-progress :percentage="10"></el-progress>
+                  </div>
+                  <div>
+                    <span>時間控制</span>
+                    <el-progress :percentage="10"></el-progress>
+                  </div>
+                  <div
+                    style="
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 900;
+                    "
+                  >
+                    實作組
+                  </div>
+                  <div>
+                    <span>創新想法</span>
+                    <el-progress :percentage="30"></el-progress>
+                  </div>
+                  <div>
+                    <span>作品穩定性</span>
+                    <el-progress :percentage="20"></el-progress>
+                  </div>
+                  <div>
+                    <span>作品實用性</span>
+                    <el-progress :percentage="20"></el-progress>
+                  </div>
+                  <div>
+                    <span>表達能力</span>
+                    <el-progress :percentage="20"></el-progress>
+                  </div>
+                  <div>
+                    <span>作品完整度</span>
+                    <el-progress :percentage="10"></el-progress>
+                  </div>
                 </div>
-                <Pie-chart :chart-data="dataC2" :options="options"></Pie-chart>
-                <div
-                  style="text-align: center; font-size: 16px; font-weight: 900"
-                >
-                  實作組
-                </div>
-                <Pie-chart :chart-data="dataI2" :options="options"></Pie-chart>
-              </div>
-              </el-scrollbar>
             </el-collapse-item>
             <el-collapse-item>
               <template slot="title"
@@ -236,7 +316,10 @@
               </template>
               <div>
                 <ol>
-                  <li v-for="(el, index) in award_info" :key="index">
+                  <li
+                    v-for="(el, index) in this.$Global_data.AwardInfo"
+                    :key="index"
+                  >
                     {{ el.data }}
                   </li>
                 </ol>
@@ -244,7 +327,10 @@
               <el-divider></el-divider>
               <div>
                 <ul>
-                  <li v-for="(el, index) in idea_award" :key="index">
+                  <li
+                    v-for="(el, index) in this.$Global_data.IdeaAward"
+                    :key="index"
+                  >
                     {{ el.data }}
                   </li>
                 </ul>
@@ -253,15 +339,18 @@
             <el-collapse-item style="padding-bottom: 0px">
               <template slot="title"
                 ><i class="header-icon el-icon-warning"></i>
-                注意事項(共八點)
+                注意事項(共十二點)
               </template>
-              <el-scrollbar style="height: 60vmin" tag="ul">
+              <div style="height: 80vmin;overflow-t:scroll" tag="ul">
                 <ol style="margin: 0px; padding-left: 0vmin">
-                  <li v-for="(el, index) in cpt_caution" :key="index">
+                  <li
+                    v-for="(el, index) in this.$Global_data.CptCaution"
+                    :key="index"
+                  >
                     {{ el.data }}
                   </li>
                 </ol>
-              </el-scrollbar>
+              </div>
             </el-collapse-item>
           </el-collapse>
         </div>
@@ -318,12 +407,9 @@
                 ><i class="header-icon el-icon-info"></i>
                 簡章全文
               </template>
-              <el-link
-                  type="primary"
-                  href="./cpt_guide.pdf"
-                  target="_blank"
-                  >點擊下載簡章全文</el-link
-                ><br />
+              <el-link type="primary" href="./cpt_guide.pdf" target="_blank"
+                >點擊下載簡章全文</el-link
+              ><br />
             </el-collapse-item>
           </el-collapse>
         </div>
@@ -477,11 +563,7 @@
 </template>
 
 <script lang="js">
-import PieChart from './PieChart.js'
 export default {
-  components: {
-    PieChart
-  },
   data () {
     return {
       drawer: false, // 快速選單
@@ -668,35 +750,35 @@ export default {
     window.addEventListener('scroll', function () {
       switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
         case (0): {
-          self.$router.push('')
+          self.$router.push('').catch(() => {})
           break
         }
         case (1): {
-          self.$router.push('#Info')
+          self.$router.push('#Info').catch(() => {})
           break
         }
         case (2): {
-          self.$router.push('#News')
+          self.$router.push('#News').catch(() => {})
           break
         }
         case (3): {
-          self.$router.push('#Schedule')
+          self.$router.push('#Schedule').catch(() => {})
           break
         }
         case (4): {
-          self.$router.push('#Rules')
+          self.$router.push('#Rules').catch(() => {})
           break
         }
         case (5): {
-          self.$router.push('#List')
+          self.$router.push('#List').catch(() => {})
           break
         }
         case (6): {
-          self.$router.push('#Works')
+          self.$router.push('#Works').catch(() => {})
           break
         }
         case (7): {
-          self.$router.push('#Faq')
+          self.$router.push('#Faq').catch(() => {})
           break
         }
       }
