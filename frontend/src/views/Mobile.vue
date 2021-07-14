@@ -253,7 +253,7 @@
             <el-collapse-item style="padding-bottom: 0px">
               <template slot="title"
                 ><i class="header-icon el-icon-warning"></i>
-                注意事項(共八點)
+                注意事項(共十二點)
               </template>
               <el-scrollbar style="height: 60vmin" tag="ul">
                 <ol style="margin: 0px; padding-left: 0vmin">
