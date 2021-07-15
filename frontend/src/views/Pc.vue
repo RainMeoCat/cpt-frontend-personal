@@ -111,7 +111,7 @@
         <div class="main_title_container" v-show="S1t">
           <div class="main_title">高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 3vmin">
-            徵稿至 2021-10-7 （四）<br />
+            徵稿至 2021-10-7(四)<br />
             總獎金50,000元整
           </div>
           <el-button
@@ -269,186 +269,245 @@
         <div class="main_title_container" v-show="S5t" style="width: 70vw">
           <div class="main_title">競賽辦法</div>
           <el-divider></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
-            <el-collapse-item title="參賽對象"
-              ><div class="sub-item">
-                全國高中職在學生，不拘科系皆可參加！
-              </div></el-collapse-item
-            >
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
-                組別說明
-              </template>
-              <div class="sub-item">
-                <div>
-                  <span>概念組</span>
-                  <br />
-                  <span
-                    >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
-                  >
-                </div>
-                <el-divider></el-divider>
-                <div>
-                  實作組
-                  <br />
-                  實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
-                </div>
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【初賽】交件說明"
-              ><div class="sub-item">
-                概念組請繳交提案說明書<el-link
-                  type="primary"
-                  href="./attach_1.pdf"
-                  target="_blank"
-                  >(附件一)</el-link
-                ><br />
-                實作組請繳交作品說明書<el-link
-                  type="primary"
-                  href="./attach_2.pdf"
-                  target="_blank"
-                  >(附件二)</el-link
+          <el-row style="overflow-y: scroll; overflow-x: hidden" :gutter="20">
+            <el-col :span="6">
+              <el-container class="RuleTitleContainer">
+                <div
+                  v-for="(el, index) in this.Rules"
+                  :key="index"
+                  class="RuleTitle"
+                  @click="RuleIndex = index"
                 >
-                <el-divider></el-divider>
-                參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
-                <el-link
-                  type="primary"
-                  href="https://forms.gle/coDqU3Nu92N4dvmCA"
-                  >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-                >
-                <el-divider></el-divider>
-                評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【初賽】評分項目"
-              ><div class="sub-item">
-                <el-row
-                  style="overflow-y: scroll; overflow-x: hidden"
-                  :gutter="60"
-                >
-                  <el-col :span="12">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 3vmin;
-                        font-weight: 900;
-                      "
-                    >
-                      概念組
-                    </div>
-                    <Pie-chart
-                      :chart-data="this.$Global_data.DataC"
-                      :options="options"
-                    ></Pie-chart>
-                  </el-col>
-                  <el-col :span="12">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 3vmin;
-                        font-weight: 900;
-                      "
-                    >
-                      實作組
-                    </div>
-                    <Pie-chart
-                      :chart-data="this.$Global_data.DataI"
-                      :options="options"
-                    ></Pie-chart>
-                  </el-col>
-                </el-row></div
-            ></el-collapse-item>
-            <el-collapse-item title="【決賽】交件說明"
-              ><div class="sub-item">
-                概念組請繳交簡報<el-link
-                  type="primary"
-                  href="./attach_3.pdf"
-                  target="_blank"
-                  >(附件三)</el-link
-                ><br />
-                實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【決賽】評分項目"
-              ><div class="sub-item">
-                <el-row
-                  style="overflow-y: scroll; overflow-x: hidden"
-                  :gutter="60"
-                >
-                  <el-col :span="12">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 3vmin;
-                        font-weight: 900;
-                      "
-                    >
-                      概念組
-                    </div>
-                    <Pie-chart
-                      :chart-data="this.$Global_data.DataC2"
-                      :options="options"
-                    ></Pie-chart>
-                  </el-col>
-                  <el-col :span="12">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 3vmin;
-                        font-weight: 900;
-                      "
-                    >
-                      實作組
-                    </div>
-                    <Pie-chart
-                      :chart-data="this.$Global_data.DataI2"
-                      :options="options"
-                    ></Pie-chart>
-                  </el-col>
-                </el-row></div
-            ></el-collapse-item>
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-star-on"></i>
-                獎勵辦法
-              </template>
-              <div class="sub-item">
-                <div>
-                  <ol>
-                    <li v-for="(el, index) in this.$Global_data.AwardInfo" :key="index">
-                      {{ el.data }}
-                    </li>
-                  </ol>
+                  {{ el }}
                 </div>
-                <el-divider></el-divider>
-                <div>
-                  <ul>
-                    <li v-for="(el, index) in this.$Global_data.IdeaAward" :key="index">
-                      {{ el.data }}
-                    </li>
-                  </ul>
-                </div>
-              </div></el-collapse-item
-            >
-            <el-collapse-item style="padding-bottom: 0px">
-              <template slot="title"
-                ><i class="header-icon el-icon-warning"></i>
-                注意事項（共十二點）
-              </template>
-              <el-scrollbar style="height: 60vmin" tag="ul">
-                <div class="sub-item">
-                  <div>
-                    <ol style="margin: 0px; padding-left: 0vmin">
-                      <li v-for="(el, index) in this.$Global_data.CptCaution" :key="index">
-                        {{ el.data }}
-                      </li>
-                    </ol>
+              </el-container>
+            </el-col>
+            <el-col :span="18">
+              <el-container class="RuleContentContainer">
+                <transition name="el-fade-in" mode="out-in">
+                  <div key="0" v-if="RuleIndex === 0">
+                    <div class="RuleContentTitle">參賽對象</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      全國高中職在學生，不拘科系皆可參加！
+                    </div>
                   </div>
-                </div>
-              </el-scrollbar></el-collapse-item
-            >
-          </el-collapse>
+                  <div key="1" v-else-if="RuleIndex === 1">
+                    <div class="RuleContentTitle">組別說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <div>
+                        <span>概念組</span>
+                        <br />
+                        <span
+                          >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
+                        >
+                      </div>
+                      <el-divider></el-divider>
+                      <div>
+                        實作組
+                        <br />
+                        實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
+                      </div>
+                    </div>
+                  </div>
+                  <div key="2" v-else-if="RuleIndex === 2">
+                    <div class="RuleContentTitle">【初賽】交件說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組請繳交提案說明書<el-link
+                        type="primary"
+                        href="./attach_1.pdf"
+                        target="_blank"
+                        >(附件一)</el-link
+                      ><br />
+                      實作組請繳交作品說明書<el-link
+                        type="primary"
+                        href="./attach_2.pdf"
+                        target="_blank"
+                        >(附件二)</el-link
+                      >
+                      <el-divider></el-divider>
+                      參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+                      <el-link
+                        type="primary"
+                        href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                        >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
+                      >
+                      <el-divider></el-divider>
+                      評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+                    </div>
+                  </div>
+                  <div key="3" v-else-if="RuleIndex === 3">
+                    <div class="RuleContentTitle">【初賽】評分項目</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <el-row
+                        style="overflow-y: scroll; overflow-x: hidden"
+                        :gutter="60"
+                      >
+                        <el-col :span="12">
+                          <div
+                            style="
+                              text-align: center;
+                              font-size: 3vmin;
+                              font-weight: 900;
+                            "
+                          >
+                            概念組
+                          </div>
+                          <Pie-chart
+                            :chart-data="this.$Global_data.DataC"
+                            :options="options"
+                          ></Pie-chart>
+                        </el-col>
+                        <el-col :span="12">
+                          <div
+                            style="
+                              text-align: center;
+                              font-size: 3vmin;
+                              font-weight: 900;
+                            "
+                          >
+                            實作組
+                          </div>
+                          <Pie-chart
+                            :chart-data="this.$Global_data.DataI"
+                            :options="options"
+                          ></Pie-chart>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </div>
+                  <div key="4" v-else-if="RuleIndex === 4">
+                    <div class="RuleContentTitle">【決賽】交件說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組請繳交簡報<el-link
+                        type="primary"
+                        href="./attach_3.pdf"
+                        target="_blank"
+                        >(附件三)</el-link
+                      ><br />
+                      實作組不需繳交資料，若須使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
+                    </div>
+                  </div>
+                  <div key="5" v-else-if="RuleIndex === 5">
+                    <div class="RuleContentTitle">【決賽】競賽規定</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組<br />
+                      評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
+                      <el-divider></el-divider>
+                      實作組<br />
+                      各隊展示、解說作品(展場規定請參照<el-link
+                        type="primary"
+                        href="./attach_4.pdf"
+                        target="_blank"
+                        >(附件四)</el-link
+                      >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
+                    </div>
+                  </div>
+                  <div key="6" v-else-if="RuleIndex === 6">
+                    <div class="RuleContentTitle">【決賽】評分項目</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <el-row
+                        style="overflow-y: scroll; overflow-x: hidden"
+                        :gutter="60"
+                      >
+                        <el-col :span="12">
+                          <div
+                            style="
+                              text-align: center;
+                              font-size: 3vmin;
+                              font-weight: 900;
+                            "
+                          >
+                            概念組
+                          </div>
+                          <Pie-chart
+                            :chart-data="this.$Global_data.DataC2"
+                            :options="options"
+                          ></Pie-chart>
+                        </el-col>
+                        <el-col :span="12">
+                          <div
+                            style="
+                              text-align: center;
+                              font-size: 3vmin;
+                              font-weight: 900;
+                            "
+                          >
+                            實作組
+                          </div>
+                          <Pie-chart
+                            :chart-data="this.$Global_data.DataI2"
+                            :options="options"
+                          ></Pie-chart>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </div>
+                  <div key="7" v-else-if="RuleIndex === 7">
+                    <div class="RuleContentTitle">獎勵方法</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <ol>
+                        <li
+                          v-for="(el, index) in this.$Global_data.AwardInfo"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ol>
+                      <el-divider></el-divider>
+                      <ul>
+                        <li
+                          v-for="(el, index) in this.$Global_data.IdeaAward"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div key="8" v-else-if="RuleIndex === 8">
+                    <div class="RuleContentTitle">注意事項</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <ol>
+                        <li
+                          v-for="(el, index) in this.$Global_data.CptCaution"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </transition>
+              </el-container>
+            </el-col>
+          </el-row>
         </div></transition
       >
     </section>
@@ -548,15 +607,13 @@ export default {
       S6t: false, // 滾動進入動畫：section6(List 名單公布)
       S7t: false, // 滾動進入動畫：section7(Works 歷屆作品)
       S8t: false, // 滾動進入動畫：section8(Faq)
+      RuleIndex: 0,
       options: { // 圓餅圖選項
         responsive: true,
-        legend: {
-          display: false
-        },
         plugins: { // chartjs-plugin-datalabels設定
           datalabels: {
             formatter: (value, ctx) => { // 圓餅圖上的標籤格式化
-              const LEGEND_PERCENTAGE = ctx.chart.data.labels[ctx.dataIndex] + '\n' + value + '%' // 數值加'%'
+              const LEGEND_PERCENTAGE = value + '%' // 數值加'%'
               return LEGEND_PERCENTAGE
               // 預留程式碼區塊：可以計算所有數值轉換為百分比後的結果'
               // let sum = 0
@@ -572,12 +629,15 @@ export default {
             textAlign: 'center', // labels設定對齊樣式
             font: {
               weight: 'bold',
-              size: 16
+              size: 18
             },
-            offset: -72
+            offset: -40
           }
         }
-      }
+      },
+      Rules: [
+        '參賽對象', '組別說明', '【初賽】交件說明', '【初賽】評分項目', '【決賽】交件說明', '【決賽】競賽規定', '【決賽】評分項目', '獎勵辦法', '注意事項'
+      ]
     }
   },
   methods: {
@@ -805,5 +865,45 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+.RuleTitle {
+  color: #303133;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 500ms;
+}
+.RuleTitle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 500ms;
+}
+.RuleTitleContainer {
+  text-align: left;
+  font-size: 2vmin;
+  font-weight: 900;
+  height: 60vh;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.RuleContentContainer {
+  text-align: left;
+  font-size: 2vmin;
+  height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.RuleContentTitle {
+  text-align: left;
+  font-size: 3vmin;
+  font-weight: 900;
+  color: #303133;
+}
+.RuleContent {
+  text-align: left;
+  font-size: 2vmin;
+  color: #303133;
 }
 </style>
