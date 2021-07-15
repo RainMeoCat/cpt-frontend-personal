@@ -1,13 +1,13 @@
 const Activities = [ // 競賽時程
   {
     content: '報名、初賽繳件截止日',
-    timestamp: '2021-10-07'
+    timestamp: '2021-10-07 中午12:00'
   }, {
     content: '公布晉級決賽名單',
     timestamp: '2021-10-14'
   }, {
     content: '決賽繳件截止日',
-    timestamp: '2021-10-21'
+    timestamp: '2021-10-21 中午12:00'
   },
   {
     content: '決賽暨頒獎典禮',
