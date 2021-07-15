@@ -223,6 +223,7 @@
                 <el-link
                   type="primary"
                   href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                  target="_blank"
                   >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
                 >
                 <el-divider></el-divider>
@@ -338,6 +339,7 @@
                       <el-link
                         type="primary"
                         href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                        target="_blank"
                         >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
                       >
                       <el-divider></el-divider>
