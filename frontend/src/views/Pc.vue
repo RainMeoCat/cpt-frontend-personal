@@ -582,6 +582,15 @@
                 </div>
               </div>
             </el-collapse-item>
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-info"></i>
+                簡章全文
+              </template>
+              <el-link type="primary" href="./cpt_guide.pdf" target="_blank"
+                >點擊下載簡章全文</el-link
+              ><br />
+            </el-collapse-item>
           </el-collapse>
         </div>
       </transition>
@@ -886,6 +895,7 @@ section {
   background-color: white;
   padding: 15px;
   border-radius: 5px;
+  overflow-y:scroll
 }
 .RuleContentContainer {
   text-align: left;
