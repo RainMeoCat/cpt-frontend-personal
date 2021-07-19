@@ -1035,7 +1035,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .contain {
   height: 50%;
   padding: 0px;
@@ -1211,15 +1211,6 @@ section {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin: 0px;
-}
-.RuleTitleContainer {
-  text-align: center;
-  font-size: 4vmin;
-  font-weight: 900;
-  height: 60vh;
-  background-color: white;
-  padding: 15px;
-  border-radius: 5px;
 }
 .RuleTitle {
   color: #303133;
