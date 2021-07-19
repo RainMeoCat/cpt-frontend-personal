@@ -109,7 +109,7 @@
         mode="out-in"
       >
         <div class="main_title_container" v-show="S1t">
-          <div class="main_title">高科盃<br />全國商業智慧競賽</div>
+          <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 3vmin">
             徵稿至 2021-10-7(四)<br />
             總獎金50,000元整
