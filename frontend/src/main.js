@@ -4,7 +4,11 @@ import router from './router'
 import { Button, Icon, Row, Col, Menu, MenuItem, Divider, Empty, Collapse, CollapseItem, Link, Timeline, TimelineItem, Progress, Scrollbar, Drawer, Loading, Container, Message } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import data from './views/Data.js'
+import VueAnalytics from 'vue-analytics'
 
+Vue.use(VueAnalytics, {
+  id: 'UA-172858412-2'
+})
 // 按需引入名單：
 
 Vue.use(Button)
