@@ -277,6 +277,7 @@
                   v-for="(el, index) in this.Rules"
                   :key="index"
                   class="RuleTitle"
+                  :class="{ RuleIndexActive: RuleIndex === index }"
                   @click="RuleIndex = index"
                 >
                   {{ el }}
@@ -619,6 +620,7 @@ export default {
       S7t: false, // 滾動進入動畫：section7(Works 歷屆作品)
       S8t: false, // 滾動進入動畫：section8(Faq)
       RuleIndex: 0,
+      RuleFirstTip: true,
       options: { // 圓餅圖選項
         responsive: true,
         plugins: { // chartjs-plugin-datalabels設定
@@ -701,6 +703,10 @@ export default {
         }
         case (4): {
           SELF.S5t = true
+          if (SELF.RuleFirstTip) {
+            SELF.$message.success('點擊左邊的項目來查看詳細內容！')
+            SELF.RuleFirstTip = false
+          }
           SELF.$router.push('#Rules').catch(() => {})
           break
         }
@@ -881,7 +887,7 @@ section {
   color: #303133;
   padding: 5px;
   border-radius: 5px;
-  transition: background-color 500ms;
+  transition: all 500ms;
 }
 .RuleTitle:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -889,13 +895,13 @@ section {
 }
 .RuleTitleContainer {
   text-align: left;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   font-weight: 900;
   height: 60vh;
   background-color: white;
   padding: 15px;
   border-radius: 5px;
-  overflow-y:scroll
+  overflow-y: scroll;
 }
 .RuleContentContainer {
   text-align: left;
@@ -906,6 +912,7 @@ section {
   background-color: white;
   padding: 15px;
   border-radius: 5px;
+  color: #303133;
 }
 .RuleContentTitle {
   text-align: left;
@@ -917,5 +924,8 @@ section {
   text-align: left;
   font-size: 2vmin;
   color: #303133;
+}
+.RuleIndexActive {
+  color: #409eff;
 }
 </style>

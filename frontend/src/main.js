@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Button, Icon, Row, Col, Menu, MenuItem, Divider, Empty, Collapse, CollapseItem, Link, Timeline, TimelineItem, Progress, Scrollbar, Drawer, Loading, Container } from 'element-ui'
+import { Button, Icon, Row, Col, Menu, MenuItem, Divider, Empty, Collapse, CollapseItem, Link, Timeline, TimelineItem, Progress, Scrollbar, Drawer, Loading, Container, Message } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import data from './views/Data.js'
 
@@ -25,7 +25,9 @@ Vue.use(Empty)
 Vue.use(Drawer)
 Vue.use(Loading)
 Vue.use(Container)
+
 Vue.prototype.$Global_data = data
+Vue.prototype.$message = Message
 Vue.config.productionTip = false
 
 new Vue({
