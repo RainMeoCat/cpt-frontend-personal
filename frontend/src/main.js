@@ -5,9 +5,13 @@ import { Button, Icon, Row, Col, Menu, MenuItem, Divider, Empty, Collapse, Colla
 import 'element-ui/lib/theme-chalk/index.css'
 import data from './views/Data.js'
 import VueAnalytics from 'vue-analytics'
+import Meta from 'vue-meta'
 
+// SEO部分
+Vue.use(Meta)
 Vue.use(VueAnalytics, {
-  id: 'UA-172858412-2'
+  id: 'UA-172858412-2',
+  router
 })
 // 按需引入名單：
 
