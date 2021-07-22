@@ -135,6 +135,22 @@
           >
         </div>
       </transition>
+      <div
+        style="
+          color: white;
+          font-size: 2vmin;
+          position: absolute;
+          bottom: 50px;
+          width: 100%;
+          text-align: center;
+          font-weight:bold;
+          filter: drop-shadow(3px 3px 2px #000000)
+        "
+        class="float"
+      >
+      向下捲動以查看更多<br>
+        <i style="font-size: 7vmin;" class="el-icon-bottom"></i>
+      </div>
     </section>
     <section class="section2" id="Info">
       <transition
@@ -941,5 +957,19 @@ section {
 }
 .RuleIndexActive {
   color: #409eff;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.float {
+  animation: float 6s ease-in-out infinite;
 }
 </style>
