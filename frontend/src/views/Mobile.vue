@@ -137,232 +137,6 @@
               {{ el }}
             </div>
           </div>
-          <!-- <el-collapse accordion style="border: 0px; padding-bottom: 0px">
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
-                【初賽】組別說明
-              </template>
-              <div>
-                <span>概念組</span>
-                <br />
-                <span
-                  >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
-                >
-              </div>
-              <el-divider></el-divider>
-              <div>
-                實作組
-                <br />
-                實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
-              </div>
-            </el-collapse-item>
-            <el-collapse-item title="【初賽】交件說明與評分項目">
-              概念組請繳交提案說明書<el-link
-                type="primary"
-                href="./attach_1.pdf"
-                target="_blank"
-                >(附件一)</el-link
-              ><br />
-              實作組請繳交作品說明書<el-link
-                type="primary"
-                href="./attach_2.pdf"
-                target="_blank"
-                >(附件二)</el-link
-              >
-              <el-divider></el-divider>
-              參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
-              <el-link type="primary" href="https://forms.gle/coDqU3Nu92N4dvmCA"
-                >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-              >
-              <el-divider></el-divider>
-              評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
-            </el-collapse-item>
-            <el-collapse-item title="【初賽】評分項目">
-              <div style="height: 60vh; overflow-y: scroll; overflow-x: hidden">
-                <div
-                  style="text-align: center; font-size: 16px; font-weight: 900"
-                >
-                  概念組
-                </div>
-                <div>
-                  <span>提案創新性</span>
-                  <el-progress :percentage="30"></el-progress>
-                </div>
-                <div>
-                  <span>市場應用可行性</span>
-                  <el-progress :percentage="30"></el-progress>
-                </div>
-                <div>
-                  <span>預期效益</span>
-                  <el-progress :percentage="20"></el-progress>
-                </div>
-                <div>
-                  <span>報告完整度</span>
-                  <el-progress :percentage="10"></el-progress>
-                </div>
-                <div>
-                  <span>作品創作理念</span>
-                  <el-progress :percentage="10"></el-progress>
-                </div>
-                <div
-                  style="text-align: center; font-size: 16px; font-weight: 900"
-                >
-                  實作組
-                </div>
-                <div>
-                  <span>作品創作理念</span>
-                  <el-progress :percentage="30"></el-progress>
-                </div>
-                <div>
-                  <span>作品功能</span>
-                  <el-progress :percentage="20"></el-progress>
-                </div>
-                <div>
-                  <span>市場應用可行性</span>
-                  <el-progress :percentage="20"></el-progress>
-                </div>
-                <div>
-                  <span>成本分析</span>
-                  <el-progress :percentage="20"></el-progress>
-                </div>
-                <div>
-                  <span>實用價值/商業價值</span>
-                  <el-progress :percentage="10"></el-progress>
-                </div>
-              </div>
-            </el-collapse-item>
-            <el-collapse-item title="【決賽】交件說明"
-              ><div class="sub-item">
-                概念組請繳交簡報<el-link
-                  type="primary"
-                  href="./attach_3.pdf"
-                  target="_blank"
-                  >(附件三)</el-link
-                ><br />
-                實作組不須繳交資料，若需使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【決賽】比賽規定"
-              ><div class="sub-item">
-                概念組<br />
-                評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                <el-divider></el-divider>
-                實作組<br />
-                各隊展示、解說作品(展場規定請參照<el-link
-                  type="primary"
-                  href="./attach_4.pdf"
-                  target="_blank"
-                  >(附件四)</el-link
-                >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
-              </div></el-collapse-item
-            >
-            <el-collapse-item title="【決賽】評分項目">
-                <div  style="height: 60vh; overflow-y: scroll; overflow-x: hidden">
-                  <div
-                    style="
-                      text-align: center;
-                      font-size: 16px;
-                      font-weight: 900;
-                    "
-                  >
-                    概念組
-                  </div>
-                  <div>
-                    <span>簡報內容</span>
-                    <el-progress :percentage="50"></el-progress>
-                  </div>
-                  <div>
-                    <span>現場表達能力</span>
-                    <el-progress :percentage="20"></el-progress>
-                  </div>
-                  <div>
-                    <span>問題回覆</span>
-                    <el-progress :percentage="10"></el-progress>
-                  </div>
-                  <div>
-                    <span>簡報技巧</span>
-                    <el-progress :percentage="10"></el-progress>
-                  </div>
-                  <div>
-                    <span>時間控制</span>
-                    <el-progress :percentage="10"></el-progress>
-                  </div>
-                  <div
-                    style="
-                      text-align: center;
-                      font-size: 16px;
-                      font-weight: 900;
-                    "
-                  >
-                    實作組
-                  </div>
-                  <div>
-                    <span>創新想法</span>
-                    <el-progress :percentage="30"></el-progress>
-                  </div>
-                  <div>
-                    <span>作品穩定性</span>
-                    <el-progress :percentage="20"></el-progress>
-                  </div>
-                  <div>
-                    <span>作品實用性</span>
-                    <el-progress :percentage="20"></el-progress>
-                  </div>
-                  <div>
-                    <span>表達能力</span>
-                    <el-progress :percentage="20"></el-progress>
-                  </div>
-                  <div>
-                    <span>作品完整度</span>
-                    <el-progress :percentage="10"></el-progress>
-                  </div>
-                </div>
-            </el-collapse-item>
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-star-on"></i>
-                獎勵辦法
-              </template>
-              <div>
-                <ol>
-                  <li
-                    v-for="(el, index) in this.$Global_data.AwardInfo"
-                    :key="index"
-                  >
-                    {{ el.data }}
-                  </li>
-                </ol>
-              </div>
-              <el-divider></el-divider>
-              <div>
-                <ul>
-                  <li
-                    v-for="(el, index) in this.$Global_data.IdeaAward"
-                    :key="index"
-                  >
-                    {{ el.data }}
-                  </li>
-                </ul>
-              </div>
-            </el-collapse-item>
-            <el-collapse-item style="padding-bottom: 0px">
-              <template slot="title"
-                ><i class="header-icon el-icon-warning"></i>
-                注意事項(共十二點)
-              </template>
-              <div style="height: 80vmin;overflow-t:scroll" tag="ul">
-                <ol style="margin: 0px; padding-left: 0vmin">
-                  <li
-                    v-for="(el, index) in this.$Global_data.CptCaution"
-                    :key="index"
-                  >
-                    {{ el.data }}
-                  </li>
-                </ol>
-              </div>
-            </el-collapse-item>
-          </el-collapse> -->
         </div>
         <transition name="el-fade-in">
           <div
@@ -381,283 +155,292 @@
           >
             <div class="RuleTitleContainer" style="padding-top: 10vmin">
               <div>
-              <transition name="el-zoom-in-top" mode="out-in">
-                <div key="0" v-if="RuleIndex === 0">
-                  <div class="RuleContentTitle">參賽對象</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    全國高中職在學生，不拘科系皆可參加！
+                <transition name="el-zoom-in-top" mode="out-in">
+                  <div key="0" v-if="RuleIndex === 0">
+                    <div class="RuleContentTitle">參賽對象</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      全國高中職在學生，不拘科系皆可參加！
+                    </div>
                   </div>
-                </div>
-                <div key="1" v-else-if="RuleIndex === 1">
-                  <div class="RuleContentTitle">組別說明</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    <div>
-                      <span>概念組</span>
-                      <br />
-                      <span
-                        >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
+                  <div key="1" v-else-if="RuleIndex === 1">
+                    <div class="RuleContentTitle">組別說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <div>
+                        <span>概念組</span>
+                        <br />
+                        <span
+                          >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
+                        >
+                      </div>
+                      <el-divider></el-divider>
+                      <div>
+                        實作組
+                        <br />
+                        實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
+                      </div>
+                    </div>
+                  </div>
+                  <div key="2" v-else-if="RuleIndex === 2">
+                    <div class="RuleContentTitle">【初賽】交件說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組請繳交提案說明書<el-link
+                        type="primary"
+                        href="./attach_1.pdf"
+                        target="_blank"
+                        >(附件一)</el-link
+                      ><br />
+                      實作組請繳交作品說明書<el-link
+                        type="primary"
+                        href="./attach_2.pdf"
+                        target="_blank"
+                        >(附件二)</el-link
                       >
-                    </div>
-                    <el-divider></el-divider>
-                    <div>
-                      實作組
-                      <br />
-                      實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
-                    </div>
-                  </div>
-                </div>
-                <div key="2" v-else-if="RuleIndex === 2">
-                  <div class="RuleContentTitle">【初賽】交件說明</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    概念組請繳交提案說明書<el-link
-                      type="primary"
-                      href="./attach_1.pdf"
-                      target="_blank"
-                      >(附件一)</el-link
-                    ><br />
-                    實作組請繳交作品說明書<el-link
-                      type="primary"
-                      href="./attach_2.pdf"
-                      target="_blank"
-                      >(附件二)</el-link
-                    >
-                    <el-divider></el-divider>
-                    參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
-                    <el-link
-                      type="primary"
-                      href="https://forms.gle/coDqU3Nu92N4dvmCA"
-                      target="_blank"
-                      >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-                    >
-                    <el-divider></el-divider>
-                    評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
-                  </div>
-                </div>
-                <div key="3" v-else-if="RuleIndex === 3">
-                  <div class="RuleContentTitle">【初賽】評分項目</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 16px;
-                        font-weight: 900;
-                      "
-                    >
-                      概念組
-                    </div>
-                    <div>
-                      <span>提案創新性</span>
-                      <el-progress :percentage="30"></el-progress>
-                    </div>
-                    <div>
-                      <span>市場應用可行性</span>
-                      <el-progress :percentage="30"></el-progress>
-                    </div>
-                    <div>
-                      <span>預期效益</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>報告完整度</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                    <div>
-                      <span>作品創作理念</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 16px;
-                        font-weight: 900;
-                      "
-                    >
-                      實作組
-                    </div>
-                    <div>
-                      <span>作品創作理念</span>
-                      <el-progress :percentage="30"></el-progress>
-                    </div>
-                    <div>
-                      <span>作品功能</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>市場應用可行性</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>成本分析</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>實用價值/商業價值</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                  </div>
-                </div>
-                <div key="4" v-else-if="RuleIndex === 4">
-                  <div class="RuleContentTitle">【決賽】交件說明</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    概念組請繳交簡報<el-link
-                      type="primary"
-                      href="./attach_3.pdf"
-                      target="_blank"
-                      >(附件三)</el-link
-                    ><br />
-                    實作組不需繳交資料，若須使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
-                  </div>
-                </div>
-                <div key="5" v-else-if="RuleIndex === 5">
-                  <div class="RuleContentTitle">【決賽】競賽規定</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    概念組<br />
-                    評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                    <el-divider></el-divider>
-                    實作組<br />
-                    各隊展示、解說作品(展場規定請參照<el-link
-                      type="primary"
-                      href="./attach_4.pdf"
-                      target="_blank"
-                      >(附件四)</el-link
-                    >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
-                  </div>
-                </div>
-                <div key="6" v-else-if="RuleIndex === 6">
-                  <div class="RuleContentTitle">【決賽】評分項目</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 16px;
-                        font-weight: 900;
-                      "
-                    >
-                      概念組
-                    </div>
-                    <div>
-                      <span>簡報內容</span>
-                      <el-progress :percentage="50"></el-progress>
-                    </div>
-                    <div>
-                      <span>現場表達能力</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>問題回覆</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                    <div>
-                      <span>簡報技巧</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                    <div>
-                      <span>時間控制</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                    <div
-                      style="
-                        text-align: center;
-                        font-size: 16px;
-                        font-weight: 900;
-                      "
-                    >
-                      實作組
-                    </div>
-                    <div>
-                      <span>創新想法</span>
-                      <el-progress :percentage="30"></el-progress>
-                    </div>
-                    <div>
-                      <span>作品穩定性</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>作品實用性</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>表達能力</span>
-                      <el-progress :percentage="20"></el-progress>
-                    </div>
-                    <div>
-                      <span>作品完整度</span>
-                      <el-progress :percentage="10"></el-progress>
-                    </div>
-                  </div>
-                </div>
-                <div key="7" v-else-if="RuleIndex === 7">
-                  <div class="RuleContentTitle">獎勵方法</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    <ol>
-                      <li
-                        v-for="(el, index) in this.$Global_data.AwardInfo"
-                        :key="index"
+                      <el-divider></el-divider>
+                      參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+                      <el-link
+                        type="primary"
+                        href="https://forms.gle/coDqU3Nu92N4dvmCA"
+                        target="_blank"
+                        >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
                       >
-                        {{ el.data }}
-                      </li>
-                    </ol>
-                    <el-divider></el-divider>
-                    <ul>
-                      <li
-                        v-for="(el, index) in this.$Global_data.IdeaAward"
-                        :key="index"
-                      >
-                        {{ el.data }}
-                      </li>
-                    </ul>
+                      <el-divider></el-divider>
+                      評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+                    </div>
                   </div>
-                </div>
-                <div key="8" v-else-if="RuleIndex === 8">
-                  <div class="RuleContentTitle">注意事項</div>
-                  <el-divider
-                    style="margin-top: 1vmin; margin-bottom: 1vmin"
-                  ></el-divider>
-                  <div class="RuleContent">
-                    <ol>
-                      <li
-                        v-for="(el, index) in this.$Global_data.CptCaution"
-                        :key="index"
+                  <div key="3" v-else-if="RuleIndex === 3">
+                    <div class="RuleContentTitle">【初賽】評分項目</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 16px;
+                          font-weight: 900;
+                        "
                       >
-                        {{ el.data }}
-                      </li>
-                    </ol>
+                        概念組
+                      </div>
+                      <div>
+                        <span>提案創新性</span>
+                        <el-progress :percentage="30"></el-progress>
+                      </div>
+                      <div>
+                        <span>市場應用可行性</span>
+                        <el-progress :percentage="30"></el-progress>
+                      </div>
+                      <div>
+                        <span>預期效益</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>報告完整度</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                      <div>
+                        <span>作品創作理念</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 16px;
+                          font-weight: 900;
+                        "
+                      >
+                        實作組
+                      </div>
+                      <div>
+                        <span>作品創作理念</span>
+                        <el-progress :percentage="30"></el-progress>
+                      </div>
+                      <div>
+                        <span>作品功能</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>市場應用可行性</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>成本分析</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>實用價值/商業價值</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                    </div>
                   </div>
+                  <div key="4" v-else-if="RuleIndex === 4">
+                    <div class="RuleContentTitle">【決賽】交件說明</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組請繳交簡報<el-link
+                        type="primary"
+                        href="./attach_3.pdf"
+                        target="_blank"
+                        >(附件三)</el-link
+                      ><br />
+                      實作組不需繳交資料，若須使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
+                    </div>
+                  </div>
+                  <div key="5" v-else-if="RuleIndex === 5">
+                    <div class="RuleContentTitle">【決賽】競賽規定</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      概念組<br />
+                      評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
+                      <el-divider></el-divider>
+                      實作組<br />
+                      各隊展示、解說作品(展場規定請參照<el-link
+                        type="primary"
+                        href="./attach_4.pdf"
+                        target="_blank"
+                        >(附件四)</el-link
+                      >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
+                    </div>
+                  </div>
+                  <div key="6" v-else-if="RuleIndex === 6">
+                    <div class="RuleContentTitle">【決賽】評分項目</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 16px;
+                          font-weight: 900;
+                        "
+                      >
+                        概念組
+                      </div>
+                      <div>
+                        <span>簡報內容</span>
+                        <el-progress :percentage="50"></el-progress>
+                      </div>
+                      <div>
+                        <span>現場表達能力</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>問題回覆</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                      <div>
+                        <span>簡報技巧</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                      <div>
+                        <span>時間控制</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                      <div
+                        style="
+                          text-align: center;
+                          font-size: 16px;
+                          font-weight: 900;
+                        "
+                      >
+                        實作組
+                      </div>
+                      <div>
+                        <span>創新想法</span>
+                        <el-progress :percentage="30"></el-progress>
+                      </div>
+                      <div>
+                        <span>作品穩定性</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>作品實用性</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>表達能力</span>
+                        <el-progress :percentage="20"></el-progress>
+                      </div>
+                      <div>
+                        <span>作品完整度</span>
+                        <el-progress :percentage="10"></el-progress>
+                      </div>
+                    </div>
+                  </div>
+                  <div key="7" v-else-if="RuleIndex === 7">
+                    <div class="RuleContentTitle">獎勵方法</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <ol>
+                        <li
+                          v-for="(el, index) in this.$Global_data.AwardInfo"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ol>
+                      <el-divider></el-divider>
+                      <ul>
+                        <li
+                          v-for="(el, index) in this.$Global_data.IdeaAward"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div key="8" v-else-if="RuleIndex === 8">
+                    <div class="RuleContentTitle">注意事項</div>
+                    <el-divider
+                      style="margin-top: 1vmin; margin-bottom: 1vmin"
+                    ></el-divider>
+                    <div class="RuleContent">
+                      <ol>
+                        <li
+                          v-for="(el, index) in this.$Global_data.CptCaution"
+                          :key="index"
+                        >
+                          {{ el.data }}
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </transition>
+                <div style="position: fixed; bottom: 20px; right: 20px">
+                  <el-button
+                    :disabled="RulePreviousBtnDisabled"
+                    @click="RuleMove('previous')"
+                    >上一頁</el-button
+                  >
+                  <el-button
+                    :disabled="RuleNextBtnDisabled"
+                    @click="RuleMove('next')"
+                    >下一頁</el-button
+                  >
+                  <el-button type="primary" @click="RuleClose()"
+                    >確 定</el-button
+                  >
                 </div>
-              </transition>
-              <div style="position: fixed; bottom: 20px; right: 20px">
-                <el-button :disabled="RulePreviousBtnDisabled" @click="RuleMove('previous')">上一頁</el-button>
-                <el-button :disabled="RuleNextBtnDisabled" @click="RuleMove('next')">下一頁</el-button>
-                <el-button type="primary" @click="RuleClose()"
-                  >確 定</el-button
-                >
               </div>
             </div>
-          </div></div>
+          </div>
         </transition>
       </section>
       <section class="section6" id="List">
@@ -1185,14 +968,18 @@ export default {
   text-align: left;
 }
 
-.el-collapse-item__content,
-.el-collapse-item__header {
-  padding-left: 3vmin;
-  padding-right: 3vmin;
-  padding-bottom: 3px;
-}
 .el-collapse-item__wrap {
   padding: 0px;
+}
+
+.el-collapse >>> .el-collapse-item__header {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.el-collapse >>> .el-collapse-item__content {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .el-divider.el-divider--horizontal {
