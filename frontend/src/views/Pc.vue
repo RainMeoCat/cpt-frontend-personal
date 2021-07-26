@@ -215,7 +215,7 @@
         <div class="main_title_container" v-show="S3t">
           <div class="main_title">最新消息</div>
           <el-divider></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px;border-radius: 5px;">
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-info"></i>
@@ -794,9 +794,6 @@ export default {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.el-collapse-item__header {
-  font-size: 16px;
-}
 .el-bottom-item {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -971,5 +968,11 @@ section {
 }
 .float {
   animation: float 6s ease-in-out infinite;
+}
+.el-collapse  >>> .el-collapse-item__header {
+  padding-left: 15px  ;
+}
+.el-collapse  >>> .el-collapse-item__content {
+  padding-left: 15px ;
 }
 </style>
