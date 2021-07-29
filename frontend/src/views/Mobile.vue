@@ -452,7 +452,7 @@
       </section>
       <section class="section7" id="Works">
         <div class="works_container">
-          <div class="main_title">歷屆得獎作品題目</div>
+          <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-collapse accordion style="border: 0px; padding-bottom: 0px">
             <el-collapse-item>
@@ -619,7 +619,7 @@
       </el-row>
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Works')"
-          ><i class="el-icon-s-open" />歷屆作品</el-button
+          ><i class="el-icon-s-open" />歷屆得獎作品</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
@@ -1136,5 +1136,10 @@ section {
   margin-top: 8vmin;
   height: calc(80vh - 50px);
   overflow-y: scroll;
+}
+.mobile-drawer{
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 </style>
