@@ -143,13 +143,13 @@
           bottom: 50px;
           width: 100%;
           text-align: center;
-          font-weight:bold;
-          filter: drop-shadow(3px 3px 2px #000000)
+          font-weight: bold;
+          filter: drop-shadow(3px 3px 2px #000000);
         "
         class="float"
       >
-      向下捲動以查看更多<br>
-        <i style="font-size: 7vmin;" class="el-icon-bottom"></i>
+        向下捲動以查看更多<br />
+        <i style="font-size: 7vmin" class="el-icon-bottom"></i>
       </div>
     </section>
     <section class="section2" id="Info">
@@ -215,7 +215,10 @@
         <div class="main_title_container" v-show="S3t">
           <div class="main_title">最新消息</div>
           <el-divider></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px;border-radius: 5px;">
+          <el-collapse
+            accordion
+            style="border: 0px; padding-bottom: 0px; border-radius: 5px"
+          >
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-info"></i>
@@ -552,9 +555,91 @@
         mode="out-in"
       >
         <div class="main_title_container" v-show="S7t">
-          <div class="main_title">歷屆作品</div>
+          <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <span>尚未有歷屆作品</span>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px;font-size:4vmin">
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-star-on"></i>
+                2020年第一屆得獎題目
+              </template>
+              <span>概念組</span>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">特優</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    減重健康APP LW&H
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">優等</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    與神同行 -鳳山 雙慈殿宗教意象行銷 策略
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">佳作</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    <ul style="padding: 0px; margin: 0px">
+                      <li>菱殼炭</li>
+                      <li>失塑列車</li>
+                      <li>LINE Eats 健康管理聊天機器人</li>
+                      <li>行銷賣場-全聯福利中心</li>
+                      <li>
+                        改善舊衣回收-創造 JOY永續新生活
+                        以智能設備改善傳統舊衣回收之問題
+                      </li>
+                    </ul>
+                  </div></el-col
+                >
+              </el-row>
+              <el-divider></el-divider>
+              <span>實作組</span>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">特優</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    防疫戰士機器人
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">優等</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    AIOT智能壓縮垃圾桶
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">佳作</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    <ul style="padding: 0px; margin: 0px">
+                      <li>商場虛擬機器人</li>
+                      <li>LINE BEACON - 尋找東南亞移民的家鄉味</li>
+                    </ul>
+                  </div></el-col
+                >
+              </el-row>
+            </el-collapse-item>
+          </el-collapse>
         </div></transition
       >
     </section>
@@ -969,10 +1054,10 @@ section {
 .float {
   animation: float 6s ease-in-out infinite;
 }
-.el-collapse  >>> .el-collapse-item__header {
-  padding-left: 15px  ;
+.el-collapse >>> .el-collapse-item__header {
+  padding-left: 15px;
 }
-.el-collapse  >>> .el-collapse-item__content {
-  padding-left: 15px ;
+.el-collapse >>> .el-collapse-item__content {
+  padding-left: 15px;
 }
 </style>
