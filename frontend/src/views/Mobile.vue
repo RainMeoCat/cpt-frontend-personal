@@ -451,10 +451,92 @@
         </div>
       </section>
       <section class="section7" id="Works">
-        <div class="main_title_container">
-          <div class="main_title">歷屆作品</div>
+        <div class="works_container">
+          <div class="main_title">歷屆得獎作品題目</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <span>尚未有歷屆作品</span>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-star-on"></i>
+                2020年第一屆得獎題目
+              </template>
+              <span>概念組</span>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">特優</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    減重健康APP LW&H
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">優等</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    與神同行 -鳳山 雙慈殿宗教意象行銷 策略
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">佳作</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    <ul style="padding: 0px; margin: 0px">
+                      <li>菱殼炭</li>
+                      <li>失塑列車</li>
+                      <li>LINE Eats 健康管理聊天機器人</li>
+                      <li>行銷賣場-全聯福利中心</li>
+                      <li>
+                        改善舊衣回收-創造 JOY永續新生活
+                        以智能設備改善傳統舊衣回收之問題
+                      </li>
+                    </ul>
+                  </div></el-col
+                >
+              </el-row>
+              <el-divider></el-divider>
+              <span>實作組</span>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">特優</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    防疫戰士機器人
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">優等</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    AIOT智能壓縮垃圾桶
+                  </div></el-col
+                >
+              </el-row>
+              <el-row :gutter="24">
+                <el-col :span="4"
+                  ><div class="grid-content bg-purple">佳作</div></el-col
+                >
+                <el-col :span="20"
+                  ><div class="grid-content bg-purple">
+                    <ul style="padding: 0px; margin: 0px">
+                      <li>商場虛擬機器人</li>
+                      <li>LINE BEACON - 尋找東南亞移民的家鄉味</li>
+                    </ul>
+                  </div></el-col
+                >
+              </el-row>
+            </el-collapse-item>
+          </el-collapse>
         </div>
       </section>
       <section class="section8" id="Faq">
@@ -959,6 +1041,14 @@ export default {
   width: 93vmin;
   text-align: left;
 }
+.works_container {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  width: 100vmin;
+  text-align: left;
+}
 .news_container {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.75);
@@ -974,11 +1064,12 @@ export default {
 
 .el-collapse >>> .el-collapse-item__header {
   padding-left: 10px;
-  padding-right: 5px;
+  padding-right: 10px;
+  border: 0px;
 }
 .el-collapse >>> .el-collapse-item__content {
   padding-left: 10px;
-  padding-right: 5px;
+  padding-right: 10px;
   padding-bottom: 5px;
 }
 
