@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cpt.ic.nkust.edu.tw/sitemap.xml
