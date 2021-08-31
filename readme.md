@@ -9,7 +9,17 @@ web framework: Vue3
 
 web server: nginx
 
-內容控制:firebase或寫死?
+內容控制:手動更新
+
+## 部屬
+
+請先將根目錄的`docker-compose.yml`及`init-letsencrypt.sh`複製進nginx-certbot資料夾，並執行`init-letsencrypt.sh`腳本。
+
+> `docker-compose.yml`需更改處
+line:11 `/home/ubuntu/cpt-frontend/frontend/dist/:/usr/share/nginx/html`此處/home/使用者名稱要改
+
+> `init-letsencrypt.sh`需更改處
+> email:"填自己的信箱"
 
 ## Backend-Env
 直接使用KKTIX報名
@@ -17,15 +27,15 @@ web server: nginx
 https://nkust-ic.kktix.cc/events/20211024
 
 ## 完成狀態
-- [ ] 版面規劃
-- [ ] 關於競賽
-- [ ] 最新消息
-- [ ] 競賽時程
-- [ ] 競賽辦法
-- [ ] 名單公布
-- [ ] 歷屆作品
-- [ ] FAQ
-- [ ] 立即報名
+- [x] 版面規劃
+- [x] 關於競賽
+- [x] 最新消息
+- [x] 競賽時程
+- [x] 競賽辦法
+- [x] 名單公布
+- [x] 歷屆作品
+- [x] FAQ
+- [x] 立即報名
 
 
 ## TODO
