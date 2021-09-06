@@ -19,7 +19,7 @@
             class="image"
             style="
                   width: 90vw;
-                  padding-top: 20vh;
+                  margin-top: 20vh;
                   "
           />
         </el-row>

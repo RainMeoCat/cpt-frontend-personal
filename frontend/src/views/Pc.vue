@@ -18,7 +18,7 @@
           class="image"
           style="
                   height: 70vh;
-                  padding-top: 15vh;
+                  margin-top: 15vh;
                   "
         />
       </el-row>
