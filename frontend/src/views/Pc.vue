@@ -1,5 +1,31 @@
 <template>
   <div class="main">
+    <div
+      style="
+              background-color: rgba(255, 255, 255, 0.8);
+              position: fixed;
+              top: 0px;
+              left: 0px;
+              width: 100vw;
+              height: 100vh;
+              z-index: 1000;
+            "
+      v-show="waringdialogVisible"
+    >
+      <el-row>
+        <img
+          src="../assets/corrigendum.png"
+          class="image"
+          style="
+                  height: 70vh;
+                  padding-top: 15vh;
+                  "
+        />
+      </el-row>
+      <el-button type="primary" @click="waringdialogVisible = false"
+        >我已了解勘誤公告</el-button
+      >
+    </div>
     <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
     <div
       style="
@@ -557,7 +583,10 @@
         <div class="main_title_container" v-show="S7t">
           <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px;font-size:4vmin">
+          <el-collapse
+            accordion
+            style="border: 0px; padding-bottom: 0px;font-size:4vmin"
+          >
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-star-on"></i>
@@ -708,6 +737,7 @@ export default {
   },
   data () {
     return {
+      waringdialogVisible: true,
       HomeBtn: false, // 回到首頁按鈕
       MenuIndex: '0', // 側邊懸浮選單高亮Index(滾動綁定)
       LoadingV: '', // 載入動畫，預先在這裡宣告，以供在不同的實例下取得這個參數
@@ -885,49 +915,49 @@ export default {
 }
 
 .section1 {
-  background-image: url("../assets/section1_background.jpg");
+  background-image: url('../assets/section1_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section2 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url('../assets/section2_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section3 {
-  background-image: url("../assets/section3_background.jpg");
+  background-image: url('../assets/section3_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section4 {
-  background-image: url("../assets/section4_background.jpg");
+  background-image: url('../assets/section4_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section5 {
-  background-image: url("../assets/section5_background.jpg");
+  background-image: url('../assets/section5_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section6 {
-  background-image: url("../assets/section6_background.jpg");
+  background-image: url('../assets/section6_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section7 {
-  background-image: url("../assets/section7_background.jpg");
+  background-image: url('../assets/section7_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section8 {
-  background-image: url("../assets/section8_background.jpg");
+  background-image: url('../assets/section8_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
