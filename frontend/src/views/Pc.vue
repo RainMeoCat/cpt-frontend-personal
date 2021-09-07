@@ -253,13 +253,13 @@
               <div>
                 概念組請繳交提案說明書<el-link
                   type="primary"
-                  href="./attach_1.pdf"
+                  href="./attach_1_v2.pdf"
                   target="_blank"
                   >(附件一)</el-link
                 ><br />
                 實作組請繳交作品說明書<el-link
                   type="primary"
-                  href="./attach_2.pdf"
+                  href="./attach_2_v2.pdf"
                   target="_blank"
                   >(附件二)</el-link
                 >
@@ -275,9 +275,41 @@
                 評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
               </div>
             </el-collapse-item>
-          </el-collapse>
-        </div></transition
-      >
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-warning"></i>
+                【勘誤告示】提案說明書
+              </template>
+              <div>
+                <p>【原】實作組提案說明書【修正】實作組作品說明書</p>
+                <p>【原】參、內文(不超過五百字)【修正】參、內文(無字數限制)</p>
+                <div>
+                  概念組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_1_v2.pdf"
+                    target="_blank"
+                    >(附件一)</el-link
+                  ><br />
+                  實作組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_2_v2.pdf"
+                    target="_blank"
+                    >(附件二)</el-link
+                  >
+                </div>
+                <img
+                  src="../assets/corrigendum.png"
+                  class="image"
+                  style="
+                  width: 25vw;
+                  display:block;
+                  margin:auto;
+                  "
+                />
+              </div>
+            </el-collapse-item>
+          </el-collapse></div
+      ></transition>
     </section>
     <section class="section4" id="Schedule">
       <transition
@@ -370,13 +402,13 @@
                     <div class="RuleContent">
                       概念組請繳交提案說明書<el-link
                         type="primary"
-                        href="./attach_1.pdf"
+                        href="./attach_1_v2.pdf"
                         target="_blank"
                         >(附件一)</el-link
                       ><br />
                       實作組請繳交作品說明書<el-link
                         type="primary"
-                        href="./attach_2.pdf"
+                        href="./attach_2_v2.pdf"
                         target="_blank"
                         >(附件二)</el-link
                       >
