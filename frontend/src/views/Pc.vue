@@ -750,7 +750,7 @@
                 ><i class="header-icon el-icon-info"></i>
                 簡章全文
               </template>
-              <el-link type="primary" href="./cpt_guide.pdf" target="_blank"
+              <el-link type="primary" href="./cpt_guide_v2.pdf" target="_blank"
                 >點擊下載簡章全文</el-link
               ><br />
             </el-collapse-item>
