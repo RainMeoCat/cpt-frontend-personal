@@ -1,5 +1,31 @@
 <template>
   <div class="main">
+    <div
+      style="
+              background-color: rgba(255, 255, 255, 0.8);
+              position: fixed;
+              top: 0px;
+              left: 0px;
+              width: 100vw;
+              height: 100vh;
+              z-index: 1000;
+            "
+      v-show="waringdialogVisible"
+    >
+      <el-row>
+        <img
+          src="../assets/corrigendum.png"
+          class="image"
+          style="
+                  height: 70vh;
+                  margin-top: 15vh;
+                  "
+        />
+      </el-row>
+      <el-button type="primary" @click="waringdialogVisible = false"
+        >我已了解勘誤公告</el-button
+      >
+    </div>
     <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
     <div
       style="
@@ -227,13 +253,13 @@
               <div>
                 概念組請繳交提案說明書<el-link
                   type="primary"
-                  href="./attach_1.pdf"
+                  href="./attach_1_v2.pdf"
                   target="_blank"
                   >(附件一)</el-link
                 ><br />
                 實作組請繳交作品說明書<el-link
                   type="primary"
-                  href="./attach_2.pdf"
+                  href="./attach_2_v2.pdf"
                   target="_blank"
                   >(附件二)</el-link
                 >
@@ -249,9 +275,41 @@
                 評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
               </div>
             </el-collapse-item>
-          </el-collapse>
-        </div></transition
-      >
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-warning"></i>
+                【勘誤告示】提案說明書
+              </template>
+              <div>
+                <p>【原】實作組提案說明書【修正】實作組作品說明書</p>
+                <p>【原】參、內文(不超過五百字)【修正】參、內文(無字數限制)</p>
+                <div>
+                  概念組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_1_v2.pdf"
+                    target="_blank"
+                    >(附件一)</el-link
+                  ><br />
+                  實作組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_2_v2.pdf"
+                    target="_blank"
+                    >(附件二)</el-link
+                  >
+                </div>
+                <img
+                  src="../assets/corrigendum.png"
+                  class="image"
+                  style="
+                  width: 25vw;
+                  display:block;
+                  margin:auto;
+                  "
+                />
+              </div>
+            </el-collapse-item>
+          </el-collapse></div
+      ></transition>
     </section>
     <section class="section4" id="Schedule">
       <transition
@@ -344,13 +402,13 @@
                     <div class="RuleContent">
                       概念組請繳交提案說明書<el-link
                         type="primary"
-                        href="./attach_1.pdf"
+                        href="./attach_1_v2.pdf"
                         target="_blank"
                         >(附件一)</el-link
                       ><br />
                       實作組請繳交作品說明書<el-link
                         type="primary"
-                        href="./attach_2.pdf"
+                        href="./attach_2_v2.pdf"
                         target="_blank"
                         >(附件二)</el-link
                       >
@@ -557,7 +615,10 @@
         <div class="main_title_container" v-show="S7t">
           <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px;font-size:4vmin">
+          <el-collapse
+            accordion
+            style="border: 0px; padding-bottom: 0px;font-size:4vmin"
+          >
             <el-collapse-item>
               <template slot="title"
                 ><i class="header-icon el-icon-star-on"></i>
@@ -689,7 +750,7 @@
                 ><i class="header-icon el-icon-info"></i>
                 簡章全文
               </template>
-              <el-link type="primary" href="./cpt_guide.pdf" target="_blank"
+              <el-link type="primary" href="./cpt_guide_v2.pdf" target="_blank"
                 >點擊下載簡章全文</el-link
               ><br />
             </el-collapse-item>
@@ -708,6 +769,7 @@ export default {
   },
   data () {
     return {
+      waringdialogVisible: true,
       HomeBtn: false, // 回到首頁按鈕
       MenuIndex: '0', // 側邊懸浮選單高亮Index(滾動綁定)
       LoadingV: '', // 載入動畫，預先在這裡宣告，以供在不同的實例下取得這個參數
@@ -885,49 +947,49 @@ export default {
 }
 
 .section1 {
-  background-image: url("../assets/section1_background.jpg");
+  background-image: url('../assets/section1_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section2 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url('../assets/section2_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section3 {
-  background-image: url("../assets/section3_background.jpg");
+  background-image: url('../assets/section3_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section4 {
-  background-image: url("../assets/section4_background.jpg");
+  background-image: url('../assets/section4_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section5 {
-  background-image: url("../assets/section5_background.jpg");
+  background-image: url('../assets/section5_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section6 {
-  background-image: url("../assets/section6_background.jpg");
+  background-image: url('../assets/section6_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section7 {
-  background-image: url("../assets/section7_background.jpg");
+  background-image: url('../assets/section7_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section8 {
-  background-image: url("../assets/section8_background.jpg");
+  background-image: url('../assets/section8_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;

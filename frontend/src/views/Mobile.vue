@@ -1,6 +1,32 @@
 <template>
   <div class="main">
     <div class="content">
+      <div
+        style="
+              background-color: rgba(255, 255, 255, 0.8);
+              position: fixed;
+              top: 0px;
+              left: 0px;
+              width: 100vw;
+              height: 100vh;
+              z-index: 3;
+            "
+        v-show="waringdialogVisible"
+      >
+        <el-row>
+          <img
+            src="../assets/corrigendum.png"
+            class="image"
+            style="
+                  width: 90vw;
+                  margin-top: 20vh;
+                  "
+          />
+        </el-row>
+        <el-button type="primary" @click="waringdialogVisible = false"
+          >我已了解勘誤公告</el-button
+        >
+      </div>
       <section class="section1" id="Top">
         <div class="main_title_container">
           <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
@@ -80,13 +106,13 @@
               <div>
                 概念組請繳交提案說明書<el-link
                   type="primary"
-                  href="./attach_1.pdf"
+                  href="./attach_1_v2.pdf"
                   target="_blank"
                   >(附件一)</el-link
                 ><br />
                 實作組請繳交作品說明書<el-link
                   type="primary"
-                  href="./attach_2.pdf"
+                  href="./attach_2_v2.pdf"
                   target="_blank"
                   >(附件二)</el-link
                 >
@@ -99,6 +125,39 @@
                 >
                 <el-divider></el-divider>
                 評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+              </div>
+            </el-collapse-item>
+            <el-collapse-item>
+              <template slot="title"
+                ><i class="header-icon el-icon-warning"></i>
+                【勘誤告示】提案說明書
+              </template>
+              <div>
+                <p>【原】實作組提案說明書【修正】實作組作品說明書</p>
+                <p>【原】參、內文(不超過五百字)【修正】參、內文(無字數限制)</p>
+                <div>
+                  概念組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_1_v2.pdf"
+                    target="_blank"
+                    >(附件一)</el-link
+                  ><br />
+                  實作組修正後說明書<el-link
+                    type="primary"
+                    href="./attach_2_v2.pdf"
+                    target="_blank"
+                    >(附件二)</el-link
+                  >
+                </div>
+                <img
+                  src="../assets/corrigendum.png"
+                  class="image"
+                  style="
+                  width: 70vw;
+                  display:block;
+                  margin:auto;
+                  "
+                />
               </div>
             </el-collapse-item>
           </el-collapse>
@@ -194,13 +253,13 @@
                     <div class="RuleContent">
                       概念組請繳交提案說明書<el-link
                         type="primary"
-                        href="./attach_1.pdf"
+                        href="./attach_1_v2.pdf"
                         target="_blank"
                         >(附件一)</el-link
                       ><br />
                       實作組請繳交作品說明書<el-link
                         type="primary"
-                        href="./attach_2.pdf"
+                        href="./attach_2_v2.pdf"
                         target="_blank"
                         >(附件二)</el-link
                       >
@@ -577,7 +636,7 @@
                 ><i class="header-icon el-icon-info"></i>
                 簡章全文
               </template>
-              <el-link type="primary" href="./cpt_guide.pdf" target="_blank"
+              <el-link type="primary" href="./cpt_guide_v2.pdf" target="_blank"
                 >點擊下載簡章全文</el-link
               ><br />
             </el-collapse-item>
@@ -632,8 +691,8 @@
           type="warning"
           style="height: 20vmin; font-size: 10vmin"
           @click="
-            drawer = false;
-            openUrl('https://nkust-ic.kktix.cc/events/20211024');
+            drawer = false
+            openUrl('https://nkust-ic.kktix.cc/events/20211024')
           "
           >前往報名</el-button
         >
@@ -739,6 +798,7 @@ export default {
       drawer: false, // 快速選單
       LastClick: '', // 快速選單捲動動作用，記錄選單關閉前所點擊的選項
       RuleIndex: 0,
+      waringdialogVisible: true,
       RulePreviousBtnDisabled: false,
       RuleNextBtnDisabled: false,
       dialogVisible: false,
@@ -911,7 +971,6 @@ export default {
     // 在Vue生命週期:created階段建立一個element ui Loading實例，並在Mounted階段將關閉的呼叫加入頁面載入完成的監聽器。
   }
 }
-
 </script>
 
 <style scoped>
@@ -960,50 +1019,50 @@ export default {
   align-items: center;
 }
 .section1 {
-  background-image: url("../assets/section1_background.jpg");
+  background-image: url('../assets/section1_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   background-position: center;
 }
 .section2 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url('../assets/section2_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section3 {
-  background-image: url("../assets/section3_background.jpg");
+  background-image: url('../assets/section3_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .section4 {
-  background-image: url("../assets/section4_background.jpg");
+  background-image: url('../assets/section4_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section5 {
-  background-image: url("../assets/section5_background.jpg");
+  background-image: url('../assets/section5_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .section6 {
-  background-image: url("../assets/section6_background.jpg");
+  background-image: url('../assets/section6_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section7 {
-  background-image: url("../assets/section7_background.jpg");
+  background-image: url('../assets/section7_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section8 {
-  background-image: url("../assets/section8_background.jpg");
+  background-image: url('../assets/section8_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1137,7 +1196,7 @@ section {
   height: calc(80vh - 50px);
   overflow-y: scroll;
 }
-.mobile-drawer{
+.mobile-drawer {
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
