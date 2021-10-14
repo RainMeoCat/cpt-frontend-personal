@@ -1,6 +1,32 @@
 <template>
   <div class="main">
     <div class="content">
+      <div
+        style="
+              background-color: rgba(255, 255, 255, 0.8);
+              position: fixed;
+              top: 0px;
+              left: 0px;
+              width: 100vw;
+              height: 100vh;
+              z-index: 3;
+            "
+        v-show="waringdialogVisible"
+      >
+        <el-row>
+          <img
+            src="../assets/corrigendum.png"
+            class="image"
+            style="
+                  width: 90vw;
+                  margin-top: 20vh;
+                  "
+          />
+        </el-row>
+        <el-button type="primary" @click="waringdialogVisible = false"
+          >我已了解勘誤公告</el-button
+        >
+      </div>
       <section class="section1" id="Top">
         <div class="main_title_container">
           <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
@@ -701,8 +727,8 @@
           type="warning"
           style="height: 20vmin; font-size: 10vmin"
           @click="
-            drawer = false;
-            openUrl('https://nkust-ic.kktix.cc/events/20211024');
+            drawer = false
+            openUrl('https://nkust-ic.kktix.cc/events/20211024')
           "
           >前往報名</el-button
         >
@@ -808,6 +834,7 @@ export default {
       drawer: false, // 快速選單
       LastClick: '', // 快速選單捲動動作用，記錄選單關閉前所點擊的選項
       RuleIndex: 0,
+      waringdialogVisible: true,
       RulePreviousBtnDisabled: false,
       RuleNextBtnDisabled: false,
       dialogVisible: false,
@@ -980,7 +1007,6 @@ export default {
     // 在Vue生命週期:created階段建立一個element ui Loading實例，並在Mounted階段將關閉的呼叫加入頁面載入完成的監聽器。
   }
 }
-
 </script>
 
 <style scoped>
@@ -1029,50 +1055,50 @@ export default {
   align-items: center;
 }
 .section1 {
-  background-image: url("../assets/section1_background.jpg");
+  background-image: url('../assets/section1_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   background-position: center;
 }
 .section2 {
-  background-image: url("../assets/section2_background.jpg");
+  background-image: url('../assets/section2_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section3 {
-  background-image: url("../assets/section3_background.jpg");
+  background-image: url('../assets/section3_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .section4 {
-  background-image: url("../assets/section4_background.jpg");
+  background-image: url('../assets/section4_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section5 {
-  background-image: url("../assets/section5_background.jpg");
+  background-image: url('../assets/section5_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .section6 {
-  background-image: url("../assets/section6_background.jpg");
+  background-image: url('../assets/section6_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section7 {
-  background-image: url("../assets/section7_background.jpg");
+  background-image: url('../assets/section7_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .section8 {
-  background-image: url("../assets/section8_background.jpg");
+  background-image: url('../assets/section8_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1206,7 +1232,7 @@ section {
   height: calc(80vh - 50px);
   overflow-y: scroll;
 }
-.mobile-drawer{
+.mobile-drawer {
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
