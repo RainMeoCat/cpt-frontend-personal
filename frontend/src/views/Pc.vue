@@ -1,31 +1,5 @@
 <template>
   <div class="main">
-    <div
-      style="
-              background-color: rgba(255, 255, 255, 0.8);
-              position: fixed;
-              top: 0px;
-              left: 0px;
-              width: 100vw;
-              height: 100vh;
-              z-index: 1000;
-            "
-      v-show="waringdialogVisible"
-    >
-      <el-row>
-        <img
-          src="../assets/corrigendum.png"
-          class="image"
-          style="
-                  height: 70vh;
-                  margin-top: 15vh;
-                  "
-        />
-      </el-row>
-      <el-button type="primary" @click="waringdialogVisible = false"
-        >我已了解勘誤公告</el-button
-      >
-    </div>
     <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
     <div style="
         float: right;

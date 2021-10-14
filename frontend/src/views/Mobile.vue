@@ -1,32 +1,6 @@
 <template>
   <div class="main">
     <div class="content">
-      <div
-        style="
-              background-color: rgba(255, 255, 255, 0.8);
-              position: fixed;
-              top: 0px;
-              left: 0px;
-              width: 100vw;
-              height: 100vh;
-              z-index: 3;
-            "
-        v-show="waringdialogVisible"
-      >
-        <el-row>
-          <img
-            src="../assets/corrigendum.png"
-            class="image"
-            style="
-                  width: 90vw;
-                  margin-top: 20vh;
-                  "
-          />
-        </el-row>
-        <el-button type="primary" @click="waringdialogVisible = false"
-          >我已了解勘誤公告</el-button
-        >
-      </div>
       <section class="section1" id="Top">
         <div class="main_title_container">
           <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
