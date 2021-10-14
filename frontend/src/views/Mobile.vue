@@ -128,36 +128,17 @@
               </div>
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-warning"></i>
-                【勘誤告示】提案說明書
+              <template slot="title"><i class="header-icon el-icon-warning"></i>
+                決賽名單公布！
               </template>
               <div>
-                <p>【原】實作組提案說明書【修正】實作組作品說明書</p>
-                <p>【原】參、內文(不超過五百字)【修正】參、內文(無字數限制)</p>
-                <div>
-                  概念組修正後說明書<el-link
-                    type="primary"
-                    href="./attach_1_v2.pdf"
-                    target="_blank"
-                    >(附件一)</el-link
-                  ><br />
-                  實作組修正後說明書<el-link
-                    type="primary"
-                    href="./attach_2_v2.pdf"
-                    target="_blank"
-                    >(附件二)</el-link
-                  >
-                </div>
-                <img
-                  src="../assets/corrigendum.png"
-                  class="image"
-                  style="
-                  width: 70vw;
-                  display:block;
-                  margin:auto;
-                  "
-                />
+                決賽名單已經公布，請移至<el-link
+                  type="primary"
+                  href="/#List"
+                  target="_blank"
+                  :underline="false"
+                  style="vertical-align: baseline;font-size:13px"
+                >名單公布</el-link>查看。
               </div>
             </el-collapse-item>
           </el-collapse>
@@ -506,7 +487,62 @@
         <div class="main_title_container">
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <span>尚未有任何名單公布</span>
+          <div>
+            <h2>決賽名單公布</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul>
+                      <li>AI疫把罩</li>
+                      <li>no P K</li>
+                      <li>Plan A</li>
+                      <li>汪汪隊</li>
+                      <li>漫步青雲</li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul>
+                      <li>漫步彩虹</li>
+                      <li>漫步雲端</li>
+                      <li>漫星雲彩</li>
+                      <li>漫漫星斗</li>
+                      <li>鑫森淼焱壵</li>
+                    </ul>
+                  </el-col>
+                </el-row>
+
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul>
+                      <li>Pass kids</li>
+                      <li>今天吃什麼</li>
+                      <li>只想吃烤肉</li>
+                      <li>你說對不隊</li>
+                      <li>車車我來了</li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul>
+                      <li>烏龜立大功</li>
+                      <li>動腦筋</li>
+                      <li>新森南路</li>
+                      <li>聞雞魚</li>
+                      <li>翱翔天際</li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
         </div>
       </section>
       <section class="section7" id="Works">

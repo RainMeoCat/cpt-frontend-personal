@@ -27,15 +27,13 @@
       >
     </div>
     <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
-    <div
-      style="
+    <div style="
         float: right;
         z-index: 999;
         position: fixed;
         right: 1vmin;
         padding-top: 25vmin;
-      "
-    >
+      ">
       <!-- 側邊懸浮選單 -->
       <transition
         name="custom-classes-transition"
@@ -43,7 +41,11 @@
         leave-active-class="animate__animated animate__fadeOutDown"
         mode="in-out"
       >
-        <el-row :span="10" style="margin-right: 10px" v-show="MenuT">
+        <el-row
+          :span="10"
+          style="margin-right: 10px"
+          v-show="MenuT"
+        >
           <el-col>
             <el-menu
               class="el-menu-vertical-demo"
@@ -56,47 +58,45 @@
                 @click="Scroll('Info')"
                 class="el-top-item"
               >
-                <template #title
-                  ><i class="el-icon-s-flag"></i><span>關於競賽</span></template
-                >
+                <template #title><i class="el-icon-s-flag"></i><span>關於競賽</span></template>
               </el-menu-item>
-              <el-menu-item index="2" @click="Scroll('News')">
-                <template #title
-                  ><i class="el-icon-s-platform"></i
-                  ><span>最新消息</span></template
-                >
+              <el-menu-item
+                index="2"
+                @click="Scroll('News')"
+              >
+                <template #title><i class="el-icon-s-platform"></i><span>最新消息</span></template>
               </el-menu-item>
-              <el-menu-item index="3" @click="Scroll('Schedule')">
-                <template #title
-                  ><i class="el-icon-time"></i><span>競賽時程</span></template
-                >
+              <el-menu-item
+                index="3"
+                @click="Scroll('Schedule')"
+              >
+                <template #title><i class="el-icon-time"></i><span>競賽時程</span></template>
               </el-menu-item>
-              <el-menu-item index="4" @click="Scroll('Rule')">
-                <template #title
-                  ><i class="el-icon-s-check"></i
-                  ><span>競賽辦法</span></template
-                >
+              <el-menu-item
+                index="4"
+                @click="Scroll('Rule')"
+              >
+                <template #title><i class="el-icon-s-check"></i><span>競賽辦法</span></template>
               </el-menu-item>
-              <el-menu-item index="5" @click="Scroll('List')">
-                <template #title
-                  ><i class="el-icon-tickets"></i
-                  ><span>名單公布</span></template
-                >
+              <el-menu-item
+                index="5"
+                @click="Scroll('List')"
+              >
+                <template #title><i class="el-icon-tickets"></i><span>名單公布</span></template>
               </el-menu-item>
 
-              <el-menu-item index="6" @click="Scroll('Works')">
-                <template #title
-                  ><i class="el-icon-s-open"></i><span>歷屆作品</span></template
-                >
+              <el-menu-item
+                index="6"
+                @click="Scroll('Works')"
+              >
+                <template #title><i class="el-icon-s-open"></i><span>歷屆作品</span></template>
               </el-menu-item>
               <el-menu-item
                 index="7"
                 @click="Scroll('Faq')"
                 class="el-bottom-item"
               >
-                <template #title
-                  ><i class="el-icon-question"></i><span>FAQ</span></template
-                >
+                <template #title><i class="el-icon-question"></i><span>FAQ</span></template>
               </el-menu-item>
             </el-menu>
           </el-col>
@@ -122,19 +122,24 @@
           "
           @click.native="Scroll('Index')"
           v-show="HomeBtn"
-          >回到頂端</el-button
-        >
+        >回到頂端</el-button>
       </transition>
     </div>
 
-    <section class="section1" id="Index">
+    <section
+      class="section1"
+      id="Index"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S1t">
+        <div
+          class="main_title_container"
+          v-show="S1t"
+        >
           <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 3vmin">
             徵稿至 2021-10-7(四)<br />
@@ -157,8 +162,7 @@
             "
             onclick="window.open('https://nkust-ic.kktix.cc/events/20211024')"
             target="_blank"
-            >立即報名</el-button
-          >
+          >立即報名</el-button>
         </div>
       </transition>
       <div
@@ -175,70 +179,85 @@
         class="float"
       >
         向下捲動以查看更多<br />
-        <i style="font-size: 7vmin" class="el-icon-bottom"></i>
+        <i
+          style="font-size: 7vmin"
+          class="el-icon-bottom"
+        ></i>
       </div>
     </section>
-    <section class="section2" id="Info">
+    <section
+      class="section2"
+      id="Info"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S2t">
+        <div
+          class="main_title_container"
+          v-show="S2t"
+        >
           <div class="main_title">關於競賽</div>
           <div style="font-size: 2vmin">
             為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。
           </div>
           <el-divider></el-divider>
           <el-row :gutter="24">
-            <el-col :span="8"
-              ><div class="grid-content bg-purple">主辦單位</div></el-col
-            >
-            <el-col :span="16"
-              ><div class="grid-content bg-purple">
+            <el-col :span="8">
+              <div class="grid-content bg-purple">主辦單位</div>
+            </el-col>
+            <el-col :span="16">
+              <div class="grid-content bg-purple">
                 國立高雄科技大學商業智慧學院暨智慧商務系
-              </div></el-col
-            >
+              </div>
+            </el-col>
           </el-row>
           <el-row :gutter="24">
-            <el-col :span="8"
-              ><div class="grid-content bg-purple">協辦單位</div></el-col
-            >
-            <el-col :span="16"
-              ><div class="grid-content bg-purple">
+            <el-col :span="8">
+              <div class="grid-content bg-purple">協辦單位</div>
+            </el-col>
+            <el-col :span="16">
+              <div class="grid-content bg-purple">
                 <ul style="padding: 0px; margin: 0px">
                   <li>高雄市政府青年局</li>
                   <li>金融資訊系</li>
                   <li>會計資訊系</li>
                 </ul>
-              </div></el-col
-            >
+              </div>
+            </el-col>
           </el-row>
           <el-row :gutter="24">
-            <el-col :span="8"
-              ><div class="grid-content bg-purple">贊助單位</div></el-col
-            >
-            <el-col :span="16"
-              ><div class="grid-content bg-purple">
+            <el-col :span="8">
+              <div class="grid-content bg-purple">贊助單位</div>
+            </el-col>
+            <el-col :span="16">
+              <div class="grid-content bg-purple">
                 <ul style="padding: 0px; margin: 0px">
                   <li>華友聯集團</li>
                   <li>智慧商務系系友會</li>
                 </ul>
-              </div></el-col
-            >
+              </div>
+            </el-col>
           </el-row>
-        </div></transition
-      >
+        </div>
+      </transition>
     </section>
-    <section class="section3" id="News">
+    <section
+      class="section3"
+      id="News"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S3t">
+        <div
+          class="main_title_container"
+          v-show="S3t"
+        >
           <div class="main_title">最新消息</div>
           <el-divider></el-divider>
           <el-collapse
@@ -246,8 +265,7 @@
             style="border: 0px; padding-bottom: 0px; border-radius: 5px"
           >
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
+              <template slot="title"><i class="header-icon el-icon-info"></i>
                 初賽徵稿至 2021-10-7日止
               </template>
               <div>
@@ -255,70 +273,55 @@
                   type="primary"
                   href="./attach_1_v2.pdf"
                   target="_blank"
-                  >(附件一)</el-link
-                ><br />
+                >(附件一)</el-link><br />
                 實作組請繳交作品說明書<el-link
                   type="primary"
                   href="./attach_2_v2.pdf"
                   target="_blank"
-                  >(附件二)</el-link
-                >
+                >(附件二)</el-link>
                 <el-divider></el-divider>
                 參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
                 <el-link
                   type="primary"
                   href="https://forms.gle/coDqU3Nu92N4dvmCA"
                   target="_blank"
-                  >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-                >
+                >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
                 <el-divider></el-divider>
                 評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
               </div>
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-warning"></i>
-                【勘誤告示】提案說明書
+              <template slot="title"><i class="header-icon el-icon-warning"></i>
+                決賽名單公布！
               </template>
               <div>
-                <p>【原】實作組提案說明書【修正】實作組作品說明書</p>
-                <p>【原】參、內文(不超過五百字)【修正】參、內文(無字數限制)</p>
-                <div>
-                  概念組修正後說明書<el-link
-                    type="primary"
-                    href="./attach_1_v2.pdf"
-                    target="_blank"
-                    >(附件一)</el-link
-                  ><br />
-                  實作組修正後說明書<el-link
-                    type="primary"
-                    href="./attach_2_v2.pdf"
-                    target="_blank"
-                    >(附件二)</el-link
-                  >
-                </div>
-                <img
-                  src="../assets/corrigendum.png"
-                  class="image"
-                  style="
-                  width: 25vw;
-                  display:block;
-                  margin:auto;
-                  "
-                />
+                決賽名單已經公布，請移至<el-link
+                  type="primary"
+                  href="/#List"
+                  target="_blank"
+                  :underline="false"
+                  style="vertical-align: baseline;font-size:13px"
+                >名單公布</el-link>查看。
               </div>
             </el-collapse-item>
-          </el-collapse></div
-      ></transition>
+          </el-collapse>
+        </div>
+      </transition>
     </section>
-    <section class="section4" id="Schedule">
+    <section
+      class="section4"
+      id="Schedule"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S4t">
+        <div
+          class="main_title_container"
+          v-show="S4t"
+        >
           <div class="main_title">競賽時程</div>
           <el-divider></el-divider>
           <div style="padding-top: 3vmin">
@@ -334,20 +337,31 @@
               </el-timeline-item>
             </el-timeline>
           </div>
-        </div></transition
-      >
+        </div>
+      </transition>
     </section>
-    <section class="section5" id="Rule" style="overflow-y: scroll">
+    <section
+      class="section5"
+      id="Rule"
+      style="overflow-y: scroll"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S5t" style="width: 70vw">
+        <div
+          class="main_title_container"
+          v-show="S5t"
+          style="width: 70vw"
+        >
           <div class="main_title">競賽辦法</div>
           <el-divider></el-divider>
-          <el-row style="overflow-y: scroll; overflow-x: hidden" :gutter="20">
+          <el-row
+            style="overflow-y: scroll; overflow-x: hidden"
+            :gutter="20"
+          >
             <el-col :span="6">
               <el-container class="RuleTitleContainer">
                 <div
@@ -363,28 +377,31 @@
             </el-col>
             <el-col :span="18">
               <el-container class="RuleContentContainer">
-                <transition name="el-fade-in" mode="out-in">
-                  <div key="0" v-if="RuleIndex === 0">
+                <transition
+                  name="el-fade-in"
+                  mode="out-in"
+                >
+                  <div
+                    key="0"
+                    v-if="RuleIndex === 0"
+                  >
                     <div class="RuleContentTitle">參賽對象</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       全國高中職在學生，不拘科系皆可參加！
                     </div>
                   </div>
-                  <div key="1" v-else-if="RuleIndex === 1">
+                  <div
+                    key="1"
+                    v-else-if="RuleIndex === 1"
+                  >
                     <div class="RuleContentTitle">組別說明</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <div>
                         <span>概念組</span>
                         <br />
-                        <span
-                          >提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span
-                        >
+                        <span>提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span>
                       </div>
                       <el-divider></el-divider>
                       <div>
@@ -394,54 +411,51 @@
                       </div>
                     </div>
                   </div>
-                  <div key="2" v-else-if="RuleIndex === 2">
+                  <div
+                    key="2"
+                    v-else-if="RuleIndex === 2"
+                  >
                     <div class="RuleContentTitle">【初賽】交件說明</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       概念組請繳交提案說明書<el-link
                         type="primary"
                         href="./attach_1_v2.pdf"
                         target="_blank"
-                        >(附件一)</el-link
-                      ><br />
+                      >(附件一)</el-link><br />
                       實作組請繳交作品說明書<el-link
                         type="primary"
                         href="./attach_2_v2.pdf"
                         target="_blank"
-                        >(附件二)</el-link
-                      >
+                      >(附件二)</el-link>
                       <el-divider></el-divider>
                       參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
                       <el-link
                         type="primary"
                         href="https://forms.gle/coDqU3Nu92N4dvmCA"
                         target="_blank"
-                        >https://forms.gle/coDqU3Nu92N4dvmCA</el-link
-                      >
+                      >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
                       <el-divider></el-divider>
                       評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
                     </div>
                   </div>
-                  <div key="3" v-else-if="RuleIndex === 3">
+                  <div
+                    key="3"
+                    v-else-if="RuleIndex === 3"
+                  >
                     <div class="RuleContentTitle">【初賽】評分項目</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <el-row
                         style="overflow-y: scroll; overflow-x: hidden"
                         :gutter="60"
                       >
                         <el-col :span="12">
-                          <div
-                            style="
+                          <div style="
                               text-align: center;
                               font-size: 3vmin;
                               font-weight: 900;
-                            "
-                          >
+                            ">
                             概念組
                           </div>
                           <Pie-chart
@@ -450,13 +464,11 @@
                           ></Pie-chart>
                         </el-col>
                         <el-col :span="12">
-                          <div
-                            style="
+                          <div style="
                               text-align: center;
                               font-size: 3vmin;
                               font-weight: 900;
-                            "
-                          >
+                            ">
                             實作組
                           </div>
                           <Pie-chart
@@ -467,26 +479,27 @@
                       </el-row>
                     </div>
                   </div>
-                  <div key="4" v-else-if="RuleIndex === 4">
+                  <div
+                    key="4"
+                    v-else-if="RuleIndex === 4"
+                  >
                     <div class="RuleContentTitle">【決賽】交件說明</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       概念組請繳交簡報<el-link
                         type="primary"
                         href="./attach_3.pdf"
                         target="_blank"
-                        >(附件三)</el-link
-                      ><br />
+                      >(附件三)</el-link><br />
                       實作組不需繳交資料，若須使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
                     </div>
                   </div>
-                  <div key="5" v-else-if="RuleIndex === 5">
+                  <div
+                    key="5"
+                    v-else-if="RuleIndex === 5"
+                  >
                     <div class="RuleContentTitle">【決賽】競賽規定</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       概念組<br />
                       評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
@@ -496,28 +509,26 @@
                         type="primary"
                         href="./attach_4.pdf"
                         target="_blank"
-                        >(附件四)</el-link
-                      >)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
+                      >(附件四)</el-link>)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
                     </div>
                   </div>
-                  <div key="6" v-else-if="RuleIndex === 6">
+                  <div
+                    key="6"
+                    v-else-if="RuleIndex === 6"
+                  >
                     <div class="RuleContentTitle">【決賽】評分項目</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <el-row
                         style="overflow-y: scroll; overflow-x: hidden"
                         :gutter="60"
                       >
                         <el-col :span="12">
-                          <div
-                            style="
+                          <div style="
                               text-align: center;
                               font-size: 3vmin;
                               font-weight: 900;
-                            "
-                          >
+                            ">
                             概念組
                           </div>
                           <Pie-chart
@@ -526,13 +537,11 @@
                           ></Pie-chart>
                         </el-col>
                         <el-col :span="12">
-                          <div
-                            style="
+                          <div style="
                               text-align: center;
                               font-size: 3vmin;
                               font-weight: 900;
-                            "
-                          >
+                            ">
                             實作組
                           </div>
                           <Pie-chart
@@ -543,11 +552,12 @@
                       </el-row>
                     </div>
                   </div>
-                  <div key="7" v-else-if="RuleIndex === 7">
+                  <div
+                    key="7"
+                    v-else-if="RuleIndex === 7"
+                  >
                     <div class="RuleContentTitle">獎勵方法</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <ol>
                         <li
@@ -568,11 +578,12 @@
                       </ul>
                     </div>
                   </div>
-                  <div key="8" v-else-if="RuleIndex === 8">
+                  <div
+                    key="8"
+                    v-else-if="RuleIndex === 8"
+                  >
                     <div class="RuleContentTitle">注意事項</div>
-                    <el-divider
-                      style="margin-top: 1vmin; margin-bottom: 1vmin"
-                    ></el-divider>
+                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <ol>
                         <li
@@ -588,31 +599,99 @@
               </el-container>
             </el-col>
           </el-row>
-        </div></transition
-      >
+        </div>
+      </transition>
     </section>
-    <section class="section6" id="List">
+    <section
+      class="section6"
+      id="List"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S6t">
+        <div
+          class="main_title_container"
+          v-show="S6t"
+        >
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <span>尚未有任何名單公布</span>
-        </div></transition
-      >
+
+          <el-container class="RuleContentContainer">
+            <h2>決賽名單公布</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:70%">
+                  <el-col :span="12">
+                    <ul>
+                      <li>AI疫把罩</li>
+                      <li>no P K</li>
+                      <li>Plan A</li>
+                      <li>汪汪隊</li>
+                      <li>漫步青雲</li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul>
+                      <li>漫步彩虹</li>
+                      <li>漫步雲端</li>
+                      <li>漫星雲彩</li>
+                      <li>漫漫星斗</li>
+                      <li>鑫森淼焱壵</li>
+                    </ul>
+                  </el-col>
+                </el-row>
+
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:70%">
+                  <el-col :span="12">
+                    <ul>
+                      <li>Pass kids</li>
+                      <li>今天吃什麼</li>
+                      <li>只想吃烤肉</li>
+                      <li>你說對不隊</li>
+                      <li>車車我來了</li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul>
+                      <li>烏龜立大功</li>
+                      <li>動腦筋</li>
+                      <li>新森南路</li>
+                      <li>聞雞魚</li>
+                      <li>翱翔天際</li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
+          </el-container>
+        </div>
+      </transition>
     </section>
-    <section class="section7" id="Works">
+    <section
+      class="section7"
+      id="Works"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S7t">
+        <div
+          class="main_title_container"
+          v-show="S7t"
+        >
           <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-collapse
@@ -620,37 +699,36 @@
             style="border: 0px; padding-bottom: 0px;font-size:4vmin"
           >
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-star-on"></i>
+              <template slot="title"><i class="header-icon el-icon-star-on"></i>
                 2020年第一屆得獎題目
               </template>
               <span>概念組</span>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">特優</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">特優</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     減重健康APP LW&H
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">優等</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">優等</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     與神同行 -鳳山 雙慈殿宗教意象行銷 策略
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">佳作</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">佳作</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     <ul style="padding: 0px; margin: 0px">
                       <li>菱殼炭</li>
                       <li>失塑列車</li>
@@ -661,74 +739,79 @@
                         以智能設備改善傳統舊衣回收之問題
                       </li>
                     </ul>
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
               <el-divider></el-divider>
               <span>實作組</span>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">特優</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">特優</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     防疫戰士機器人
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">優等</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">優等</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     AIOT智能壓縮垃圾桶
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
               <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">佳作</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
+                <el-col :span="4">
+                  <div class="grid-content bg-purple">佳作</div>
+                </el-col>
+                <el-col :span="20">
+                  <div class="grid-content bg-purple">
                     <ul style="padding: 0px; margin: 0px">
                       <li>商場虛擬機器人</li>
                       <li>LINE BEACON - 尋找東南亞移民的家鄉味</li>
                     </ul>
-                  </div></el-col
-                >
+                  </div>
+                </el-col>
               </el-row>
             </el-collapse-item>
           </el-collapse>
-        </div></transition
-      >
+        </div>
+      </transition>
     </section>
-    <section class="section8" id="Faq">
+    <section
+      class="section8"
+      id="Faq"
+    >
       <transition
         name="custom-classes-transition"
         enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOutLeft"
         mode="out-in"
       >
-        <div class="main_title_container" v-show="S8t">
+        <div
+          class="main_title_container"
+          v-show="S8t"
+        >
           <div class="main_title">FAQ</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+          <el-collapse
+            accordion
+            style="border: 0px; padding-bottom: 0px"
+          >
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
+              <template slot="title"><i class="header-icon el-icon-info"></i>
                 聯絡窗口
               </template>
               <div class="sub-item">
                 <div>
                   <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
-                  <span
-                    >國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
-                    分機：17560<br
-                  /></span>
-                  <span
-                    style="
+                  <span>國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
+                    分機：17560<br /></span>
+                  <span style="
                       color: linear-gradient(
                         to right,
                         orange,
@@ -739,20 +822,19 @@
                         violet
                       );
                       width: 100%;
-                    "
-                    >開發團隊/網頁維護：ITALAB</span
-                  >
+                    ">開發團隊/網頁維護：ITALAB</span>
                 </div>
               </div>
             </el-collapse-item>
             <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-info"></i>
+              <template slot="title"><i class="header-icon el-icon-info"></i>
                 簡章全文
               </template>
-              <el-link type="primary" href="./cpt_guide_v2.pdf" target="_blank"
-                >點擊下載簡章全文</el-link
-              ><br />
+              <el-link
+                type="primary"
+                href="./cpt_guide.pdf"
+                target="_blank"
+              >點擊下載簡章全文</el-link><br />
             </el-collapse-item>
           </el-collapse>
         </div>
