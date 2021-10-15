@@ -261,7 +261,7 @@
                   target="_blank"
                 >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
                 <el-divider></el-divider>
-                評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+                評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
               </div>
             </el-collapse-item>
             <el-collapse-item>
@@ -410,7 +410,7 @@
                         target="_blank"
                       >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
                       <el-divider></el-divider>
-                      評審委員在每組中評選16隊晉級決賽(視狀況酌予增減)
+                      評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
                     </div>
                   </div>
                   <div
