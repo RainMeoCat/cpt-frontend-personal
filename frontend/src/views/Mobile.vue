@@ -115,6 +115,22 @@
                 >名單公布</el-link>查看。
               </div>
             </el-collapse-item>
+            <el-collapse-item>
+              <template slot="title"><i class="header-icon el-icon-warning"></i>
+                決賽得獎名單公布！
+              </template>
+              <div>
+                決賽最終得獎名單已經公布，請移至<el-link
+                  type="primary"
+                  href="/#List"
+                  target="_blank"
+                  :underline="false"
+                  style="vertical-align: baseline;font-size:13px"
+                >名單公布</el-link>查看。
+                <br/>
+                非常感謝大家的參與！
+              </div>
+            </el-collapse-item>
           </el-collapse>
         </div>
       </section>
@@ -458,10 +474,105 @@
         </transition>
       </section>
       <section class="section6" id="List">
-        <div class="main_title_container">
+        <div class="main_title_container" style="padding:15px">
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <div>
+                        <h2>第二屆最終得獎名單</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <br/>漫步彩虹
+                      </li>
+                      <li>&emsp;優等
+                        <br/>汪汪隊
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>AI疫把罩
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>no P K
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>漫步雲端
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <br/>漫漫星斗
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>鑫森淼焱壵
+                      </li>
+                      <li>入圍獎
+                        <br/>Plan A
+                      </li>
+                      <li>入圍獎
+                        <br/>漫步青雲
+                      </li>
+                      <li>入圍獎
+                        <br/>漫星雲彩
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <br/>Pass kids
+                      </li>
+                      <li>&emsp;特優
+                        <br/>只想吃烤肉
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>車車我來了
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>新森南路
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>烏龜立大功
+                      </li>
+
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <br/>動腦筋
+                      </li>
+                      <li>&emsp;佳作
+                        <br/>聞雞魚
+                      </li>
+                      <li>入圍獎
+                        <br/>你說對不隊
+                      </li>
+                      <li>入圍獎
+                        <br/>今天吃什麼
+                      </li>
+                      <li>入圍獎
+                        <br/>翱翔天際
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
             <h2>決賽名單公布</h2>
             <el-collapse accordion>
               <el-collapse-item
@@ -987,6 +1098,17 @@ export default {
 .contain {
   height: 50%;
   padding: 0px;
+}
+.final-li {
+  list-style: none;
+  padding-left: 10px;
+}
+.final-li > li {
+  padding-left: 1rem;
+  text-indent: -0.7rem;
+}
+.final-li > li::before {
+  content: "🏅 ";
 }
 .el-tabs__header.is-top {
   margin-bottom: 0px;

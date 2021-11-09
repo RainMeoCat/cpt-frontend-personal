@@ -278,6 +278,22 @@
                 >名單公布</el-link>查看。
               </div>
             </el-collapse-item>
+                        <el-collapse-item>
+              <template slot="title"><i class="header-icon el-icon-warning"></i>
+                決賽得獎名單公布！
+              </template>
+              <div>
+                決賽最終得獎名單已經公布，請移至<el-link
+                  type="primary"
+                  href="/#List"
+                  target="_blank"
+                  :underline="false"
+                  style="vertical-align: baseline;font-size:13px"
+                >名單公布</el-link>查看。
+                <br/>
+                非常感謝大家的參與！
+              </div>
+            </el-collapse-item>
           </el-collapse>
         </div>
       </transition>
@@ -594,6 +610,101 @@
           <el-divider style="background-color: #ffffff"></el-divider>
 
           <el-container class="RuleContentContainer">
+            <h2>第二屆最終得獎名單</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:70%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />漫步彩虹
+                      </li>
+                      <li>&emsp;優等
+                        <el-divider direction="vertical" />汪汪隊
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />AI疫把罩
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />no P K
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />漫步雲端
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />漫漫星斗
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />鑫森淼焱壵
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />Plan A
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />漫步青雲
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />漫星雲彩
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:70%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />Pass kids
+                      </li>
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />只想吃烤肉
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />車車我來了
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />新森南路
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />烏龜立大功
+                      </li>
+
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />動腦筋
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />聞雞魚
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />你說對不隊
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />今天吃什麼
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />翱翔天際
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
             <h2>決賽名單公布</h2>
             <el-collapse accordion>
               <el-collapse-item
@@ -1001,51 +1112,60 @@ export default {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
+.final-li {
+  list-style: none;
+}
+.final-li > li {
+  padding-left: 1rem;
+  text-indent: -0.7rem;
+}
+.final-li > li::before {
+  content: "🏅 ";
+}
 .section1 {
-  background-image: url('../assets/section1_background.jpg');
+  background-image: url("../assets/section1_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section2 {
-  background-image: url('../assets/section2_background.jpg');
+  background-image: url("../assets/section2_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section3 {
-  background-image: url('../assets/section3_background.jpg');
+  background-image: url("../assets/section3_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section4 {
-  background-image: url('../assets/section4_background.jpg');
+  background-image: url("../assets/section4_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section5 {
-  background-image: url('../assets/section5_background.jpg');
+  background-image: url("../assets/section5_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section6 {
-  background-image: url('../assets/section6_background.jpg');
+  background-image: url("../assets/section6_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section7 {
-  background-image: url('../assets/section7_background.jpg');
+  background-image: url("../assets/section7_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 .section8 {
-  background-image: url('../assets/section8_background.jpg');
+  background-image: url("../assets/section8_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
