@@ -3,7 +3,7 @@
     <div class="content">
       <section class="section1" id="Top">
         <div class="main_title_container">
-          <div class="main_title">第二屆高科盃<br />全國商業智慧競賽</div>
+          <div class="main_title">第三屆高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 18px; text-align: center">
             徵稿至 2021-10-7日<br />
             總獎金50,000元整
@@ -25,7 +25,7 @@
           <div class="main_title">關於競賽</div>
           <el-divider></el-divider>
           <span
-            >為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。</span
+            >為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。</span
           >
           <el-divider></el-divider>
           <el-row :gutter="24">
@@ -478,7 +478,7 @@
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <div>
-                        <h2>第二屆最終得獎名單</h2>
+            <h2>第二屆最終得獎名單</h2>
             <el-collapse accordion>
               <el-collapse-item
                 title="實作組"
@@ -635,91 +635,191 @@
           <div class="main_title">歷屆得獎作品</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-collapse accordion style="border: 0px; padding-bottom: 0px">
-            <el-collapse-item>
-              <template slot="title"
-                ><i class="header-icon el-icon-star-on"></i>
-                2020年第一屆得獎題目
-              </template>
-              <span>概念組</span>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">特優</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    減重健康APP LW&H
-                  </div></el-col
-                >
-              </el-row>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">優等</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    與神同行 -鳳山 雙慈殿宗教意象行銷 策略
-                  </div></el-col
-                >
-              </el-row>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">佳作</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    <ul style="padding: 0px; margin: 0px">
-                      <li>菱殼炭</li>
-                      <li>失塑列車</li>
-                      <li>LINE Eats 健康管理聊天機器人</li>
-                      <li>行銷賣場-全聯福利中心</li>
-                      <li>
-                        改善舊衣回收-創造 JOY永續新生活
-                        以智能設備改善傳統舊衣回收之問題
+          <div>
+          <h2 class="el-icon-star-on">2020年第一屆得獎題目</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="24">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />防疫戰士機器人
+                      </li>
+                      <li>&emsp;優等
+                        <el-divider direction="vertical" />AIOT智能壓縮垃圾桶
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />商場虛擬機器人
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />LINE BEACON - 尋找東南亞移民的家鄉味
                       </li>
                     </ul>
-                  </div></el-col
-                >
-              </el-row>
-              <el-divider></el-divider>
-              <span>實作組</span>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">特優</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    防疫戰士機器人
-                  </div></el-col
-                >
-              </el-row>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">優等</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    AIOT智能壓縮垃圾桶
-                  </div></el-col
-                >
-              </el-row>
-              <el-row :gutter="24">
-                <el-col :span="4"
-                  ><div class="grid-content bg-purple">佳作</div></el-col
-                >
-                <el-col :span="20"
-                  ><div class="grid-content bg-purple">
-                    <ul style="padding: 0px; margin: 0px">
-                      <li>商場虛擬機器人</li>
-                      <li>LINE BEACON - 尋找東南亞移民的家鄉味</li>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="24">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />減重健康APP LW&H
+                      </li>
+                      <li>&emsp;優等
+                        <el-divider direction="vertical" />與神同行 -鳳山 雙慈殿宗教意象行銷 策略
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />菱殼炭
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />失塑列車
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />LINE Eats 健康管理聊天機器人
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />行銷賣場-全聯福利中心
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />改善舊衣回收-創造 JOY永續新生活 以智能設備改善傳統舊衣回收之問題
+                      </li>
                     </ul>
-                  </div></el-col
-                >
-              </el-row>
-            </el-collapse-item>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
+          <h2 class="el-icon-star-on">2021年第二屆得獎名單</h2>
+            <el-collapse accordion>
+              <el-collapse-item
+                title="實作組"
+                name="1"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />漫步彩虹
+                      </li>
+                      <li>&emsp;優等
+                        <el-divider direction="vertical" />汪汪隊
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />AI疫把罩
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />no P K
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />漫步雲端
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />漫漫星斗
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />鑫森淼焱壵
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />Plan A
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />漫步青雲
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />漫星雲彩
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+              <el-collapse-item
+                title="概念組"
+                name="2"
+              >
+                <el-row style="width:100%">
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />Pass kids
+                      </li>
+                      <li>&emsp;特優
+                        <el-divider direction="vertical" />只想吃烤肉
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />車車我來了
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />新森南路
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />烏龜立大功
+                      </li>
+                    </ul>
+                  </el-col>
+                  <el-col :span="12">
+                    <ul class="final-li">
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />動腦筋
+                      </li>
+                      <li>&emsp;佳作
+                        <el-divider direction="vertical" />聞雞魚
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />你說對不隊
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />今天吃什麼
+                      </li>
+                      <li>入圍獎
+                        <el-divider direction="vertical" />翱翔天際
+                      </li>
+                    </ul>
+                  </el-col>
+                </el-row>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
           </el-collapse>
         </div>
       </section>
-      <section class="section8" id="Faq">
+      <section class="section8" id="Activities">
+        <div class="activities_container">
+          <div class="main_title">活動花絮</div>
+          <el-divider style="background-color: #ffffff"></el-divider>
+          <el-collapse accordion style="border: 0px; padding-bottom: 0px">
+            <div>
+              <h2 class="el-icon-camera">2021年第二屆活動照片</h2>
+              <el-collapse accordion>
+              <el-collapse-item
+              title="大合照"
+              name="1"
+              >
+              </el-collapse-item>
+              <el-collapse-item
+              title="實作組"
+              name="2"
+              >
+              </el-collapse-item>
+              <el-collapse-item
+              title="概念組"
+              name="3"
+              >
+              </el-collapse-item>
+              </el-collapse>
+            </div>
+          </el-collapse>
+        </div>
+      </section>
+      <section class="section9" id="Faq">
         <div class="faq_container">
           <div class="main_title">FAQ</div>
           <el-divider style="background-color: #ffffff"></el-divider>
@@ -769,7 +869,7 @@
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="80%"
+      size="85%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
@@ -800,6 +900,11 @@
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Works')"
           ><i class="el-icon-s-open" />歷屆得獎作品</el-button
+        >
+      </el-row>
+      <el-row class="mobile-drawer">
+        <el-button type="primary" plain @click="ScrollProcess('Activities')"
+          ><i class="el-icon-camera" />活動花絮</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
@@ -965,7 +1070,7 @@ export default {
         name: 'keywords', content: '高科盃 全國商業智慧競賽 總獎金50000元整 國立高科大 國立高雄科技大學 智慧商務系 nkust ic'
       },
       {
-        name: 'description', content: '為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第二屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。'
+        name: 'description', content: '為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。'
       }
     ]
   },
@@ -1041,7 +1146,7 @@ export default {
     // 因為callback中的這個繫結沒有指向vue實例。
     // 為解決這個問題，在建立的hook中定義一個變數var self = this，指向vue實例，在callback中使用self引用資料屬性。
     window.addEventListener('scroll', function () {
-      switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 8))) {
+      switch (Math.round(window.scrollY / parseInt(document.body.clientHeight / 9))) {
         case (0): {
           self.$router.push('').catch(() => {})
           break
@@ -1071,6 +1176,10 @@ export default {
           break
         }
         case (7): {
+          self.$router.push('#Activities').catch(() => {})
+          break
+        }
+        case (8): {
           self.$router.push('#Faq').catch(() => {})
           break
         }
@@ -1194,6 +1303,12 @@ export default {
   background-position: center;
 }
 .section8 {
+  background-image: url('../assets/section1_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section9 {
   background-image: url('../assets/section8_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -1241,6 +1356,14 @@ export default {
   text-align: left;
 }
 .news_container {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  width: 93vmin;
+  text-align: left;
+}
+.activities_container {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
