@@ -11,7 +11,7 @@
     "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^1.0.0",
     "core-js": "^3.8.3",
-    "element-ui": "^2.15.3",
+    "element-ui": "^2.15.9",
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
     "vue-chartjs": "^3.5.1",

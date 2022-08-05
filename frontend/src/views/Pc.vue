@@ -125,8 +125,8 @@
         >
           <div class="main_title">第三屆高科盃<br />全國商業智慧競賽</div>
           <div style="font-size: 3vmin">
-            徵稿至 2021-10-7(四)<br />
-            總獎金50,000元整
+            徵稿至 2022-10-14(五) 中午12:00<br />
+            總獎金 45,000 元整
           </div>
           <el-button
             plain
@@ -143,7 +143,7 @@
             class="
               animate__animated animate__pulse animate__infinite animate__slower
             "
-            onclick="window.open('https://nkust-ic.kktix.cc/events/20211024')"
+            onclick="window.open('https://nkust-ic.kktix.cc/events/20211024-copy-1')"
             target="_blank"
           >立即報名</el-button>
         </div>
@@ -184,7 +184,7 @@
         >
           <div class="main_title">關於競賽</div>
           <div style="font-size: 2vmin">
-            為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。
+            為引發高中職及大學部學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。順應新課綱強調專題實作與實習科目學習成果，鼓勵同學將上述成果延伸本競賽，展現同學在課綱核心素養的具體實現，與活用專業知識與技能的能力，並增加未來在職場創就業之競爭力。國立高雄科技大學商業智慧學院及智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意興趣及增加未來在職場創就業之競爭力，並提供全國各校學生相互交流的機會。
           </div>
           <el-divider></el-divider>
           <el-row :gutter="24">
@@ -204,22 +204,8 @@
             <el-col :span="16">
               <div class="grid-content bg-purple">
                 <ul style="padding: 0px; margin: 0px">
-                  <li>高雄市政府青年局</li>
                   <li>金融資訊系</li>
                   <li>會計資訊系</li>
-                </ul>
-              </div>
-            </el-col>
-          </el-row>
-          <el-row :gutter="24">
-            <el-col :span="8">
-              <div class="grid-content bg-purple">贊助單位</div>
-            </el-col>
-            <el-col :span="16">
-              <div class="grid-content bg-purple">
-                <ul style="padding: 0px; margin: 0px">
-                  <li>華友聯集團</li>
-                  <li>智慧商務系系友會</li>
                 </ul>
               </div>
             </el-col>
@@ -249,58 +235,38 @@
           >
             <el-collapse-item>
               <template slot="title"><i class="header-icon el-icon-info"></i>
-                初賽徵稿至 2021-10-7日止
+                初賽徵稿至 2022-10-14日 中午12:00止
               </template>
               <div>
-                概念組請繳交提案說明書<el-link
+                概念組請繳交提案說明書 <el-link
                   type="primary"
-                  href="./attach_1_v2.pdf"
+                  href="./attach_1.pdf"
                   target="_blank"
                 >(附件一)</el-link><br />
-                實作組請繳交作品說明書<el-link
+                實作組請繳交作品說明書 <el-link
                   type="primary"
-                  href="./attach_2_v2.pdf"
+                  href="./attach_2.pdf"
                   target="_blank"
-                >(附件二)</el-link>
+                >(附件二)</el-link><br />
+                大學組請繳交提案說明書 <el-link
+                  type="primary"
+                  href="./attach_3.pdf"
+                  target="_blank"
+                >(附件三)</el-link>
                 <el-divider></el-divider>
                 參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
                 <el-link
                   type="primary"
                   href="https://forms.gle/coDqU3Nu92N4dvmCA"
                   target="_blank"
-                >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
+                >初賽繳件Google表單</el-link><br />
+                <el-link
+                  type="primary"
+                  href="https://reurl.cc/WEzYee"
+                  target="_blank"
+                >表單下載</el-link>
                 <el-divider></el-divider>
                 評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
-              </div>
-            </el-collapse-item>
-            <el-collapse-item>
-              <template slot="title"><i class="header-icon el-icon-warning"></i>
-                決賽名單公布！
-              </template>
-              <div>
-                決賽名單已經公布，請移至<el-link
-                  type="primary"
-                  href="/#List"
-                  target="_blank"
-                  :underline="false"
-                  style="vertical-align: baseline;font-size:13px"
-                >名單公布</el-link>查看。
-              </div>
-            </el-collapse-item>
-                        <el-collapse-item>
-              <template slot="title"><i class="header-icon el-icon-warning"></i>
-                決賽得獎名單公布！
-              </template>
-              <div>
-                決賽最終得獎名單已經公布，請移至<el-link
-                  type="primary"
-                  href="/#List"
-                  target="_blank"
-                  :underline="false"
-                  style="vertical-align: baseline;font-size:13px"
-                >名單公布</el-link>查看。
-                <br/>
-                非常感謝大家的參與！
               </div>
             </el-collapse-item>
           </el-collapse>
@@ -387,7 +353,7 @@
                     <div class="RuleContentTitle">參賽對象</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      全國高中職在學生，不拘科系皆可參加！
+                      全國高中職及大學在學生，不拘科皆可參加！
                     </div>
                   </div>
                   <div
@@ -408,6 +374,12 @@
                         <br />
                         實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
                       </div>
+                      <el-divider></el-divider>
+                      <div>
+                        大學組
+                        <br />
+                        以智慧科技，創新服務流程，創新經營模式，創新產品應用於新世代之下的數位轉型，智慧商務，財務管理科技，金融科技，品牌行銷，休閒光觀事業，文化創意產業或是新式商業模式與元宇宙等議題皆可依主題進行應用發想並且提出具備創意與可行的企劃書或構想書。
+                      </div>
                     </div>
                   </div>
                   <div
@@ -417,23 +389,33 @@
                     <div class="RuleContentTitle">【初賽】交件說明</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      概念組請繳交提案說明書<el-link
+                      概念組請繳交提案說明書 <el-link
                         type="primary"
-                        href="./attach_1_v2.pdf"
+                        href="./attach_1.pdf"
                         target="_blank"
                       >(附件一)</el-link><br />
-                      實作組請繳交作品說明書<el-link
+                      實作組請繳交作品說明書 <el-link
                         type="primary"
-                        href="./attach_2_v2.pdf"
+                        href="./attach_2.pdf"
                         target="_blank"
-                      >(附件二)</el-link>
+                      >(附件二)</el-link><br />
+                      大學組請繳交提案說明書 <el-link
+                        type="primary"
+                        href="./attach_3.pdf"
+                        target="_blank"
+                      >(附件三)</el-link>
                       <el-divider></el-divider>
-                      參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
+                      參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。<br />
                       <el-link
                         type="primary"
                         href="https://forms.gle/coDqU3Nu92N4dvmCA"
                         target="_blank"
-                      >https://forms.gle/coDqU3Nu92N4dvmCA</el-link>
+                      >初賽繳件Google表單</el-link><br />
+                      <el-link
+                        type="primary"
+                        href="https://reurl.cc/WEzYee"
+                        target="_blank"
+                      >表單下載</el-link>
                       <el-divider></el-divider>
                       評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
                     </div>
@@ -455,7 +437,7 @@
                               font-size: 3vmin;
                               font-weight: 900;
                             ">
-                            概念組
+                            概念組/大學組
                           </div>
                           <Pie-chart
                             :chart-data="this.$Global_data.DataC"
@@ -485,12 +467,12 @@
                     <div class="RuleContentTitle">【決賽】交件說明</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      概念組請繳交簡報<el-link
+                      概念組、實作組及大學組請繳交簡報 <el-link
                         type="primary"
-                        href="./attach_3.pdf"
+                        href="./attach_4.pdf"
                         target="_blank"
-                      >(附件三)</el-link><br />
-                      實作組不需繳交資料，若須使用簡報報告大會亦無限定格式，請自行發揮，相關設備也請自行攜帶
+                      >(附件四)</el-link><br />
+                      實作組需準備海報(格式於入圍時會公告)，若需使用相關設備也請自行攜帶。
                     </div>
                   </div>
                   <div
@@ -501,14 +483,13 @@
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       概念組<br />
-                      評審針對參賽者簡報內容及表現進行評分。每隊4分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
+                      評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
                       <el-divider></el-divider>
                       實作組<br />
-                      各隊展示、解說作品(展場規定請參照<el-link
-                        type="primary"
-                        href="./attach_4.pdf"
-                        target="_blank"
-                      >(附件四)</el-link>)，由評審針對作品及報告進行評分，每隊10分鐘，問答時間5分鐘(統問統答)。
+                      各隊展示、解說作品，評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
+                      <el-divider></el-divider>
+                      大學組<br />
+                      評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
                     </div>
                   </div>
                   <div
@@ -528,7 +509,7 @@
                               font-size: 3vmin;
                               font-weight: 900;
                             ">
-                            概念組
+                            概念組/大學組
                           </div>
                           <Pie-chart
                             :chart-data="this.$Global_data.DataC2"
@@ -617,158 +598,6 @@
         >
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
-
-          <el-container class="RuleContentContainer">
-            <h2>第二屆最終得獎名單</h2>
-            <el-collapse accordion>
-              <el-collapse-item
-                title="實作組"
-                name="1"
-              >
-                <el-row style="width:70%">
-                  <el-col :span="12">
-                    <ul class="final-li">
-                      <li>&emsp;特優
-                        <el-divider direction="vertical" />漫步彩虹
-                      </li>
-                      <li>&emsp;優等
-                        <el-divider direction="vertical" />汪汪隊
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />AI疫把罩
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />no P K
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />漫步雲端
-                      </li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="12">
-                    <ul class="final-li">
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />漫漫星斗
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />鑫森淼焱壵
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />Plan A
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />漫步青雲
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />漫星雲彩
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-
-              </el-collapse-item>
-              <el-collapse-item
-                title="概念組"
-                name="2"
-              >
-                <el-row style="width:70%">
-                  <el-col :span="12">
-                    <ul class="final-li">
-                      <li>&emsp;特優
-                        <el-divider direction="vertical" />Pass kids
-                      </li>
-                      <li>&emsp;特優
-                        <el-divider direction="vertical" />只想吃烤肉
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />車車我來了
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />新森南路
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />烏龜立大功
-                      </li>
-
-                    </ul>
-                  </el-col>
-                  <el-col :span="12">
-                    <ul class="final-li">
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />動腦筋
-                      </li>
-                      <li>&emsp;佳作
-                        <el-divider direction="vertical" />聞雞魚
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />你說對不隊
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />今天吃什麼
-                      </li>
-                      <li>入圍獎
-                        <el-divider direction="vertical" />翱翔天際
-                      </li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </el-collapse-item>
-            </el-collapse>
-            <h2>決賽名單公布</h2>
-            <el-collapse accordion>
-              <el-collapse-item
-                title="實作組"
-                name="1"
-              >
-                <el-row style="width:70%">
-                  <el-col :span="12">
-                    <ul>
-                      <li>AI疫把罩</li>
-                      <li>no P K</li>
-                      <li>Plan A</li>
-                      <li>汪汪隊</li>
-                      <li>漫步青雲</li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="12">
-                    <ul>
-                      <li>漫步彩虹</li>
-                      <li>漫步雲端</li>
-                      <li>漫星雲彩</li>
-                      <li>漫漫星斗</li>
-                      <li>鑫森淼焱壵</li>
-                    </ul>
-                  </el-col>
-                </el-row>
-
-              </el-collapse-item>
-              <el-collapse-item
-                title="概念組"
-                name="2"
-              >
-                <el-row style="width:70%">
-                  <el-col :span="12">
-                    <ul>
-                      <li>Pass kids</li>
-                      <li>今天吃什麼</li>
-                      <li>只想吃烤肉</li>
-                      <li>你說對不隊</li>
-                      <li>車車我來了</li>
-                    </ul>
-                  </el-col>
-                  <el-col :span="12">
-                    <ul>
-                      <li>烏龜立大功</li>
-                      <li>動腦筋</li>
-                      <li>新森南路</li>
-                      <li>聞雞魚</li>
-                      <li>翱翔天際</li>
-                    </ul>
-                  </el-col>
-                </el-row>
-              </el-collapse-item>
-            </el-collapse>
-          </el-container>
         </div>
       </transition>
     </section>
@@ -968,16 +797,43 @@
               title="大合照"
               name="1"
               >
+              <div>
+                <template>
+                  <el-carousel :interval="3000">
+                    <el-carousel-item v-for="(img,index) in GroupImgList" :key="index">
+                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
+                    </el-carousel-item>
+                  </el-carousel>
+                </template>
+              </div>
               </el-collapse-item>
               <el-collapse-item
               title="實作組"
               name="2"
               >
+              <div>
+                <template>
+                  <el-carousel :interval="3000">
+                    <el-carousel-item v-for="(img,index) in ImplementImgList" :key="index">
+                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
+                    </el-carousel-item>
+                  </el-carousel>
+                </template>
+              </div>
               </el-collapse-item>
               <el-collapse-item
               title="概念組"
               name="3"
               >
+              <div>
+                <template>
+                  <el-carousel :interval="3000">
+                    <el-carousel-item v-for="(img,index) in ConceptImgList" :key="index">
+                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
+                    </el-carousel-item>
+                  </el-carousel>
+                </template>
+              </div>
               </el-collapse-item>
             </el-collapse>
           </el-container>
@@ -1011,7 +867,7 @@
               <div class="sub-item">
                 <div>
                   <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
-                  <span>國立高雄科技大學智慧商務系杜助理電子郵件：momo@nkust.edu.tw<br />聯絡電話：07-3814526
+                  <span>國立高雄科技大學智慧商務系 杜助理<br />電子郵件：momoheui@gmail.com<br />聯絡電話：07-3814526
                     分機：17560<br /></span>
                   <span style="
                       color: linear-gradient(
@@ -1098,6 +954,29 @@ export default {
       },
       Rules: [
         '參賽對象', '組別說明', '【初賽】交件說明', '【初賽】評分項目', '【決賽】交件說明', '【決賽】競賽規定', '【決賽】評分項目', '獎勵辦法', '注意事項'
+      ],
+      ImplementImgList: [
+        { url: require('../assets/Implement_1.jpg') },
+        { url: require('../assets/Implement_2.jpg') },
+        { url: require('../assets/Implement_3.jpg') },
+        { url: require('../assets/Implement_4.jpg') },
+        { url: require('../assets/Implement_5.jpg') },
+        { url: require('../assets/Implement_6.jpg') },
+        { url: require('../assets/Implement_7.jpg') }
+      ],
+      ConceptImgList: [
+        { url: require('../assets/Concept_1.jpg') },
+        { url: require('../assets/Concept_2.jpg') },
+        { url: require('../assets/Concept_3.jpg') },
+        { url: require('../assets/Concept_4.jpg') },
+        { url: require('../assets/Concept_5.jpg') },
+        { url: require('../assets/Concept_6.jpg') },
+        { url: require('../assets/Concept_7.jpg') }
+      ],
+      GroupImgList: [
+        { url: require('../assets/Group_1.jpg') },
+        { url: require('../assets/Group_2.jpg') },
+        { url: require('../assets/Group_3.jpg') }
       ]
     }
   },
@@ -1108,7 +987,7 @@ export default {
         charset: 'utf-8'
       },
       {
-        name: 'keywords', content: '高科盃 全國商業智慧競賽 總獎金50000元整 國立高科大 國立高雄科技大學 智慧商務系 nkust ic'
+        name: 'keywords', content: '高科盃 全國商業智慧競賽 總獎金45000元整 國立高科大 國立高雄科技大學 智慧商務系 nkust ic'
       },
       {
         name: 'description', content: '為引發高中職學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣，並提供全國各校學生相互交流的機會。'
@@ -1317,6 +1196,17 @@ export default {
   font-size: 10vmin;
   font-weight: 900;
   text-align: left;
+}
+
+.CarouselImg{
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 section {
