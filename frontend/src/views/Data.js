@@ -167,7 +167,7 @@ const IdeaAward = [ // 競賽辦法.獎勵辦法
     data: '佳作共五名，每人獎狀一只。'
   },
   {
-    data: '特別獎共二名，每人獎狀一只。'
+    data: '入圍獎共二名，每人獎狀一只。'
   }
 ]
 export default {
