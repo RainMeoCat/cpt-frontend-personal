@@ -577,7 +577,7 @@
                       <li>&emsp;特優
                         <el-divider direction="vertical" />Pass kids
                       </li>
-                      <li>&emsp;特優
+                      <li>&emsp;優等
                         <el-divider direction="vertical" />只想吃烤肉
                       </li>
                       <li>&emsp;佳作
@@ -640,12 +640,40 @@
               </div>
               </el-collapse-item>
               <el-collapse-item
-              title="實作組"
+              title="實作組頒獎合影"
               name="2"
               >
               <div>
                 <template>
                   <el-carousel :interval="3000">
+                    <el-carousel-item v-for="(img,index) in ImplementAwardImgList" :key="index">
+                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
+                    </el-carousel-item>
+                  </el-carousel>
+                </template>
+              </div>
+              </el-collapse-item>
+              <el-collapse-item
+              title="概念組頒獎合影"
+              name="3"
+              >
+              <div>
+                <template>
+                  <el-carousel :interval="3000">
+                    <el-carousel-item v-for="(img,index) in ConceptAwardImgList" :key="index">
+                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
+                    </el-carousel-item>
+                  </el-carousel>
+                </template>
+              </div>
+              </el-collapse-item>
+              <el-collapse-item
+              title="實作組"
+              name="4"
+              >
+              <div>
+                <template>
+                  <el-carousel :interval="3000" indicator-position="none">
                     <el-carousel-item v-for="(img,index) in ImplementImgList" :key="index">
                       <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
                     </el-carousel-item>
@@ -655,11 +683,11 @@
               </el-collapse-item>
               <el-collapse-item
               title="概念組"
-              name="3"
+              name="5"
               >
               <div>
                 <template>
-                  <el-carousel :interval="3000">
+                  <el-carousel :interval="3000" indicator-position="none">
                     <el-carousel-item v-for="(img,index) in ConceptImgList" :key="index">
                       <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
                     </el-carousel-item>
@@ -910,7 +938,7 @@ export default {
       Rules: [
         '參賽對象', '組別說明', '【初賽】交件說明', '【初賽】評分項目', '【決賽】交件說明', '【決賽】競賽規定', '【決賽】評分項目', '獎勵辦法', '注意事項'
       ],
-      ImplementImgList: [
+      ImplementAwardImgList: [
         { url: require('../assets/Implement_1.jpg') },
         { url: require('../assets/Implement_2.jpg') },
         { url: require('../assets/Implement_3.jpg') },
@@ -919,7 +947,7 @@ export default {
         { url: require('../assets/Implement_6.jpg') },
         { url: require('../assets/Implement_7.jpg') }
       ],
-      ConceptImgList: [
+      ConceptAwardImgList: [
         { url: require('../assets/Concept_1.jpg') },
         { url: require('../assets/Concept_2.jpg') },
         { url: require('../assets/Concept_3.jpg') },
@@ -932,6 +960,33 @@ export default {
         { url: require('../assets/Group_1.jpg') },
         { url: require('../assets/Group_2.jpg') },
         { url: require('../assets/Group_3.jpg') }
+      ],
+      ImplementImgList: [
+        { url: require('../assets/Implement_8.jpg') },
+        { url: require('../assets/Implement_9.jpg') },
+        { url: require('../assets/Implement_10.jpg') },
+        { url: require('../assets/Implement_11.jpg') },
+        { url: require('../assets/Implement_12.jpg') },
+        { url: require('../assets/Implement_13.jpg') },
+        { url: require('../assets/Implement_14.jpg') },
+        { url: require('../assets/Implement_15.jpg') },
+        { url: require('../assets/Implement_16.jpg') },
+        { url: require('../assets/Implement_17.jpg') },
+        { url: require('../assets/Implement_18.jpg') },
+        { url: require('../assets/Implement_19.jpg') },
+        { url: require('../assets/Implement_20.jpg') }
+      ],
+      ConceptImgList: [
+        { url: require('../assets/Concept_8.jpg') },
+        { url: require('../assets/Concept_9.jpg') },
+        { url: require('../assets/Concept_10.jpg') },
+        { url: require('../assets/Concept_11.jpg') },
+        { url: require('../assets/Concept_12.jpg') },
+        { url: require('../assets/Concept_13.jpg') },
+        { url: require('../assets/Concept_14.jpg') },
+        { url: require('../assets/Concept_15.jpg') },
+        { url: require('../assets/Concept_16.jpg') },
+        { url: require('../assets/Concept_17.jpg') }
       ]
     }
   },
