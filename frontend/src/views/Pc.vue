@@ -6,7 +6,7 @@
         z-index: 999;
         position: fixed;
         right: 1vmin;
-        padding-top: 25vmin;
+        padding-top: 15vmin;
       ">
       <!-- 側邊懸浮選單 -->
       <transition
@@ -76,9 +76,16 @@
               <el-menu-item
                 index="8"
                 @click="Scroll('Faq')"
-                class="el-bottom-item"
               >
                 <template #title><i class="el-icon-question"></i><span>FAQ</span></template>
+              </el-menu-item>
+
+              <el-menu-item
+                index="9"
+                class="el-bottom-item"
+                onclick="window.open('https://ic.nkust.edu.tw/')"
+              >
+                <template #title><i class="el-icon-school"></i><span>智慧商務系</span></template>
               </el-menu-item>
               <!--  -->
             </el-menu>
@@ -101,7 +108,7 @@
             position: fixed;
             right: 2vmin;
             bottom: 2vmin;
-            width: 126px;
+            width: 145px;
           "
           @click.native="Scroll('Index')"
           v-show="HomeBtn"
@@ -193,7 +200,7 @@
             </el-col>
             <el-col :span="16">
               <div class="grid-content bg-purple">
-                國立高雄科技大學商業智慧學院暨智慧商務系
+                <a href="https://ic.nkust.edu.tw/" target="_blank" style="text-decoration:none;color:#ffffff">國立高雄科技大學商業智慧學院暨智慧商務系</a>
               </div>
             </el-col>
           </el-row>

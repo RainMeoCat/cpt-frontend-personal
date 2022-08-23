@@ -749,7 +749,7 @@
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="85%"
+      size="90%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
@@ -790,6 +790,16 @@
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Faq')"
           ><i class="el-icon-question" />FAQ</el-button
+        >
+      </el-row>
+      <el-row class="mobile-drawer">
+        <el-button
+          type="success" plain
+          @click="
+            drawer = false
+            openUrl('https://ic.nkust.edu.tw/')
+          "
+          ><i class="el-icon-school" />智慧商務系</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
