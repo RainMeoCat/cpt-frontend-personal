@@ -6,7 +6,7 @@
         z-index: 999;
         position: fixed;
         right: 1vmin;
-        padding-top: 25vmin;
+        padding-top: 15vmin;
       ">
       <!-- 側邊懸浮選單 -->
       <transition
@@ -76,9 +76,16 @@
               <el-menu-item
                 index="8"
                 @click="Scroll('Faq')"
-                class="el-bottom-item"
               >
                 <template #title><i class="el-icon-question"></i><span>FAQ</span></template>
+              </el-menu-item>
+
+              <el-menu-item
+                index="9"
+                class="el-bottom-item"
+                onclick="window.open('https://ic.nkust.edu.tw/')"
+              >
+                <template #title><i class="el-icon-school"></i><span>智慧商務系</span></template>
               </el-menu-item>
               <!--  -->
             </el-menu>
@@ -101,7 +108,7 @@
             position: fixed;
             right: 2vmin;
             bottom: 2vmin;
-            width: 126px;
+            width: 145px;
           "
           @click.native="Scroll('Index')"
           v-show="HomeBtn"
@@ -193,7 +200,7 @@
             </el-col>
             <el-col :span="16">
               <div class="grid-content bg-purple">
-                國立高雄科技大學商業智慧學院暨智慧商務系
+                <a href="https://ic.nkust.edu.tw/" target="_blank" style="text-decoration:none;color:#ffffff">國立高雄科技大學商業智慧學院暨智慧商務系</a>
               </div>
             </el-col>
           </el-row>
@@ -791,11 +798,19 @@
           <div class="main_title">活動花絮</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-container class="RuleContentContainer">
-            <h2 class="el-icon-camera">2021年第二屆活動照片</h2>
+            <h2 class="el-icon-camera">2021年第二屆活動花絮</h2>
             <el-collapse accordion>
               <el-collapse-item
-              title="大合照"
+              title="活動影片"
               name="1"
+              >
+              <div>
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6XWbaFmu_eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </el-collapse-item>
+              <el-collapse-item
+              title="大合照"
+              name="2"
               >
               <div>
                 <template>
@@ -809,7 +824,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="實作組頒獎合影"
-              name="2"
+              name="3"
               >
               <div>
                 <template>
@@ -823,7 +838,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="概念組頒獎合影"
-              name="3"
+              name="4"
               >
               <div>
                 <template>
@@ -837,7 +852,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="實作組"
-              name="4"
+              name="5"
               >
               <div>
                 <template>
@@ -851,7 +866,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="概念組"
-              name="5"
+              name="6"
               >
               <div>
                 <template>

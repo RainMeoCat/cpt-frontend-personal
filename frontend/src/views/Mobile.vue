@@ -623,11 +623,19 @@
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-collapse accordion style="border: 0px; padding-bottom: 0px">
             <div>
-              <h2 class="el-icon-camera">2021年第二屆活動照片</h2>
+              <h2 class="el-icon-camera">2021年第二屆活動花絮</h2>
               <el-collapse accordion>
               <el-collapse-item
-              title="大合照"
+              title="活動影片"
               name="1"
+              >
+              <div>
+                <iframe src="https://www.youtube-nocookie.com/embed/6XWbaFmu_eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style=" height: 100%;width: 100%;"></iframe>
+              </div>
+              </el-collapse-item>
+              <el-collapse-item
+              title="大合照"
+              name="2"
               >
               <div>
                 <template>
@@ -641,7 +649,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="實作組頒獎合影"
-              name="2"
+              name="3"
               >
               <div>
                 <template>
@@ -655,7 +663,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="概念組頒獎合影"
-              name="3"
+              name="4"
               >
               <div>
                 <template>
@@ -669,7 +677,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="實作組"
-              name="4"
+              name="5"
               >
               <div>
                 <template>
@@ -683,7 +691,7 @@
               </el-collapse-item>
               <el-collapse-item
               title="概念組"
-              name="5"
+              name="6"
               >
               <div>
                 <template>
@@ -749,7 +757,7 @@
       title="快速選單"
       :visible.sync="drawer"
       direction="btt"
-      size="85%"
+      size="90%"
       @closed="DrawerClosed()"
     >
       <el-row class="mobile-drawer">
@@ -790,6 +798,16 @@
       <el-row class="mobile-drawer">
         <el-button type="primary" plain @click="ScrollProcess('Faq')"
           ><i class="el-icon-question" />FAQ</el-button
+        >
+      </el-row>
+      <el-row class="mobile-drawer">
+        <el-button
+          type="success" plain
+          @click="
+            drawer = false
+            openUrl('https://ic.nkust.edu.tw/')
+          "
+          ><i class="el-icon-school" />智慧商務系</el-button
         >
       </el-row>
       <el-row class="mobile-drawer">
