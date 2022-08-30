@@ -213,6 +213,7 @@
                 <ul style="padding: 0px; margin: 0px">
                   <li>金融資訊系</li>
                   <li>會計資訊系</li>
+                  <li>AI金融科技中心</li>
                 </ul>
               </div>
             </el-col>
