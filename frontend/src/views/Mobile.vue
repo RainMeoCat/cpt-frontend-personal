@@ -65,19 +65,19 @@
                 初賽徵稿至 2022-10-14 (五) 中午12:00止
               </template>
               <div>
-                概念組請繳交提案說明書 <el-link
+                高中職概念組請繳交提案說明書 <el-link
                   type="primary"
                   href="./attach_1.pdf"
                   target="_blank"
                   >(附件一)</el-link
                 ><br />
-                實作組請繳交作品說明書 <el-link
+                高中職實作組請繳交作品說明書 <el-link
                   type="primary"
                   href="./attach_2.pdf"
                   target="_blank"
                   >(附件二)</el-link
                 ><br />
-                大學組請繳交提案說明書 <el-link
+                大學概念組請繳交提案說明書 <el-link
                   type="primary"
                   href="./attach_3.pdf"
                   target="_blank"
@@ -169,19 +169,19 @@
                     ></el-divider>
                     <div class="RuleContent">
                       <div>
-                        <span>概念組</span>
+                        <span>高中職概念組</span>
                         <br />
                         <span>提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span>
                       </div>
                       <el-divider></el-divider>
                       <div>
-                        實作組
+                        高中職實作組
                         <br />
                         實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
                       </div>
                       <el-divider></el-divider>
                       <div>
-                        大學組
+                        大學概念組
                         <br />
                         以智慧科技，創新服務流程，創新經營模式，創新產品應用於新世代之下的數位轉型，智慧商務，財務管理科技，金融科技，品牌行銷，休閒光觀事業，文化創意產業或是新式商業模式與元宇宙等議題皆可依主題進行應用發想並且提出具備創意與可行的企劃書或構想書。
                       </div>
@@ -193,17 +193,17 @@
                       style="margin-top: 1vmin; margin-bottom: 1vmin"
                     ></el-divider>
                     <div class="RuleContent">
-                      概念組請繳交提案說明書 <el-link
+                      高中職概念組請繳交提案說明書 <el-link
                         type="primary"
                         href="./attach_1.pdf"
                         target="_blank"
                       >(附件一)</el-link><br />
-                      實作組請繳交作品說明書 <el-link
+                      高中職實作組請繳交作品說明書 <el-link
                         type="primary"
                         href="./attach_2.pdf"
                         target="_blank"
                       >(附件二)</el-link><br />
-                      大學組請繳交提案說明書 <el-link
+                      大學概念組請繳交提案說明書 <el-link
                         type="primary"
                         href="./attach_3.pdf"
                         target="_blank"
@@ -237,7 +237,7 @@
                           font-weight: 900;
                         "
                       >
-                        概念組/大學組
+                      高中職概念組/大學概念組
                       </div>
                       <div>
                         <span>提案創新性</span>
@@ -266,7 +266,7 @@
                           font-weight: 900;
                         "
                       >
-                        實作組
+                      高中職實作組
                       </div>
                       <div>
                         <span>作品創作理念</span>
@@ -296,13 +296,13 @@
                       style="margin-top: 1vmin; margin-bottom: 1vmin"
                     ></el-divider>
                     <div class="RuleContent">
-                      概念組、實作組及大學組請繳交簡報<el-link
+                      高中職概念組、高中職實作組及大學概念組請繳交簡報<el-link
                         type="primary"
                         href="./attach_4.pdf"
                         target="_blank"
                         >(附件四)</el-link
                       ><br />
-                      實作組需準備海報(格式於入圍時會公告)，若需使用相關設備也請自行攜帶。
+                      高中職實作組需準備海報(格式於入圍時會公告)，若需使用相關設備也請自行攜帶。
                     </div>
                   </div>
                   <div key="5" v-else-if="RuleIndex === 5">
@@ -311,13 +311,13 @@
                       style="margin-top: 1vmin; margin-bottom: 1vmin"
                     ></el-divider>
                     <div class="RuleContent">
-                      概念組<br />
+                      高中職概念組<br />
                       評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
                       <el-divider></el-divider>
-                      實作組<br />
+                      高中職實作組<br />
                       各隊展示、解說作品，評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
                       <el-divider></el-divider>
-                      大學組<br />
+                      大學概念組<br />
                       評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
                     </div>
                   </div>
@@ -334,7 +334,7 @@
                           font-weight: 900;
                         "
                       >
-                        概念組/大學組
+                      高中職概念組/大學概念組
                       </div>
                       <div>
                         <span>簡報內容</span>
@@ -363,7 +363,7 @@
                           font-weight: 900;
                         "
                       >
-                        實作組
+                      高中職實作組
                       </div>
                       <div>
                         <span>創新想法</span>
@@ -466,7 +466,7 @@
           <h2 class="el-icon-star-on">2020年第一屆得獎題目</h2>
             <el-collapse accordion>
               <el-collapse-item
-                title="實作組"
+                title="高中職實作組"
                 name="1"
               >
                 <el-row style="width:100%">
@@ -489,7 +489,7 @@
                 </el-row>
               </el-collapse-item>
               <el-collapse-item
-                title="概念組"
+                title="高中職概念組"
                 name="2"
               >
                 <el-row style="width:100%">
@@ -524,7 +524,7 @@
           <h2 class="el-icon-star-on">2021年第二屆得獎名單</h2>
             <el-collapse accordion>
               <el-collapse-item
-                title="實作組"
+                title="高中職實作組"
                 name="1"
               >
                 <el-row style="width:100%">
@@ -569,7 +569,7 @@
                 </el-row>
               </el-collapse-item>
               <el-collapse-item
-                title="概念組"
+                title="高中職概念組"
                 name="2"
               >
                 <el-row style="width:100%">
@@ -649,7 +649,7 @@
               </div>
               </el-collapse-item>
               <el-collapse-item
-              title="實作組頒獎合影"
+              title="高中職實作組頒獎合影"
               name="3"
               >
               <div>
@@ -663,7 +663,7 @@
               </div>
               </el-collapse-item>
               <el-collapse-item
-              title="概念組頒獎合影"
+              title="高中職概念組頒獎合影"
               name="4"
               >
               <div>
@@ -677,7 +677,7 @@
               </div>
               </el-collapse-item>
               <el-collapse-item
-              title="實作組"
+              title="高中職實作組"
               name="5"
               >
               <div>
@@ -691,7 +691,7 @@
               </div>
               </el-collapse-item>
               <el-collapse-item
-              title="概念組"
+              title="高中職概念組"
               name="6"
               >
               <div>
