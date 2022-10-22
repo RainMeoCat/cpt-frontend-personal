@@ -12,4 +12,22 @@
 
 ![](https://i.imgur.com/uRhTr5w.jpg)
 
+## 專案依賴安裝
+```
+npm install
+```
 
+### 開發
+```
+npm run serve
+```
+
+### 打包
+```
+npm run build
+```
+
+### Lint和自動修正
+```
+npm run lint
+```
