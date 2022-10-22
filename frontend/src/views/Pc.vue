@@ -1,9 +1,36 @@
 <template>
   <div class="main">
+    <a
+      href="https://github.com/RainMeoCat/cpt-frontend-personal"
+      class="github-corner"
+      target="_blank"
+      aria-label="View source on GitHub"
+    >
+      <svg
+        width="120"
+        height="120"
+        viewBox="0 0 250 250"
+        class="octocat"
+        aria-hidden="true"
+      >
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px;"
+          class="octo-arm"
+        />
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        />
+      </svg>
+    </a>
     <!-- 懸浮的div，包著側邊選單和回到頂端按鈕 -->
     <div style="
         float: right;
-        z-index: 999;
+        z-index: 2;
         position: fixed;
         right: 1vmin;
         padding-top: 15vmin;
@@ -79,15 +106,6 @@
               >
                 <template #title><i class="el-icon-question"></i><span>FAQ</span></template>
               </el-menu-item>
-
-              <el-menu-item
-                index="9"
-                class="el-bottom-item"
-                onclick="window.open('https://ic.nkust.edu.tw/')"
-              >
-                <template #title><i class="el-icon-school"></i><span>智慧商務系</span></template>
-              </el-menu-item>
-              <!--  -->
             </el-menu>
           </el-col>
         </el-row>
@@ -130,10 +148,10 @@
           class="main_title_container"
           v-show="S1t"
         >
-          <div class="main_title">第三屆高科盃<br />全國商業智慧競賽</div>
+          <div class="main_title">第〇屆貓貓盃<br />全國摸貓競賽</div>
           <div style="font-size: 3vmin">
-            徵稿至 2022-10-14(五) 中午12:00<br />
-            總獎金 45,000 元整
+            徵稿至 2222-2-22(五) 22:22<br />
+            總獎金 22,222 元整
           </div>
           <el-button
             plain
@@ -150,7 +168,7 @@
             class="
               animate__animated animate__pulse animate__infinite animate__slower
             "
-            onclick="window.open('https://nkust-ic.kktix.cc/events/20211024-copy-1')"
+            onclick="window.open('https://www.youtube.com/watch?v=8dVQ0813KVM')"
             target="_blank"
           >立即報名</el-button>
         </div>
@@ -191,7 +209,7 @@
         >
           <div class="main_title">關於競賽</div>
           <div style="font-size: 2vmin">
-            為引發高中職及大學部學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。順應新課綱強調專題實作與實習科目學習成果，鼓勵同學將上述成果延伸本競賽，展現同學在課綱核心素養的具體實現，與活用專業知識與技能的能力，並增加未來在職場創就業之競爭力。國立高雄科技大學商業智慧學院及智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意興趣及增加未來在職場創就業之競爭力，並提供全國各校學生相互交流的機會。
+            <loremIpsum add="1p" />
           </div>
           <el-divider></el-divider>
           <el-row :gutter="24">
@@ -200,7 +218,11 @@
             </el-col>
             <el-col :span="16">
               <div class="grid-content bg-purple">
-                <a href="https://ic.nkust.edu.tw/" target="_blank" style="text-decoration:none;color:#ffffff">國立高雄科技大學商業智慧學院暨智慧商務系</a>
+                <a
+                  href="https://imgur.com/MBDRtdr.jpg"
+                  target="_blank"
+                  style="text-decoration:none;color:#ffffff"
+                >貓貓國王</a>
               </div>
             </el-col>
           </el-row>
@@ -211,9 +233,9 @@
             <el-col :span="16">
               <div class="grid-content bg-purple">
                 <ul style="padding: 0px; margin: 0px">
-                  <li>金融資訊系</li>
-                  <li>會計資訊系</li>
-                  <li>AI金融科技中心</li>
+                  <li>金融貓咪系</li>
+                  <li>會計貓咪系</li>
+                  <li>貓咪金融科技中心</li>
                 </ul>
               </div>
             </el-col>
@@ -243,36 +265,13 @@
           >
             <el-collapse-item>
               <template slot="title"><i class="header-icon el-icon-info"></i>
-                初賽徵稿至 2022-10-14 (五) 中午12:00止
+                初賽徵稿至 2222-2-2 (五) 22:22止
               </template>
               <div>
-                高中職概念組請繳交提案說明書 <el-link
-                  type="primary"
-                  href="./attach_1.pdf"
-                  target="_blank"
-                >(附件一)</el-link><br />
-                高中職實作組請繳交作品說明書 <el-link
-                  type="primary"
-                  href="./attach_2.pdf"
-                  target="_blank"
-                >(附件二)</el-link><br />
-                大學概念組請繳交提案說明書 <el-link
-                  type="primary"
-                  href="./attach_3.pdf"
-                  target="_blank"
-                >(附件三)</el-link>
+                <loremIpsum add="8s" />
                 <el-divider></el-divider>
-                參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。
-                <el-link
-                  type="primary"
-                  href="https://forms.gle/coDqU3Nu92N4dvmCA"
-                  target="_blank"
-                >初賽繳件Google表單</el-link><br />
-                <el-link
-                  type="primary"
-                  href="https://reurl.cc/WEzYee"
-                  target="_blank"
-                >表單下載</el-link>
+                <loremIpsum add="8s" />
+
                 <el-divider></el-divider>
                 評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
               </div>
@@ -361,7 +360,7 @@
                     <div class="RuleContentTitle">參賽對象</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      全國高中職及大學在學生，不拘科皆可參加！
+                      人類皆可參加！
                     </div>
                   </div>
                   <div
@@ -372,21 +371,15 @@
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
                       <div>
-                        <span>高中職概念組</span>
+                        <span>職業組</span>
                         <br />
-                        <span>提供創意的「商業智慧」提案，可以解決或改善商務問題，優化商業行為、商業模式、商業品質上的創意產品，均適合本項競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用發想，提出產品提案。</span>
+                        <span>超級職業摸貓團隊，給你最賞心悅目和刺激的摸貓比賽觀賞體驗!</span>
                       </div>
                       <el-divider></el-divider>
                       <div>
-                        高中職實作組
+                        業餘組
                         <br />
-                        實作「商業智慧」作品，包含物聯網、機器人、大數據分析及其他商業資訊技術領域，凡可解決或改善商務問題，優化商業行為之作品，皆符合本競賽。參賽團隊請依照自行設定之主題，進行商業智慧的應用實作。
-                      </div>
-                      <el-divider></el-divider>
-                      <div>
-                        大學概念組
-                        <br />
-                        以智慧科技，創新服務流程，創新經營模式，創新產品應用於新世代之下的數位轉型，智慧商務，財務管理科技，金融科技，品牌行銷，休閒光觀事業，文化創意產業或是新式商業模式與元宇宙等議題皆可依主題進行應用發想並且提出具備創意與可行的企劃書或構想書。
+                        不輸職業組的業餘摸貓團隊，給你最平易近人又搞笑的摸貓比賽觀賞體驗!
                       </div>
                     </div>
                   </div>
@@ -394,115 +387,19 @@
                     key="2"
                     v-else-if="RuleIndex === 2"
                   >
-                    <div class="RuleContentTitle">【初賽】交件說明</div>
+                    <div class="RuleContentTitle">【決賽】競賽規定</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      高中職概念組請繳交提案說明書 <el-link
-                        type="primary"
-                        href="./attach_1.pdf"
-                        target="_blank"
-                      >(附件一)</el-link><br />
-                      高中職實作組請繳交作品說明書 <el-link
-                        type="primary"
-                        href="./attach_2.pdf"
-                        target="_blank"
-                      >(附件二)</el-link><br />
-                      大學概念組請繳交提案說明書 <el-link
-                        type="primary"
-                        href="./attach_3.pdf"
-                        target="_blank"
-                      >(附件三)</el-link>
+                      <loremIpsum add="7s" />
                       <el-divider></el-divider>
-                      參賽作品只要有參加過國內外相關競賽者，欲以相同或相近內容參與本競賽，無論是否獲獎，皆須填寫延續性作品說明書，連同初賽作品、學生證明、著作財產權授權同意書、法定代理人同意書、請上傳至google表單，不須提供紙本。<br />
-                      <el-link
-                        type="primary"
-                        href="https://forms.gle/coDqU3Nu92N4dvmCA"
-                        target="_blank"
-                      >初賽繳件Google表單</el-link><br />
-                      <el-link
-                        type="primary"
-                        href="https://reurl.cc/WEzYee"
-                        target="_blank"
-                      >表單下載</el-link>
+                      <loremIpsum add="7s" />
                       <el-divider></el-divider>
-                      評審委員在每組中評選10隊晉級決賽(視狀況酌予增減)
+                      <loremIpsum add="6s" />
                     </div>
                   </div>
                   <div
                     key="3"
                     v-else-if="RuleIndex === 3"
-                  >
-                    <div class="RuleContentTitle">【初賽】評分項目</div>
-                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
-                    <div class="RuleContent">
-                      <el-row
-                        style="overflow-y: scroll; overflow-x: hidden"
-                        :gutter="60"
-                      >
-                        <el-col :span="12">
-                          <div style="
-                              text-align: center;
-                              font-size: 3vmin;
-                              font-weight: 900;
-                            ">
-                            高中職概念組/大學概念組
-                          </div>
-                          <Pie-chart
-                            :chart-data="this.$Global_data.DataC"
-                            :options="options"
-                          ></Pie-chart>
-                        </el-col>
-                        <el-col :span="12">
-                          <div style="
-                              text-align: center;
-                              font-size: 3vmin;
-                              font-weight: 900;
-                            ">
-                            高中職實作組
-                          </div>
-                          <Pie-chart
-                            :chart-data="this.$Global_data.DataI"
-                            :options="options"
-                          ></Pie-chart>
-                        </el-col>
-                      </el-row>
-                    </div>
-                  </div>
-                  <div
-                    key="4"
-                    v-else-if="RuleIndex === 4"
-                  >
-                    <div class="RuleContentTitle">【決賽】交件說明</div>
-                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
-                    <div class="RuleContent">
-                      高中職概念組、高中職實作組及大學概念組請繳交簡報 <el-link
-                        type="primary"
-                        href="./attach_4.pdf"
-                        target="_blank"
-                      >(附件四)</el-link><br />
-                      高中職實作組需準備海報(格式於入圍時會公告)，若需使用相關設備也請自行攜帶。
-                    </div>
-                  </div>
-                  <div
-                    key="5"
-                    v-else-if="RuleIndex === 5"
-                  >
-                    <div class="RuleContentTitle">【決賽】競賽規定</div>
-                    <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
-                    <div class="RuleContent">
-                      高中職概念組<br />
-                      評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                      <el-divider></el-divider>
-                      高中職實作組<br />
-                      各隊展示、解說作品，評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                      <el-divider></el-divider>
-                      大學概念組<br />
-                      評審針對參賽者簡報內容及表現進行評分。每隊7分鐘，問答時間3分鐘(統問統答)，簡報統一由大會電腦投影。
-                    </div>
-                  </div>
-                  <div
-                    key="6"
-                    v-else-if="RuleIndex === 6"
                   >
                     <div class="RuleContentTitle">【決賽】評分項目</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
@@ -517,7 +414,7 @@
                               font-size: 3vmin;
                               font-weight: 900;
                             ">
-                            高中職概念組/大學概念組
+                            職業組
                           </div>
                           <Pie-chart
                             :chart-data="this.$Global_data.DataC2"
@@ -530,7 +427,7 @@
                               font-size: 3vmin;
                               font-weight: 900;
                             ">
-                            高中職實作組
+                            業餘組
                           </div>
                           <Pie-chart
                             :chart-data="this.$Global_data.DataI2"
@@ -541,8 +438,8 @@
                     </div>
                   </div>
                   <div
-                    key="7"
-                    v-else-if="RuleIndex === 7"
+                    key="4"
+                    v-else-if="RuleIndex === 4"
                   >
                     <div class="RuleContentTitle">獎勵方法</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
@@ -567,20 +464,13 @@
                     </div>
                   </div>
                   <div
-                    key="8"
-                    v-else-if="RuleIndex === 8"
+                    key="5"
+                    v-else-if="RuleIndex === 5"
                   >
                     <div class="RuleContentTitle">注意事項</div>
                     <el-divider style="margin-top: 1vmin; margin-bottom: 1vmin"></el-divider>
                     <div class="RuleContent">
-                      <ol>
-                        <li
-                          v-for="(el, index) in this.$Global_data.CptCaution"
-                          :key="index"
-                        >
-                          {{ el.data }}
-                        </li>
-                      </ol>
+                      <loremIpsum add="3p" />
                     </div>
                   </div>
                 </transition>
@@ -606,6 +496,9 @@
         >
           <div class="main_title">名單公布</div>
           <el-divider style="background-color: #ffffff"></el-divider>
+          <div style="color:white">
+            <loremIpsum add="2p" />
+          </div>
         </div>
       </transition>
     </section>
@@ -623,61 +516,61 @@
           class="main_title_container"
           v-show="S7t"
         >
-          <div class="main_title">歷屆得獎作品</div>
+          <div class="main_title">歷屆得獎人</div>
           <el-divider style="background-color: #ffffff"></el-divider>
           <el-container class="RuleContentContainer">
-            <h2 class="el-icon-star-on">2020年第一屆得獎題目</h2>
+            <h2 class="el-icon-star-on">2020年第一屆得獎人</h2>
             <el-collapse accordion>
               <el-collapse-item
-              title="高中職實作組"
-              name="1"
+                title="職業組"
+                name="1"
               >
                 <el-row style="width:85%">
                   <el-col :span="24">
                     <ul class="final-li">
                       <li>&emsp;特優
-                        <el-divider direction="vertical" />防疫戰士機器人
+                        <el-divider direction="vertical" />Bessie O'Quinn
                       </li>
                       <li>&emsp;優等
-                        <el-divider direction="vertical" />AIOT智能壓縮垃圾桶
+                        <el-divider direction="vertical" />Tahir Ruiz
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />商場虛擬機器人
+                        <el-divider direction="vertical" />Bradlee Dillon
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />LINE BEACON - 尋找東南亞移民的家鄉味
+                        <el-divider direction="vertical" />Greg Hoffman
                       </li>
                     </ul>
                   </el-col>
                 </el-row>
               </el-collapse-item>
               <el-collapse-item
-              title="高中職概念組"
-              name="2"
+                title="業餘組"
+                name="2"
               >
                 <el-row style="width:85%">
                   <el-col :span="24">
                     <ul class="final-li">
                       <li>&emsp;特優
-                        <el-divider direction="vertical" />減重健康APP LW&H
+                        <el-divider direction="vertical" />Jaya Blundell
                       </li>
                       <li>&emsp;優等
-                        <el-divider direction="vertical" />與神同行 -鳳山 雙慈殿宗教意象行銷 策略
+                        <el-divider direction="vertical" />Nicholas Delacruz
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />菱殼炭
+                        <el-divider direction="vertical" />Dahlia Almond
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />失塑列車
+                        <el-divider direction="vertical" />Tobey Bonilla
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />LINE Eats 健康管理聊天機器人
+                        <el-divider direction="vertical" />Aled Bass
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />行銷賣場-全聯福利中心
+                        <el-divider direction="vertical" />Lillie-Mae Crane
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />改善舊衣回收-創造 JOY永續新生活 以智能設備改善傳統舊衣回收之問題
+                        <el-divider direction="vertical" />Charles Mcfarlane
                       </li>
                     </ul>
                   </el-col>
@@ -687,90 +580,90 @@
             <h2 class="el-icon-star-on">2021年第二屆得獎名單</h2>
             <el-collapse accordion>
               <el-collapse-item
-              title="高中職實作組"
-              name="1"
+                title="職業組"
+                name="1"
               >
                 <el-row style="width:70%">
                   <el-col :span="12">
                     <ul class="final-li">
                       <li>&emsp;特優
-                        <el-divider direction="vertical" />漫步彩虹
+                        <el-divider direction="vertical" />Clara Leal
                       </li>
                       <li>&emsp;優等
-                        <el-divider direction="vertical" />汪汪隊
+                        <el-divider direction="vertical" />Ruby-May Barnett
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />AI疫把罩
+                        <el-divider direction="vertical" />Caden Ferry
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />no P K
+                        <el-divider direction="vertical" />Renee Burke
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />漫步雲端
+                        <el-divider direction="vertical" />Zakary Perez
                       </li>
                     </ul>
                   </el-col>
                   <el-col :span="12">
                     <ul class="final-li">
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />漫漫星斗
+                        <el-divider direction="vertical" />Serenity Gray
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />鑫森淼焱壵
+                        <el-divider direction="vertical" />Teejay Sullivan
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />Plan A
+                        <el-divider direction="vertical" />Shania Talley
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />漫步青雲
+                        <el-divider direction="vertical" />Huda Cantrell
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />漫星雲彩
+                        <el-divider direction="vertical" />Tanya Sloan
                       </li>
                     </ul>
                   </el-col>
                 </el-row>
               </el-collapse-item>
               <el-collapse-item
-              title="高中職概念組"
-              name="2"
+                title="業餘組"
+                name="2"
               >
                 <el-row style="width:70%">
                   <el-col :span="12">
                     <ul class="final-li">
                       <li>&emsp;特優
-                        <el-divider direction="vertical" />Pass kids
+                        <el-divider direction="vertical" />Leandro Holden
                       </li>
                       <li>&emsp;優等
-                        <el-divider direction="vertical" />只想吃烤肉
+                        <el-divider direction="vertical" />Darien Roach
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />車車我來了
+                        <el-divider direction="vertical" />Alison Hammond
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />新森南路
+                        <el-divider direction="vertical" />Zofia Chamberlain
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />烏龜立大功
+                        <el-divider direction="vertical" />Ann Tillman
                       </li>
                     </ul>
                   </el-col>
                   <el-col :span="12">
                     <ul class="final-li">
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />動腦筋
+                        <el-divider direction="vertical" />Amman Lyon
                       </li>
                       <li>&emsp;佳作
-                        <el-divider direction="vertical" />聞雞魚
+                        <el-divider direction="vertical" />Neive Goldsmith
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />你說對不隊
+                        <el-divider direction="vertical" />Meadow Morton
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />今天吃什麼
+                        <el-divider direction="vertical" />Poppy-Mae Sullivan
                       </li>
                       <li>入圍獎
-                        <el-divider direction="vertical" />翱翔天際
+                        <el-divider direction="vertical" />Yasir Witt
                       </li>
                     </ul>
                   </el-col>
@@ -802,82 +695,20 @@
             <h2 class="el-icon-camera">2021年第二屆活動花絮</h2>
             <el-collapse accordion>
               <el-collapse-item
-              title="活動影片"
-              name="1"
+                title="活動影片"
+                name="1"
               >
-              <div>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6XWbaFmu_eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              </el-collapse-item>
-              <el-collapse-item
-              title="大合照"
-              name="2"
-              >
-              <div>
-                <template>
-                  <el-carousel :interval="3000">
-                    <el-carousel-item v-for="(img,index) in GroupImgList" :key="index">
-                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
-                    </el-carousel-item>
-                  </el-carousel>
-                </template>
-              </div>
-              </el-collapse-item>
-              <el-collapse-item
-              title="高中職實作組頒獎合影"
-              name="3"
-              >
-              <div>
-                <template>
-                  <el-carousel :interval="3000">
-                    <el-carousel-item v-for="(img,index) in ImplementAwardImgList" :key="index">
-                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
-                    </el-carousel-item>
-                  </el-carousel>
-                </template>
-              </div>
-              </el-collapse-item>
-              <el-collapse-item
-              title="高中職概念組頒獎合影"
-              name="4"
-              >
-              <div>
-                <template>
-                  <el-carousel :interval="3000">
-                    <el-carousel-item v-for="(img,index) in ConceptAwardImgList" :key="index">
-                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
-                    </el-carousel-item>
-                  </el-carousel>
-                </template>
-              </div>
-              </el-collapse-item>
-              <el-collapse-item
-              title="高中職實作組"
-              name="5"
-              >
-              <div>
-                <template>
-                  <el-carousel :interval="3000" indicator-position="none">
-                    <el-carousel-item v-for="(img,index) in ImplementImgList" :key="index">
-                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
-                    </el-carousel-item>
-                  </el-carousel>
-                </template>
-              </div>
-              </el-collapse-item>
-              <el-collapse-item
-              title="高中職概念組"
-              name="6"
-              >
-              <div>
-                <template>
-                  <el-carousel :interval="3000" indicator-position="none">
-                    <el-carousel-item v-for="(img,index) in ConceptImgList" :key="index">
-                      <img class="CarouselImg" v-bind:src="img.url" loading=”lazy”>
-                    </el-carousel-item>
-                  </el-carousel>
-                </template>
-              </div>
+                <div>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/cwyTleTL06Y"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </el-collapse-item>
             </el-collapse>
           </el-container>
@@ -910,21 +741,7 @@
               </template>
               <div class="sub-item">
                 <div>
-                  <span>如有任何問題請先洽詢聯絡窗口或粉絲專頁私訊</span><br />
-                  <span>國立高雄科技大學智慧商務系 杜助理<br />電子郵件：momoheui@gmail.com<br />聯絡電話：07-3814526
-                    分機：17560<br /></span>
-                  <span style="
-                      color: linear-gradient(
-                        to right,
-                        orange,
-                        yellow,
-                        green,
-                        cyan,
-                        blue,
-                        violet
-                      );
-                      width: 100%;
-                    ">開發團隊/網頁維護：ITALAB</span>
+                  <span>如有任何問題請不要問我</span><br />
                 </div>
               </div>
             </el-collapse-item>
@@ -934,7 +751,7 @@
               </template>
               <el-link
                 type="primary"
-                href="./cpt_guide.pdf"
+                href="https://www.youtube.com/watch?v=w3Fq7D_iBiE"
                 target="_blank"
               >點擊下載簡章全文</el-link><br />
             </el-collapse-item>
@@ -947,9 +764,11 @@
 
 <script lang="js">
 import PieChart from './PieChart.js'
+import LoremIpsum from 'vue-lorem-ipsum'
 export default {
   components: {
-    PieChart
+    PieChart,
+    LoremIpsum
   },
   data () {
     return {
@@ -997,71 +816,21 @@ export default {
         }
       },
       Rules: [
-        '參賽對象', '組別說明', '【初賽】交件說明', '【初賽】評分項目', '【決賽】交件說明', '【決賽】競賽規定', '【決賽】評分項目', '獎勵辦法', '注意事項'
-      ],
-      ImplementAwardImgList: [
-        { url: require('../assets/Implement_1.jpg') },
-        { url: require('../assets/Implement_2.jpg') },
-        { url: require('../assets/Implement_3.jpg') },
-        { url: require('../assets/Implement_4.jpg') },
-        { url: require('../assets/Implement_5.jpg') },
-        { url: require('../assets/Implement_6.jpg') },
-        { url: require('../assets/Implement_7.jpg') }
-      ],
-      ConceptAwardImgList: [
-        { url: require('../assets/Concept_1.jpg') },
-        { url: require('../assets/Concept_2.jpg') },
-        { url: require('../assets/Concept_3.jpg') },
-        { url: require('../assets/Concept_4.jpg') },
-        { url: require('../assets/Concept_5.jpg') },
-        { url: require('../assets/Concept_6.jpg') },
-        { url: require('../assets/Concept_7.jpg') }
-      ],
-      GroupImgList: [
-        { url: require('../assets/Group_1.jpg') },
-        { url: require('../assets/Group_2.jpg') },
-        { url: require('../assets/Group_3.jpg') }
-      ],
-      ImplementImgList: [
-        { url: require('../assets/Implement_8.jpg') },
-        { url: require('../assets/Implement_9.jpg') },
-        { url: require('../assets/Implement_10.jpg') },
-        { url: require('../assets/Implement_11.jpg') },
-        { url: require('../assets/Implement_12.jpg') },
-        { url: require('../assets/Implement_13.jpg') },
-        { url: require('../assets/Implement_14.jpg') },
-        { url: require('../assets/Implement_15.jpg') },
-        { url: require('../assets/Implement_16.jpg') },
-        { url: require('../assets/Implement_17.jpg') },
-        { url: require('../assets/Implement_18.jpg') },
-        { url: require('../assets/Implement_19.jpg') },
-        { url: require('../assets/Implement_20.jpg') }
-      ],
-      ConceptImgList: [
-        { url: require('../assets/Concept_8.jpg') },
-        { url: require('../assets/Concept_9.jpg') },
-        { url: require('../assets/Concept_10.jpg') },
-        { url: require('../assets/Concept_11.jpg') },
-        { url: require('../assets/Concept_12.jpg') },
-        { url: require('../assets/Concept_13.jpg') },
-        { url: require('../assets/Concept_14.jpg') },
-        { url: require('../assets/Concept_15.jpg') },
-        { url: require('../assets/Concept_16.jpg') },
-        { url: require('../assets/Concept_17.jpg') }
+        '參賽對象', '組別說明', '【決賽】競賽規定', '【決賽】評分項目', '獎勵辦法', '注意事項'
       ]
     }
   },
   metaInfo: {
-    title: '高科盃全國商業智慧競賽',
+    title: '貓貓盃全國摸貓競賽',
     meta: [
       {
         charset: 'utf-8'
       },
       {
-        name: 'keywords', content: '高科盃 全國商業智慧競賽 總獎金45000元整 國立高科大 國立高雄科技大學 智慧商務系 nkust ic'
+        name: 'keywords', content: '貓咪 作品集 迷因'
       },
       {
-        name: 'description', content: '為引發高中職及大學部學生對於「智慧商務」之創意構想，培養跨領域之專業人才，鼓勵學生積極嘗試與發想，提高創新思考能力，並提昇知識整合、實作及人際溝通合作之能力。國立高雄科技大學商業智慧學院暨智慧商務系舉辦「第三屆高科盃全國商業智慧競賽」，期盼能激發學生創意及興趣及增加未來在職場創就業之競爭力，並提供全國各校學生相互交流的機會。'
+        name: 'description', content: '貓貓盃全國摸貓競賽，摸貓貓 摸貓貓'
       }
     ]
   },
@@ -1269,7 +1038,7 @@ export default {
   text-align: left;
 }
 
-.CarouselImg{
+.CarouselImg {
   max-height: 100%;
   max-width: 100%;
   position: absolute;
@@ -1307,7 +1076,7 @@ section {
 .section6,
 .section7,
 .section8,
-.section9{
+.section9 {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -1387,5 +1156,45 @@ section {
 }
 .el-collapse >>> .el-collapse-item__content {
   padding-left: 15px;
+}
+.octocat {
+  fill: #ffffff3a;
+  mix-blend-mode: hard-light;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  border: 0;
+  right: 0;
+  z-index: 5;
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
 </style>
