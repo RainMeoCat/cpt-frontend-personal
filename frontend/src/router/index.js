@@ -10,7 +10,7 @@ if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobil
   // 偵測到手機版
   routes = [
     {
-      path: '/',
+      path: '/cpt-pet-cats/',
       name: 'Mobile',
       component: Mobile
     }
@@ -19,7 +19,7 @@ if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobil
   // 偵測到電腦版
   routes = [
     {
-      path: '/',
+      path: '/cpt-pet-cats/',
       name: 'Pc',
       component: Pc
     }
